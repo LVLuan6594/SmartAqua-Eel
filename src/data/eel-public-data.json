@@ -1,0 +1,1890 @@
+{
+  "metadata": {
+    "datasetId": "cantho-eel-public-v1",
+    "species": "Lươn",
+    "retrievedAt": "2026-10-26",
+    "administrativeScope": "103 xã/phường TP Cần Thơ sau 01/07/2025",
+    "coverageCount": 103,
+    "method": "Tìm kiếm theo thành phố mới, Cần Thơ/Hậu Giang/Sóc Trăng cũ, hộ, diện tích, bể và sản lượng. Đối chiếu tên với 103 mã đã có và NQ1668. Không phải rà soát độc lập từng xã hay tổng điều tra.",
+    "limitations": [
+      "Chưa tìm thấy bảng dữ liệu mở đầy đủ chỉ tiêu nuôi lươn cho từng đơn vị trong 103 xã/phường.",
+      "Không suy diễn hộ, tọa độ hoặc ranh giới từ số liệu tổng hợp.",
+      "Không cộng số liệu khác kỳ/cấp địa bàn, mẫu nghiên cứu hoặc tồn đọng thành tổng thu hoạch.",
+      "Ngày xuất bản không xác định được để null, không dùng ngày crawler làm ngày xuất bản."
+    ]
+  },
+  "sources": [
+    {
+      "id": "danviet-20260428",
+      "publisher": "Báo Dân Việt",
+      "publishedAt": "2026-04-28",
+      "title": "Thông tin mới nhất về lươn nuôi quá lứa tồn đọng ở Cần Thơ",
+      "url": "https://danviet.vn/thong-tin-moi-nhat-ve-hang-nghin-tan-luon-nuoi-qua-lua-ton-dong-o-can-tho-toan-con-to-bu-van-an-bao-co-d1422347.html",
+      "retrievedAt": "2026-10-26",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review"
+    },
+    {
+      "id": "ttxvn-20260423",
+      "publisher": "TTXVN / Báo Tin tức và Dân tộc",
+      "publishedAt": "2026-04-23",
+      "title": "Người nuôi lươn đối mặt nhiều rủi ro khi neo lươn chờ giá tăng",
+      "url": "https://baotintuc.vn/nguoi-nuoi-luon-doi-mat-nhieu-rui-ro-khi-neo-luon-cho-gia-tang-post547734.html",
+      "retrievedAt": "2026-10-26",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review"
+    },
+    {
+      "id": "danviet-20260415",
+      "publisher": "Báo Dân Việt",
+      "publishedAt": "2026-04-15",
+      "title": "Lươn nuôi quá lứa tại Cần Thơ cần tìm đầu ra",
+      "url": "https://danviet.vn/vi-sao-tp-can-tho-con-ton-khoang-4000-tan-luon-nuoi-qua-lua-can-phai-tim-dau-ra-d1418763.html",
+      "retrievedAt": "2026-10-26",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review"
+    },
+    {
+      "id": "nhandan-20260422",
+      "publisher": "Báo Nhân Dân",
+      "publishedAt": "2026-04-22",
+      "title": "Hội Nông dân Cần Thơ khảo sát, tìm cách giúp người nuôi lươn vượt khó",
+      "url": "https://nhandan.vn/hoi-nong-dan-can-tho-khao-sat-tim-cach-giup-nguoi-nuoi-luon-vuot-kho-post957520.html",
+      "retrievedAt": "2026-10-26",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review"
+    },
+    {
+      "id": "cantho-tanlong-20260408",
+      "publisher": "Báo Cần Thơ",
+      "publishedAt": "2026-04-08",
+      "title": "Hội Cựu chiến binh TP Cần Thơ kiểm tra công tác Hội năm 2026 tại xã Tân Long",
+      "url": "https://baocantho.com.vn/hoi-cuu-chien-binh-tp-can-tho-kiem-tra-cong-tac-hoi-nam-2026-tai-xa-tan-long-a201556.html",
+      "retrievedAt": "2026-10-26",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review"
+    },
+    {
+      "id": "cantho-thoilai",
+      "publisher": "Báo Cần Thơ",
+      "publishedAt": null,
+      "title": "Khởi nghiệp với nghề nuôi lươn",
+      "url": "https://baocantho.com.vn/khoi-nghiep-voi-nghe-nuoi-luon-a192227.html",
+      "retrievedAt": "2026-10-26",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review"
+    },
+    {
+      "id": "cantho-longtuyen",
+      "publisher": "Báo Cần Thơ",
+      "publishedAt": null,
+      "title": "Ăn nên làm ra với mô hình nuôi lươn không bùn",
+      "url": "https://baocantho.com.vn/an-nen-lam-ra-voi-mo-hinh-nuoi-luon-khong-bun-a189114.html",
+      "retrievedAt": "2026-10-26",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review"
+    },
+    {
+      "id": "thuysan-xuanhoa",
+      "publisher": "Tạp chí Thủy sản Việt Nam",
+      "publishedAt": null,
+      "title": "Sóc Trăng: Hội viên phụ nữ thu nhập ổn định từ mô hình nuôi lươn không bùn",
+      "url": "https://thuysanvietnam.com.vn/soc-trang-hoi-vien-phu-nu-thu-nhap-on-dinh-tu-mo-hinh-nuoi-luon-khong-bun/",
+      "retrievedAt": "2026-10-26",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review"
+    },
+    {
+      "id": "hoinongdan-thanhxuan",
+      "publisher": "Hội Nông dân Việt Nam",
+      "publishedAt": "2025-06-13",
+      "title": "Mô hình lươn thương phẩm tại xã Thạnh Xuân, Châu Thành A cũ",
+      "url": "https://hoinongdan.org.vn/day-nghe-viec-lam/nuoi-con-dac-san-binh-dan-trong-nha-mot-nong-dan-hau-giang-ban-gia-tot-truoc-gio-sap-nhap-vao-ca-365918",
+      "retrievedAt": "2026-10-26",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review"
+    },
+    {
+      "id": "ctu-study-2025",
+      "publisher": "Tạp chí Khoa học Đại học Cần Thơ",
+      "publishedAt": "2025-12-24",
+      "title": "Phân tích khía cạnh kỹ thuật và tài chính của mô hình nuôi lươn đồng trong bể ở tỉnh Hậu Giang",
+      "url": "https://ctujsvn.ctu.edu.vn/index.php/ctujsvn/article/view/7169",
+      "doi": "10.22144/ctujos.2025.199",
+      "retrievedAt": "2026-10-26",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review"
+    },
+    {
+      "id": "cantho-haugiang-study",
+      "publisher": "Báo Cần Thơ",
+      "publishedAt": null,
+      "title": "Nghiên cứu giúp ương giống và nuôi lươn thương phẩm đạt chất lượng cao",
+      "url": "https://baocantho.com.vn/nghien-cuu-giup-uong-giong-va-nuoi-luon-thuong-pham-dat-chat-luong-cao-a212494.html",
+      "retrievedAt": "2026-10-26",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review"
+    },
+    {
+      "id": "cantho-thoiandong",
+      "publisher": "Báo Cần Thơ",
+      "publishedAt": null,
+      "title": "Phát triển nghề nuôi lươn không bùn",
+      "url": "https://baocantho.com.vn/phat-trien-nghe-nuoi-luon-khong-bun-a112800.html",
+      "retrievedAt": "2026-10-26",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review"
+    },
+    {
+      "id": "resolution-1668",
+      "publisher": "Cổng Thông tin điện tử Chính phủ",
+      "publishedAt": "2025-06-16",
+      "title": "Nghị quyết 1668/NQ-UBTVQH15: 103 đơn vị hành chính cấp xã của Cần Thơ",
+      "url": "https://xaydungchinhsach.chinhphu.vn/toan-van-nghi-quyet-so-1668-nq-ubtvqh15-sap-xep-cac-dvhc-cap-xa-cua-thanh-pho-can-tho-nam-2025-119250616191340674.htm",
+      "retrievedAt": "2026-10-26",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review"
+    }
+  ],
+  "observations": [
+    {
+      "id": "city-2025",
+      "sourceId": "ttxvn-20260423",
+      "scope": "city",
+      "period": "Cuối năm 2025",
+      "communeCodes": [],
+      "metrics": [
+        {
+          "name": "households",
+          "value": 1900,
+          "unit": "hộ",
+          "qualifier": "nearly"
+        },
+        {
+          "name": "farmingArea",
+          "value": 18,
+          "unit": "ha",
+          "qualifier": "greater_than"
+        }
+      ],
+      "note": "Quy mô toàn thành phố sau sáp nhập; không có phân bổ cho từng xã/phường.",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review",
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "city-unsold-20260418",
+      "sourceId": "ttxvn-20260423",
+      "scope": "city",
+      "period": "2026-04-18",
+      "communeCodes": [],
+      "metrics": [
+        {
+          "name": "unsoldHouseholds",
+          "value": 372,
+          "unit": "hộ",
+          "qualifier": "reported"
+        },
+        {
+          "name": "unsoldBiomass",
+          "value": 1600,
+          "unit": "tấn",
+          "qualifier": "greater_than"
+        }
+      ],
+      "note": "Rà soát của Chi cục Thủy sản và Kiểm ngư; lượng đến kỳ chưa tiêu thụ, không phải thu hoạch.",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review",
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "city-unsold-20260415",
+      "sourceId": "danviet-20260415",
+      "scope": "city",
+      "period": "2026-04-15",
+      "communeCodes": [],
+      "metrics": [
+        {
+          "name": "unsoldBiomass",
+          "value": 4000,
+          "unit": "tấn",
+          "qualifier": "approximately"
+        }
+      ],
+      "note": "Báo cáo sơ bộ của Hội Nông dân. Khác thời điểm/phạm vi rà soát với số liệu ngày 18/4; không cộng hai số.",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review",
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "vithuy-20260422",
+      "sourceId": "nhandan-20260422",
+      "scope": "commune",
+      "period": "Khảo sát được công bố 2026-04-22",
+      "communeCodes": [
+        "31441"
+      ],
+      "metrics": [
+        {
+          "name": "households",
+          "value": 150,
+          "unit": "hộ",
+          "qualifier": "approximately"
+        },
+        {
+          "name": "reportedProduction",
+          "value": 900,
+          "unit": "tấn",
+          "qualifier": "estimated"
+        },
+        {
+          "name": "unsoldHouseholds",
+          "value": 40,
+          "unit": "hộ",
+          "qualifier": "approximately"
+        },
+        {
+          "name": "unsoldBiomass",
+          "value": 150.5,
+          "unit": "tấn",
+          "qualifier": "approximately"
+        }
+      ],
+      "note": "Nguồn không nêu rõ chu kỳ/năm của 900 tấn; không diễn giải thành sản lượng năm.",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review",
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "tanlong-group",
+      "sourceId": "cantho-tanlong-20260408",
+      "scope": "group",
+      "period": "Quý I/2026",
+      "communeCodes": [
+        "31741"
+      ],
+      "metrics": [
+        {
+          "name": "members",
+          "value": 13,
+          "unit": "thành viên",
+          "qualifier": "reported"
+        },
+        {
+          "name": "stockingPopulation",
+          "value": 190000,
+          "unit": "con",
+          "qualifier": "reported"
+        }
+      ],
+      "note": "Một tổ hợp tác; không phải tổng số hộ hoặc sản lượng toàn xã.",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review",
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "thoilai-case-1",
+      "sourceId": "cantho-thoilai",
+      "scope": "household_case",
+      "period": "Vụ được thuật lại trong bài (không rõ ngày thu hoạch)",
+      "communeCodes": [
+        "31258"
+      ],
+      "metrics": [
+        {
+          "name": "harvestQuantity",
+          "value": 1,
+          "unit": "tấn",
+          "qualifier": "nearly"
+        },
+        {
+          "name": "cycleDuration",
+          "value": 8,
+          "unit": "tháng",
+          "qualifier": "approximately"
+        }
+      ],
+      "note": "Trường hợp hộ tại ấp Trường Hòa; không có danh sách đăng ký hoặc tọa độ hộ.",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review",
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "thoilai-case-2",
+      "sourceId": "cantho-thoilai",
+      "scope": "household_case",
+      "period": "Vụ được thuật lại trong bài (không rõ ngày thu hoạch)",
+      "communeCodes": [
+        "31258"
+      ],
+      "metrics": [
+        {
+          "name": "harvestQuantity",
+          "value": 1.5,
+          "unit": "tấn",
+          "qualifier": "greater_than"
+        },
+        {
+          "name": "cycleDuration",
+          "value": 11,
+          "unit": "tháng",
+          "qualifier": "reported"
+        }
+      ],
+      "note": "Trường hợp hộ khác trong cùng bài; không đại diện tổng số toàn xã.",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review",
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "longtuyen-case",
+      "sourceId": "cantho-longtuyen",
+      "scope": "household_case",
+      "period": "Thời điểm bài viết; ngày xuất bản chưa xác định",
+      "communeCodes": [],
+      "metrics": [
+        {
+          "name": "tanks",
+          "value": 10,
+          "unit": "bồn",
+          "qualifier": "reported"
+        },
+        {
+          "name": "tankArea",
+          "value": 8,
+          "unit": "m²/bồn",
+          "qualifier": "reported"
+        },
+        {
+          "name": "reportedProduction",
+          "value": 10,
+          "unit": "tấn",
+          "qualifier": "reported"
+        }
+      ],
+      "note": "Địa bàn Long Tuyền cũ có chia tách; vị trí trường hợp cần đối chiếu trước khi gán xã/phường mới.",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review",
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "xuanhoa-group",
+      "sourceId": "thuysan-xuanhoa",
+      "scope": "historical_group",
+      "period": "Thời điểm bài viết; hoạt động từ 2023",
+      "communeCodes": [
+        "31531"
+      ],
+      "metrics": [
+        {
+          "name": "members",
+          "value": 23,
+          "unit": "thành viên",
+          "qualifier": "reported"
+        }
+      ],
+      "note": "Xã Xuân Hòa, Kế Sách cũ → một phần xã An Lạc Thôn theo khoản 74 NQ1668; không phải thống kê toàn xã mới.",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review",
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "xuanhoa-case",
+      "sourceId": "thuysan-xuanhoa",
+      "scope": "historical_household_case",
+      "period": "Thời điểm bài viết, không xác định kỳ thu",
+      "communeCodes": [
+        "31531"
+      ],
+      "metrics": [
+        {
+          "name": "tanks",
+          "value": 3,
+          "unit": "bể",
+          "qualifier": "reported"
+        },
+        {
+          "name": "farmingArea",
+          "value": 20,
+          "unit": "m²",
+          "qualifier": "reported"
+        }
+      ],
+      "note": "Một trường hợp hộ trong bài; không tạo hồ sơ người thật hoặc hình học bể.",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review",
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "thanhxuan-case",
+      "sourceId": "hoinongdan-thanhxuan",
+      "scope": "historical_household_case",
+      "period": "Vụ 12 tháng được công bố 2025-06-13",
+      "communeCodes": [
+        "31360"
+      ],
+      "metrics": [
+        {
+          "name": "farmingArea",
+          "value": 6,
+          "unit": "m²",
+          "qualifier": "reported"
+        },
+        {
+          "name": "harvestQuantity",
+          "value": 1036,
+          "unit": "kg",
+          "qualifier": "greater_than"
+        }
+      ],
+      "note": "Thạnh Xuân, Châu Thành A cũ; giữ nguyên số liệu nguồn, cần rà soát trước khi sử dụng thống kê.",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review",
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "haugiang-survey-2024",
+      "sourceId": "ctu-study-2025",
+      "scope": "research_sample",
+      "period": "Khảo sát 08–12/2024",
+      "communeCodes": [],
+      "metrics": [
+        {
+          "name": "sampleHouseholds",
+          "value": 52,
+          "unit": "hộ",
+          "qualifier": "reported"
+        },
+        {
+          "name": "cycleDuration",
+          "value": 333,
+          "unit": "ngày/vụ",
+          "qualifier": "reported"
+        },
+        {
+          "name": "yield",
+          "value": 1243,
+          "unit": "kg/10m²/vụ",
+          "qualifier": "reported"
+        },
+        {
+          "name": "survivalRate",
+          "value": 79.7,
+          "unit": "%",
+          "qualifier": "reported"
+        }
+      ],
+      "note": "Mẫu nghiên cứu ở địa bàn Hậu Giang cũ; không phải tổng điều tra và không phân bổ xuống xã mới.",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review",
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "haugiang-reported-2025",
+      "sourceId": "cantho-haugiang-study",
+      "scope": "historical_province",
+      "period": "Năm 2025, tỉnh Hậu Giang cũ",
+      "communeCodes": [],
+      "metrics": [
+        {
+          "name": "households",
+          "value": 1000,
+          "unit": "hộ",
+          "qualifier": "approximately"
+        },
+        {
+          "name": "farmingArea",
+          "value": 10000,
+          "unit": "m²",
+          "qualifier": "nearly"
+        }
+      ],
+      "note": "Giữ nguyên số liệu bài báo. Khác cấp địa bàn và thời điểm với 18 ha toàn Cần Thơ; không cộng/gộp hoặc tự hiệu chỉnh.",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review",
+      "lat": null,
+      "lng": null
+    },
+    {
+      "id": "thoiandong-group",
+      "sourceId": "cantho-thoiandong",
+      "scope": "historical_group",
+      "period": "Thời điểm bài viết, chưa xác định ngày",
+      "communeCodes": [
+        "31174"
+      ],
+      "metrics": [
+        {
+          "name": "members",
+          "value": 14,
+          "unit": "thành viên",
+          "qualifier": "reported"
+        }
+      ],
+      "note": "Tổ hợp tác ở phường Thới An Đông cũ, nằm trong phường Thới An Đông mới theo khoản 5 NQ1668.",
+      "source": "PUBLIC_REPORT",
+      "verificationStatus": "needs_review",
+      "lat": null,
+      "lng": null
+    }
+  ],
+  "coverage": [
+    {
+      "communeCode": "31120",
+      "communeName": "Phường Cái Khế",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31135",
+      "communeName": "Phường Ninh Kiều",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31147",
+      "communeName": "Phường Tân An",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31150",
+      "communeName": "Phường An Bình",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31153",
+      "communeName": "Phường Ô Môn",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31157",
+      "communeName": "Phường Thới Long",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31162",
+      "communeName": "Phường Phước Thới",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31168",
+      "communeName": "Phường Bình Thuỷ",
+      "status": "reported_current",
+      "evidence": [
+        {
+          "code": "31168",
+          "sourceId": "ttxvn-20260423",
+          "status": "reported_current",
+          "note": ""
+        }
+      ],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Bằng chứng báo chí/nghiên cứu, chưa phải sổ đăng ký đầy đủ."
+    },
+    {
+      "communeCode": "31174",
+      "communeName": "Phường Thới An Đông",
+      "status": "historical_mapped",
+      "evidence": [
+        {
+          "code": "31174",
+          "sourceId": "cantho-thoiandong",
+          "status": "historical_mapped",
+          "note": "Thới An Đông cũ hợp nhất vào phường cùng tên theo NQ1668 khoản 5."
+        }
+      ],
+      "observationIds": [
+        "thoiandong-group"
+      ],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Bằng chứng báo chí/nghiên cứu, chưa phải sổ đăng ký đầy đủ."
+    },
+    {
+      "communeCode": "31183",
+      "communeName": "Phường Long Tuyền",
+      "status": "mapping_needs_review",
+      "evidence": [
+        {
+          "code": "31183",
+          "sourceId": "cantho-longtuyen",
+          "status": "mapping_needs_review",
+          "note": "Long Tuyền cũ chia một phần sang An Bình; chưa có tọa độ để chốt trường hợp."
+        }
+      ],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Bằng chứng báo chí/nghiên cứu, chưa phải sổ đăng ký đầy đủ."
+    },
+    {
+      "communeCode": "31186",
+      "communeName": "Phường Cái Răng",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31201",
+      "communeName": "Phường Hưng Phú",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31207",
+      "communeName": "Phường Thốt Nốt",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31213",
+      "communeName": "Phường Tân Lộc",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31217",
+      "communeName": "Phường Trung Nhứt",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31228",
+      "communeName": "Phường Thuận Hưng",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31231",
+      "communeName": "Xã Thạnh An",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31232",
+      "communeName": "Xã Vĩnh Thạnh",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31237",
+      "communeName": "Xã Vĩnh Trinh",
+      "status": "reported_current",
+      "evidence": [
+        {
+          "code": "31237",
+          "sourceId": "ttxvn-20260423",
+          "status": "reported_current",
+          "note": ""
+        }
+      ],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Bằng chứng báo chí/nghiên cứu, chưa phải sổ đăng ký đầy đủ."
+    },
+    {
+      "communeCode": "31246",
+      "communeName": "Xã Thạnh Quới",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31249",
+      "communeName": "Xã Thạnh Phú",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31255",
+      "communeName": "Xã Trung Hưng",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31258",
+      "communeName": "Xã Thới Lai",
+      "status": "reported_current",
+      "evidence": [
+        {
+          "code": "31258",
+          "sourceId": "cantho-thoilai",
+          "status": "reported_current",
+          "note": ""
+        }
+      ],
+      "observationIds": [
+        "thoilai-case-1",
+        "thoilai-case-2"
+      ],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Bằng chứng báo chí/nghiên cứu, chưa phải sổ đăng ký đầy đủ."
+    },
+    {
+      "communeCode": "31261",
+      "communeName": "Xã Cờ Đỏ",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31264",
+      "communeName": "Xã Thới Hưng",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31273",
+      "communeName": "Xã Đông Hiệp",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31282",
+      "communeName": "Xã Đông Thuận",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31288",
+      "communeName": "Xã Trường Thành",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31294",
+      "communeName": "Xã Trường Xuân",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31299",
+      "communeName": "Xã Phong Điền",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31309",
+      "communeName": "Xã Trường Long",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31315",
+      "communeName": "Xã Nhơn Ái",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31321",
+      "communeName": "Phường Vị Thanh",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31333",
+      "communeName": "Phường Vị Tân",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31338",
+      "communeName": "Xã Hoả Lựu",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31340",
+      "communeName": "Phường Ngã Bảy",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31342",
+      "communeName": "Xã Tân Hoà",
+      "status": "reported_current",
+      "evidence": [
+        {
+          "code": "31342",
+          "sourceId": "ttxvn-20260423",
+          "status": "reported_current",
+          "note": ""
+        }
+      ],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Bằng chứng báo chí/nghiên cứu, chưa phải sổ đăng ký đầy đủ."
+    },
+    {
+      "communeCode": "31348",
+      "communeName": "Xã Trường Long Tây",
+      "status": "reported_current",
+      "evidence": [
+        {
+          "code": "31348",
+          "sourceId": "danviet-20260428",
+          "status": "reported_current",
+          "note": ""
+        }
+      ],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Bằng chứng báo chí/nghiên cứu, chưa phải sổ đăng ký đầy đủ."
+    },
+    {
+      "communeCode": "31360",
+      "communeName": "Xã Thạnh Xuân",
+      "status": "historical_mapped",
+      "evidence": [
+        {
+          "code": "31360",
+          "sourceId": "hoinongdan-thanhxuan",
+          "status": "historical_mapped",
+          "note": "Bằng chứng cấp hộ trước 01/07/2025, không phải tổng toàn xã mới."
+        }
+      ],
+      "observationIds": [
+        "thanhxuan-case"
+      ],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Bằng chứng báo chí/nghiên cứu, chưa phải sổ đăng ký đầy đủ."
+    },
+    {
+      "communeCode": "31366",
+      "communeName": "Xã Châu Thành",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31369",
+      "communeName": "Xã Đông Phước",
+      "status": "reported_current",
+      "evidence": [
+        {
+          "code": "31369",
+          "sourceId": "danviet-20260428",
+          "status": "reported_current",
+          "note": ""
+        }
+      ],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Bằng chứng báo chí/nghiên cứu, chưa phải sổ đăng ký đầy đủ."
+    },
+    {
+      "communeCode": "31378",
+      "communeName": "Xã Phú Hữu",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31393",
+      "communeName": "Xã Hoà An",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31396",
+      "communeName": "Xã Hiệp Hưng",
+      "status": "reported_current",
+      "evidence": [
+        {
+          "code": "31396",
+          "sourceId": "danviet-20260428",
+          "status": "reported_current",
+          "note": ""
+        }
+      ],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Bằng chứng báo chí/nghiên cứu, chưa phải sổ đăng ký đầy đủ."
+    },
+    {
+      "communeCode": "31399",
+      "communeName": "Xã Tân Bình",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31408",
+      "communeName": "Xã Thạnh Hoà",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31411",
+      "communeName": "Phường Đại Thành",
+      "status": "reported_current",
+      "evidence": [
+        {
+          "code": "31411",
+          "sourceId": "ttxvn-20260423",
+          "status": "reported_current",
+          "note": ""
+        }
+      ],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Bằng chứng báo chí/nghiên cứu, chưa phải sổ đăng ký đầy đủ."
+    },
+    {
+      "communeCode": "31420",
+      "communeName": "Xã Phụng Hiệp",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31426",
+      "communeName": "Xã Phương Bình",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31432",
+      "communeName": "Xã Tân Phước Hưng",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31441",
+      "communeName": "Xã Vị Thuỷ",
+      "status": "reported_current",
+      "evidence": [
+        {
+          "code": "31441",
+          "sourceId": "danviet-20260415",
+          "status": "reported_current",
+          "note": ""
+        },
+        {
+          "code": "31441",
+          "sourceId": "ttxvn-20260423",
+          "status": "reported_current",
+          "note": ""
+        },
+        {
+          "code": "31441",
+          "sourceId": "nhandan-20260422",
+          "status": "reported_current",
+          "note": ""
+        }
+      ],
+      "observationIds": [
+        "vithuy-20260422"
+      ],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Bằng chứng báo chí/nghiên cứu, chưa phải sổ đăng ký đầy đủ."
+    },
+    {
+      "communeCode": "31453",
+      "communeName": "Xã Vĩnh Thuận Đông",
+      "status": "reported_current",
+      "evidence": [
+        {
+          "code": "31453",
+          "sourceId": "danviet-20260415",
+          "status": "reported_current",
+          "note": ""
+        }
+      ],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Bằng chứng báo chí/nghiên cứu, chưa phải sổ đăng ký đầy đủ."
+    },
+    {
+      "communeCode": "31459",
+      "communeName": "Xã Vĩnh Tường",
+      "status": "reported_current",
+      "evidence": [
+        {
+          "code": "31459",
+          "sourceId": "danviet-20260415",
+          "status": "reported_current",
+          "note": ""
+        }
+      ],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Bằng chứng báo chí/nghiên cứu, chưa phải sổ đăng ký đầy đủ."
+    },
+    {
+      "communeCode": "31465",
+      "communeName": "Xã Vị Thanh 1",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31471",
+      "communeName": "Phường Long Mỹ",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31473",
+      "communeName": "Phường Long Bình",
+      "status": "mapping_needs_review",
+      "evidence": [
+        {
+          "code": "31473",
+          "sourceId": "danviet-20260415",
+          "status": "mapping_needs_review",
+          "note": "Nguồn gọi xã Long Bình; danh mục hiện tại là phường Long Bình. Cần xác nhận."
+        }
+      ],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Bằng chứng báo chí/nghiên cứu, chưa phải sổ đăng ký đầy đủ."
+    },
+    {
+      "communeCode": "31480",
+      "communeName": "Phường Long Phú 1",
+      "status": "reported_current",
+      "evidence": [
+        {
+          "code": "31480",
+          "sourceId": "danviet-20260415",
+          "status": "reported_current",
+          "note": ""
+        }
+      ],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Bằng chứng báo chí/nghiên cứu, chưa phải sổ đăng ký đầy đủ."
+    },
+    {
+      "communeCode": "31489",
+      "communeName": "Xã Vĩnh Viễn",
+      "status": "reported_current",
+      "evidence": [
+        {
+          "code": "31489",
+          "sourceId": "danviet-20260415",
+          "status": "reported_current",
+          "note": ""
+        }
+      ],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Bằng chứng báo chí/nghiên cứu, chưa phải sổ đăng ký đầy đủ."
+    },
+    {
+      "communeCode": "31492",
+      "communeName": "Xã Lương Tâm",
+      "status": "reported_current",
+      "evidence": [
+        {
+          "code": "31492",
+          "sourceId": "danviet-20260415",
+          "status": "reported_current",
+          "note": ""
+        },
+        {
+          "code": "31492",
+          "sourceId": "ttxvn-20260423",
+          "status": "reported_current",
+          "note": ""
+        }
+      ],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Bằng chứng báo chí/nghiên cứu, chưa phải sổ đăng ký đầy đủ."
+    },
+    {
+      "communeCode": "31495",
+      "communeName": "Xã Xà Phiên",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31507",
+      "communeName": "Phường Sóc Trăng",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31510",
+      "communeName": "Phường Phú Lợi",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31528",
+      "communeName": "Xã Kế Sách",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31531",
+      "communeName": "Xã An Lạc Thôn",
+      "status": "historical_mapped",
+      "evidence": [
+        {
+          "code": "31531",
+          "sourceId": "thuysan-xuanhoa",
+          "status": "historical_mapped",
+          "note": "Xuân Hòa cũ thuộc An Lạc Thôn mới theo NQ1668 khoản 74."
+        }
+      ],
+      "observationIds": [
+        "xuanhoa-group",
+        "xuanhoa-case"
+      ],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Bằng chứng báo chí/nghiên cứu, chưa phải sổ đăng ký đầy đủ."
+    },
+    {
+      "communeCode": "31537",
+      "communeName": "Xã Phong Nẫm",
+      "status": "reported_current",
+      "evidence": [
+        {
+          "code": "31537",
+          "sourceId": "ttxvn-20260423",
+          "status": "reported_current",
+          "note": ""
+        }
+      ],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Bằng chứng báo chí/nghiên cứu, chưa phải sổ đăng ký đầy đủ."
+    },
+    {
+      "communeCode": "31540",
+      "communeName": "Xã Thới An Hội",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31552",
+      "communeName": "Xã Nhơn Mỹ",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31561",
+      "communeName": "Xã Đại Hải",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31567",
+      "communeName": "Xã Mỹ Tú",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31569",
+      "communeName": "Xã Phú Tâm",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31570",
+      "communeName": "Xã Hồ Đắc Kiện",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31579",
+      "communeName": "Xã Long Hưng",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31582",
+      "communeName": "Xã Thuận Hoà",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31591",
+      "communeName": "Xã Mỹ Hương",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31594",
+      "communeName": "Xã An Ninh",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31603",
+      "communeName": "Xã Mỹ Phước",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31615",
+      "communeName": "Xã An Thạnh",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31633",
+      "communeName": "Xã Cù Lao Dung",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31639",
+      "communeName": "Xã Long Phú",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31645",
+      "communeName": "Xã Đại Ngãi",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31654",
+      "communeName": "Xã Trường Khánh",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31666",
+      "communeName": "Xã Tân Thạnh",
+      "status": "reported_current",
+      "evidence": [
+        {
+          "code": "31666",
+          "sourceId": "danviet-20260415",
+          "status": "reported_current",
+          "note": ""
+        }
+      ],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Bằng chứng báo chí/nghiên cứu, chưa phải sổ đăng ký đầy đủ."
+    },
+    {
+      "communeCode": "31673",
+      "communeName": "Xã Trần Đề",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31675",
+      "communeName": "Xã Liêu Tú",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31679",
+      "communeName": "Xã Lịch Hội Thượng",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31684",
+      "communeName": "Phường Mỹ Xuyên",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31687",
+      "communeName": "Xã Tài Văn",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31699",
+      "communeName": "Xã Thạnh Thới An",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31708",
+      "communeName": "Xã Nhu Gia",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31717",
+      "communeName": "Xã Hoà Tú",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31723",
+      "communeName": "Xã Ngọc Tố",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31726",
+      "communeName": "Xã Gia Hoà",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31732",
+      "communeName": "Phường Ngã Năm",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31741",
+      "communeName": "Xã Tân Long",
+      "status": "reported_current",
+      "evidence": [
+        {
+          "code": "31741",
+          "sourceId": "danviet-20260415",
+          "status": "reported_current",
+          "note": ""
+        },
+        {
+          "code": "31741",
+          "sourceId": "cantho-tanlong-20260408",
+          "status": "reported_current",
+          "note": ""
+        }
+      ],
+      "observationIds": [
+        "tanlong-group"
+      ],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Bằng chứng báo chí/nghiên cứu, chưa phải sổ đăng ký đầy đủ."
+    },
+    {
+      "communeCode": "31753",
+      "communeName": "Phường Mỹ Quới",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31756",
+      "communeName": "Xã Phú Lộc",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31759",
+      "communeName": "Xã Lâm Tân",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31777",
+      "communeName": "Xã Vĩnh Lợi",
+      "status": "reported_current",
+      "evidence": [
+        {
+          "code": "31777",
+          "sourceId": "danviet-20260415",
+          "status": "reported_current",
+          "note": ""
+        },
+        {
+          "code": "31777",
+          "sourceId": "ttxvn-20260423",
+          "status": "reported_current",
+          "note": ""
+        }
+      ],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Bằng chứng báo chí/nghiên cứu, chưa phải sổ đăng ký đầy đủ."
+    },
+    {
+      "communeCode": "31783",
+      "communeName": "Phường Vĩnh Châu",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31789",
+      "communeName": "Phường Khánh Hoà",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31795",
+      "communeName": "Xã Vĩnh Hải",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31804",
+      "communeName": "Phường Vĩnh Phước",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    },
+    {
+      "communeCode": "31810",
+      "communeName": "Xã Lai Hoà",
+      "status": "not_found_in_collected_sources",
+      "evidence": [],
+      "observationIds": [],
+      "households": null,
+      "farmingAreaM2": null,
+      "harvestedKg": null,
+      "note": "Chưa tìm thấy trong tập nguồn đã thu thập; không có nghĩa là không nuôi lươn."
+    }
+  ],
+  "unresolvedMentions": [
+    {
+      "sourceId": "ttxvn-20260423",
+      "name": "Long Mỹ",
+      "reason": "Tên có thể chỉ vùng/huyện cũ hoặc phường hiện tại; chưa phân bổ."
+    }
+  ]
+}

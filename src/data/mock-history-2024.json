@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "id": "eel-no-legacy-history",
+    "source": "MOCK_DATA"
+  },
+  "farmingCycles": [],
+  "stockingEvents": [],
+  "feedDiaries": [],
+  "medicationDiaries": [],
+  "environmentObservations": [],
+  "growthObservations": [],
+  "harvests": [],
+  "healthEvents": []
+}

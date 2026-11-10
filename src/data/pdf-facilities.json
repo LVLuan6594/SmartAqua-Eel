@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "title": "Chưa nhập hồ sơ cơ sở nuôi lươn",
+    "sourceFile": "",
+    "sourcePages": 0,
+    "level": "disabled",
+    "crs": "EPSG:4326",
+    "asOf": "2026-10-26",
+    "areaUnit": "m2",
+    "deidentified": true,
+    "deidentificationNote": "Không dùng phụ lục cá tra của phiên bản cũ",
+    "provenance": "Không có dữ liệu",
+    "disclaimer": "Nguồn nhập ngoài chưa được kết nối"
+  },
+  "facilities": [],
+  "ponds": [],
+  "summary": {
+    "sourcePages": 0,
+    "totalFacilities": 0,
+    "totalPonds": 0,
+    "uniquePonds": 0,
+    "duplicatePondCodes": 0,
+    "facilitiesWithCoordinates": 0,
+    "facilitiesWithoutCoordinates": 0,
+    "pondsWithCoordinates": 0,
+    "pondsWithoutCoordinates": 0,
+    "pondsWithArea": 0,
+    "pondsWithoutArea": 0,
+    "coordinateOutliers": 0,
+    "coordinateLowConfidence": 0,
+    "areaUnitEvidenceRows": 0,
+    "mappedByCoordinate": 0,
+    "mappedByAddress": 0,
+    "unresolved": 0,
+    "ownersDetected": 0,
+    "speciesDistribution": [],
+    "totalAreaM2": 0,
+    "generatedFrom": "disabled-for-eel-demo",
+    "crs": "EPSG:4326",
+    "areaUnit": "m2",
+    "deidentified": true
+  }
+}

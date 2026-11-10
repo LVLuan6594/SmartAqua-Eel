@@ -1,0 +1,193 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/features/gis/components/GisStatusBar.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=3bc94ee6"; const Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"]; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+import __vite__cjsImport3_react from "/node_modules/.vite/deps/react.js?v=3bc94ee6"; const useEffect = __vite__cjsImport3_react["useEffect"]; const useState = __vite__cjsImport3_react["useState"];
+import { Box, Divider, Typography } from "/node_modules/.vite/deps/@mui_material.js?v=3bc94ee6";
+import { Compass, Layers3, Ruler } from "/node_modules/.vite/deps/lucide-react.js?v=3bc94ee6";
+import { getStatus, subscribeStatus } from "/src/features/gis/services/statusBus.ts";
+const fmt = (n, dec = 2) => n.toLocaleString("vi-VN", { maximumFractionDigits: dec, minimumFractionDigits: dec });
+export default function GisStatusBar({ loading, counts, basemap }) {
+  _s();
+  const [status, setStatus] = useState(getStatus());
+  useEffect(() => subscribeStatus(setStatus), []);
+  return /* @__PURE__ */ jsxDEV(Box, { className: "gis-statusbar", role: "status", "aria-live": "polite", children: [
+    /* @__PURE__ */ jsxDEV(Box, { sx: { display: "flex", alignItems: "center", gap: 0.6 }, children: [
+      /* @__PURE__ */ jsxDEV(Compass, { size: 15, color: "#1F5CA9" }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+        lineNumber: 42,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV(Typography, { sx: { fontSize: 13, color: "#3d6472" }, children: status?.pointer ? `${status.pointer[0].toFixed(5)}, ${status.pointer[1].toFixed(5)}` : "Di chuyển chuột trên bản đồ để xem toạ độ" }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+        lineNumber: 43,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+      lineNumber: 41,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(Typography, { sx: { fontSize: 13, color: "#3d6472" }, children: [
+      "Mức phóng: ",
+      /* @__PURE__ */ jsxDEV("b", { children: status?.zoom ?? "—" }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+        lineNumber: 49,
+        columnNumber: 20
+      }, this)
+    ] }, void 0, true, {
+      fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+      lineNumber: 48,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(Box, { sx: { display: "flex", alignItems: "center", gap: 0.5 }, children: [
+      /* @__PURE__ */ jsxDEV(Layers3, { size: 15, color: "#1F5CA9" }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+        lineNumber: 53,
+        columnNumber: 9
+      }, this),
+      /* @__PURE__ */ jsxDEV(Typography, { sx: { fontSize: 13, color: "#3d6472" }, children: [
+        "Xã/phường ",
+        /* @__PURE__ */ jsxDEV("b", { children: counts.communes || "—" }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+          lineNumber: 55,
+          columnNumber: 21
+        }, this),
+        " · Vùng nuôi ",
+        /* @__PURE__ */ jsxDEV("b", { children: counts.zones || 0 }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+          lineNumber: 55,
+          columnNumber: 65
+        }, this),
+        " · Ao ",
+        /* @__PURE__ */ jsxDEV("b", { children: counts.aquaculture || 0 }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+          lineNumber: 55,
+          columnNumber: 97
+        }, this),
+        " · Cơ sở (phụ lục) ",
+        /* @__PURE__ */ jsxDEV("b", { children: counts.facilitiesPdf || 0 }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+          lineNumber: 55,
+          columnNumber: 148
+        }, this),
+        " · Vùng nước ",
+        /* @__PURE__ */ jsxDEV("b", { children: counts.water || 0 }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+          lineNumber: 55,
+          columnNumber: 195
+        }, this),
+        loading && " · đang tải…"
+      ] }, void 0, true, {
+        fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+        lineNumber: 54,
+        columnNumber: 9
+      }, this)
+    ] }, void 0, true, {
+      fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+      lineNumber: 52,
+      columnNumber: 7
+    }, this),
+    status && status.pointCount >= 2 && /* @__PURE__ */ jsxDEV(Box, { sx: { display: "flex", alignItems: "center", gap: 0.5, color: "#B23B3B" }, children: [
+      /* @__PURE__ */ jsxDEV(Ruler, { size: 15 }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+        lineNumber: 62,
+        columnNumber: 11
+      }, this),
+      /* @__PURE__ */ jsxDEV(Typography, { sx: { fontSize: 13, color: "#B23B3B" }, children: [
+        "Dài ",
+        /* @__PURE__ */ jsxDEV("b", { children: fmt(status.distanceKm ?? 0) }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+          lineNumber: 64,
+          columnNumber: 17
+        }, this),
+        " km",
+        status.areaKm2 != null ? /* @__PURE__ */ jsxDEV(Fragment, { children: [
+          " · Diện tích ",
+          /* @__PURE__ */ jsxDEV("b", { children: fmt(status.areaKm2) }, void 0, false, {
+            fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+            lineNumber: 65,
+            columnNumber: 54
+          }, this),
+          " km²"
+        ] }, void 0, true, {
+          fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+          lineNumber: 65,
+          columnNumber: 39
+        }, this) : null,
+        " ",
+        "(",
+        status.pointCount,
+        " điểm)"
+      ] }, void 0, true, {
+        fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+        lineNumber: 63,
+        columnNumber: 11
+      }, this)
+    ] }, void 0, true, {
+      fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+      lineNumber: 61,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(Box, { className: "spacer" }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+      lineNumber: 71,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(Typography, { sx: { fontSize: 12.5, color: "text.secondary" }, children: [
+      "Nền: ",
+      basemap === "osm" ? "OpenStreetMap" : "Esri World Imagery"
+    ] }, void 0, true, {
+      fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+      lineNumber: 73,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(Divider, { orientation: "vertical", flexItem: true, sx: { display: { xs: "none", sm: "block" } } }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+      lineNumber: 76,
+      columnNumber: 7
+    }, this),
+    /* @__PURE__ */ jsxDEV(Typography, { sx: { fontSize: 12.5, color: "text.secondary" }, children: "Ranh giới: ThangLeQuoc (MIT) · Nuôi trồng/nước: © OpenStreetMap (ODbL) · © 2026 SmartAqua · Dữ liệu hệ thống" }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+      lineNumber: 77,
+      columnNumber: 7
+    }, this)
+  ] }, void 0, true, {
+    fileName: "F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx",
+    lineNumber: 40,
+    columnNumber: 5
+  }, this);
+}
+_s(GisStatusBar, "Onz6H0/seR9g2hXYFiu4h66qhO4=");
+_c = GisStatusBar;
+var _c;
+$RefreshReg$(_c, "GisStatusBar");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("F:/SmartAquaDemo/src/features/gis/components/GisStatusBar.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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QUVKO0FBQUNQLEdBaER1QkosY0FBWTtBQUFBLEtBQVpBO0FBQVksSUFBQXlCO0FBQUEsYUFBQUEsSUFBQSIsIm5hbWVzIjpbInVzZUVmZmVjdCIsInVzZVN0YXRlIiwiQm94IiwiRGl2aWRlciIsIlR5cG9ncmFwaHkiLCJDb21wYXNzIiwiTGF5ZXJzMyIsIlJ1bGVyIiwiZ2V0U3RhdHVzIiwic3Vic2NyaWJlU3RhdHVzIiwiZm10IiwibiIsImRlYyIsInRvTG9jYWxlU3RyaW5nIiwibWF4aW11bUZyYWN0aW9uRGlnaXRzIiwibWluaW11bUZyYWN0aW9uRGlnaXRzIiwiR2lzU3RhdHVzQmFyIiwibG9hZGluZyIsImNvdW50cyIsImJhc2VtYXAiLCJfcyIsInN0YXR1cyIsInNldFN0YXR1cyIsImRpc3BsYXkiLCJhbGlnbkl0ZW1zIiwiZ2FwIiwiZm9udFNpemUiLCJjb2xvciIsInBvaW50ZXIiLCJ0b0ZpeGVkIiwiem9vbSIsImNvbW11bmVzIiwiem9uZXMiLCJhcXVhY3VsdHVyZSIsImZhY2lsaXRpZXNQZGYiLCJ3YXRlciIsInBvaW50Q291bnQiLCJkaXN0YW5jZUttIiwiYXJlYUttMiIsInhzIiwic20iLCJfYyJdLCJpZ25vcmVMaXN0IjpbXSwic291cmNlcyI6WyJHaXNTdGF0dXNCYXIudHN4Il0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCwgeyB1c2VFZmZlY3QsIHVzZVN0YXRlIH0gZnJvbSAncmVhY3QnO1xuaW1wb3J0IHsgQm94LCBEaXZpZGVyLCBUeXBvZ3JhcGh5IH0gZnJvbSAnQG11aS9tYXRlcmlhbCc7XG5pbXBvcnQgeyBDb21wYXNzLCBMYXllcnMzLCBSdWxlciB9IGZyb20gJ2x1Y2lkZS1yZWFjdCc7XG5pbXBvcnQgdHlwZSB7IE1hcFN0YXR1cyB9IGZyb20gJy4uL3R5cGVzJztcbmltcG9ydCB7IGdldFN0YXR1cywgc3Vic2NyaWJlU3RhdHVzIH0gZnJvbSAnLi4vc2VydmljZXMvc3RhdHVzQnVzJztcblxuZXhwb3J0IGludGVyZmFjZSBHaXNTdGF0dXNCYXJQcm9wcyB7XG4gIGxvYWRpbmc6IGJvb2xlYW47XG4gIGNvdW50czogeyBjb21tdW5lczogbnVtYmVyOyB6b25lcz86IG51bWJlcjsgYXF1YWN1bHR1cmU6IG51bWJlcjsgZmFjaWxpdGllc1BkZj86IG51bWJlcjsgd2F0ZXI6IG51bWJlciB9O1xuICBiYXNlbWFwOiAnb3NtJyB8ICdzYXRlbGxpdGUnO1xufVxuXG5jb25zdCBmbXQgPSAobjogbnVtYmVyLCBkZWMgPSAyKSA9PiBuLnRvTG9jYWxlU3RyaW5nKCd2aS1WTicsIHsgbWF4aW11bUZyYWN0aW9uRGlnaXRzOiBkZWMsIG1pbmltdW1GcmFjdGlvbkRpZ2l0czogZGVjIH0pO1xuXG5leHBvcnQgZGVmYXVsdCBmdW5jdGlvbiBHaXNTdGF0dXNCYXIoeyBsb2FkaW5nLCBjb3VudHMsIGJhc2VtYXAgfTogR2lzU3RhdHVzQmFyUHJvcHMpIHtcbiAgY29uc3QgW3N0YXR1cywgc2V0U3RhdHVzXSA9IHVzZVN0YXRlPE1hcFN0YXR1cz4oZ2V0U3RhdHVzKCkpO1xuXG4gIHVzZUVmZmVjdCgoKSA9PiBzdWJzY3JpYmVTdGF0dXMoc2V0U3RhdHVzKSwgW10pO1xuXG4gIHJldHVybiAoXG4gICAgPEJveCBjbGFzc05hbWU9XCJnaXMtc3RhdHVzYmFyXCIgcm9sZT1cInN0YXR1c1wiIGFyaWEtbGl2ZT1cInBvbGl0ZVwiPlxuICAgICAgPEJveCBzeD17eyBkaXNwbGF5OiAnZmxleCcsIGFsaWduSXRlbXM6ICdjZW50ZXInLCBnYXA6IDAuNiB9fT5cbiAgICAgICAgPENvbXBhc3Mgc2l6ZT17MTV9IGNvbG9yPVwiIzFGNUNBOVwiIC8+XG4gICAgICAgIDxUeXBvZ3JhcGh5IHN4PXt7IGZvbnRTaXplOiAxMywgY29sb3I6ICcjM2Q2NDcyJyB9fT5cbiAgICAgICAgICB7c3RhdHVzPy5wb2ludGVyID8gYCR7c3RhdHVzLnBvaW50ZXJbMF0udG9GaXhlZCg1KX0sICR7c3RhdHVzLnBvaW50ZXJbMV0udG9GaXhlZCg1KX1gIDogJ0RpIGNodXnhu4NuIGNodeG7mXQgdHLDqm4gYuG6o24gxJHhu5MgxJHhu4MgeGVtIHRv4bqhIMSR4buZJ31cbiAgICAgICAgPC9UeXBvZ3JhcGh5PlxuICAgICAgPC9Cb3g+XG5cbiAgICAgIDxUeXBvZ3JhcGh5IHN4PXt7IGZvbnRTaXplOiAxMywgY29sb3I6ICcjM2Q2NDcyJyB9fT5cbiAgICAgICAgTeG7qWMgcGjDs25nOiA8Yj57c3RhdHVzPy56b29tID8/ICfigJQnfTwvYj5cbiAgICAgIDwvVHlwb2dyYXBoeT5cblxuICAgICAgPEJveCBzeD17eyBkaXNwbGF5OiAnZmxleCcsIGFsaWduSXRlbXM6ICdjZW50ZXInLCBnYXA6IDAuNSB9fT5cbiAgICAgICAgPExheWVyczMgc2l6ZT17MTV9IGNvbG9yPVwiIzFGNUNBOVwiIC8+XG4gICAgICAgIDxUeXBvZ3JhcGh5IHN4PXt7IGZvbnRTaXplOiAxMywgY29sb3I6ICcjM2Q2NDcyJyB9fT5cbiAgICAgICAgICBYw6MvcGjGsOG7nW5nIDxiPntjb3VudHMuY29tbXVuZXMgfHwgJ+KAlCd9PC9iPiDCtyBWw7luZyBudcO0aSA8Yj57Y291bnRzLnpvbmVzIHx8IDB9PC9iPiDCtyBBbyA8Yj57Y291bnRzLmFxdWFjdWx0dXJlIHx8IDB9PC9iPiDCtyBDxqEgc+G7nyAocGjhu6UgbOG7pWMpIDxiPntjb3VudHMuZmFjaWxpdGllc1BkZiB8fCAwfTwvYj4gwrcgVsO5bmcgbsaw4bubYyA8Yj57Y291bnRzLndhdGVyIHx8IDB9PC9iPlxuICAgICAgICAgIHtsb2FkaW5nICYmICcgwrcgxJFhbmcgdOG6o2nigKYnfVxuICAgICAgICA8L1R5cG9ncmFwaHk+XG4gICAgICA8L0JveD5cblxuICAgICAge3N0YXR1cyAmJiBzdGF0dXMucG9pbnRDb3VudCA+PSAyICYmIChcbiAgICAgICAgPEJveCBzeD17eyBkaXNwbGF5OiAnZmxleCcsIGFsaWduSXRlbXM6ICdjZW50ZXInLCBnYXA6IDAuNSwgY29sb3I6ICcjQjIzQjNCJyB9fT5cbiAgICAgICAgICA8UnVsZXIgc2l6ZT17MTV9IC8+XG4gICAgICAgICAgPFR5cG9ncmFwaHkgc3g9e3sgZm9udFNpemU6IDEzLCBjb2xvcjogJyNCMjNCM0InIH19PlxuICAgICAgICAgICAgRMOgaSA8Yj57Zm10KHN0YXR1cy5kaXN0YW5jZUttID8/IDApfTwvYj4ga21cbiAgICAgICAgICAgIHtzdGF0dXMuYXJlYUttMiAhPSBudWxsID8gPD4gwrcgRGnhu4duIHTDrWNoIDxiPntmbXQoc3RhdHVzLmFyZWFLbTIpfTwvYj4ga23CsjwvPiA6IG51bGx9XG4gICAgICAgICAgICB7JyAnfSh7c3RhdHVzLnBvaW50Q291bnR9IMSRaeG7g20pXG4gICAgICAgICAgPC9UeXBvZ3JhcGh5PlxuICAgICAgICA8L0JveD5cbiAgICAgICl9XG5cbiAgICAgIDxCb3ggY2xhc3NOYW1lPVwic3BhY2VyXCIgLz5cblxuICAgICAgPFR5cG9ncmFwaHkgc3g9e3sgZm9udFNpemU6IDEyLjUsIGNvbG9yOiAndGV4dC5zZWNvbmRhcnknIH19PlxuICAgICAgICBO4buBbjoge2Jhc2VtYXAgPT09ICdvc20nID8gJ09wZW5TdHJlZXRNYXAnIDogJ0VzcmkgV29ybGQgSW1hZ2VyeSd9XG4gICAgICA8L1R5cG9ncmFwaHk+XG4gICAgICA8RGl2aWRlciBvcmllbnRhdGlvbj1cInZlcnRpY2FsXCIgZmxleEl0ZW0gc3g9e3sgZGlzcGxheTogeyB4czogJ25vbmUnLCBzbTogJ2Jsb2NrJyB9IH19IC8+XG4gICAgICA8VHlwb2dyYXBoeSBzeD17eyBmb250U2l6ZTogMTIuNSwgY29sb3I6ICd0ZXh0LnNlY29uZGFyeScgfX0+XG4gICAgICAgIFJhbmggZ2nhu5tpOiBUaGFuZ0xlUXVvYyAoTUlUKSDCtyBOdcO0aSB0cuG7k25nL27GsOG7m2M6IMKpIE9wZW5TdHJlZXRNYXAgKE9EYkwpIMK3IMKpIDIwMjYgU21hcnRBcXVhIMK3IEThu68gbGnhu4d1IGjhu4cgdGjhu5FuZ1xuICAgICAgPC9UeXBvZ3JhcGh5PlxuICAgIDwvQm94PlxuICApO1xufVxuIl0sImZpbGUiOiJGOi9TbWFydEFxdWFEZW1vL3NyYy9mZWF0dXJlcy9naXMvY29tcG9uZW50cy9HaXNTdGF0dXNCYXIudHN4In0=

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "EEL-HEAD-HEMORRHAGE-01",
+    "species": "Lươn đồng",
+    "scientificName": "Monopterus albus",
+    "signGroup": "Đỏ vùng đầu · Nghi xuất huyết",
+    "conditionName": "Phù đầu, đỏ đầu — nghi bệnh xuất huyết",
+    "conditionSummary": "Kịch bản mô phỏng cho ảnh mẫu lươn có vùng đầu đỏ. Phù đầu và xuất huyết là những dấu hiệu cần kiểm tra thêm; ảnh chưa đủ để xác định tác nhân gây bệnh.",
+    "observedSigns": [
+      "Một số con trong ảnh mẫu có vùng đỏ rõ ở phần đầu và quanh hàm.",
+      "Màu đỏ khu trú khác với màu thân. Mức độ sưng và tình trạng nội tạng không xác định được từ ảnh này."
+    ],
+    "possibleCauses": [
+      "Nhóm vi khuẩn Aeromonas có liên quan bệnh xuất huyết ở lươn; cần lấy mẫu để xác nhận.",
+      "Edwardsiella là một hướng kiểm tra khi có phù đầu hoặc tổn thương nội tạng, không thể kết luận từ ảnh.",
+      "Biến động chất lượng nước, stress và khẩu phần chưa phù hợp có thể góp phần làm lươn suy yếu hoặc có dấu hiệu tương tự."
+    ],
+    "recommendations": [
+      "Kiểm tra thêm đầu có sưng không, lượng ăn, hoạt động và số con bị ảnh hưởng; ghi lại diễn biến theo ngày.",
+      "Đo và ghi nhật ký nhiệt độ, pH, oxy và chất lượng nước; đối chiếu với các lần thay nước hoặc san bể gần đây.",
+      "Thu gom thức ăn thừa và lươn chết, hạn chế thao tác gây trầy xước; kiểm tra nguồn nước trước khi điều chỉnh môi trường.",
+      "Liên hệ cán bộ thủy sản để đánh giá đàn và lấy mẫu xét nghiệm khi có bỏ ăn, xuất huyết hoặc chết tăng.",
+      "Lưu ảnh và nhận định này vào nhật ký sức khỏe của đúng bể, đúng vụ để theo dõi và trao đổi với chuyên gia."
+    ],
+    "treatmentNotice": "Chọn biện pháp xử lý sau khi xác minh nguyên nhân. Việc dùng thuốc, kháng sinh và thời gian ngừng thuốc cần hướng dẫn chuyên môn; demo không đưa phác đồ hoặc liều dùng từ ảnh.",
+    "evidenceSource": "Ảnh mẫu do người dùng bổ sung; tài liệu Đại học Cần Thơ, Green Bio, Báo Vĩnh Long và BIO-PHARMACHEMIE.",
+    "referenceImage": "/images/AI_PhuDau_DoDau.jpg",
+    "referenceFileName": "AI_PhuDau_DoDau.jpg",
+    "verificationNotice": "Nhận định dựng sẵn cho ảnh mẫu được đối chiếu theo nội dung tệp. Không phải kết quả mô hình AI hoặc chẩn đoán xét nghiệm. Ảnh khác chưa có mẫu sẽ không được gán bệnh này.",
+    "references": [
+      {"title":"Đại học Cần Thơ · Nghiên cứu bệnh xuất huyết trên lươn (2012)","url":"https://ctujsvn.ctu.edu.vn/index.php/ctujsvn/article/view/1280","description":"Nghiên cứu phân lập và xác định khả năng gây bệnh của A. hydrophila."},
+      {"title":"Green Bio · Phù đầu, đỏ đầu, xuất huyết","url":"https://tapdoangreenbio.vn/luon-bi-phu-dau-do-dau-xuat-huyet/","description":"Tài liệu doanh nghiệp; tham khảo phân biệt các nhóm dấu hiệu."},
+      {"title":"Báo Vĩnh Long · Phòng trừ bệnh xuất huyết trên lươn (2022)","url":"https://baovinhlong.com.vn/kinh-te/nong-nghiep/202210/nha-nong-tim-hieu-phong-tru-benh-xuat-huyet-tren-luon-3139106/","description":"Mô tả sưng đỏ đầu và các biểu hiện cần kiểm tra ở đàn."},
+      {"title":"BIO-PHARMACHEMIE · Kiểm soát lươn bị xuất huyết","url":"https://www.biopharmachemie.com/thong-tin-ky-thuat/cham-soc-phong-tri-benh-tren-ca/kiem-soat-luon-bi-xuat-huyet-khi-nuoi-thuong-pham.html","description":"Tài liệu doanh nghiệp; phân biệt yếu tố môi trường, dinh dưỡng và nhiễm khuẩn."}
+    ]
+  }
+]

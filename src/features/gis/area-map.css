@@ -1,0 +1,68 @@
+.eel-area-marker{background:none;border:0}
+.eel-area-marker-body{width:34px;height:34px;border-radius:12px 12px 12px 3px;display:grid;place-items:center;background:linear-gradient(135deg,#178f94,#176070);border:2px solid #fff;color:white;box-shadow:0 3px 10px #0d3c5b50;transform:rotate(-45deg);transition:background .15s,box-shadow .15s}
+.eel-area-marker-body>svg{transform:rotate(45deg)}
+.eel-area-marker.is-selected .eel-area-marker-body{background:#cf801e;box-shadow:0 0 0 5px #f0b95835,0 3px 12px #5e37004d}
+.eel-area-marker:hover .eel-area-marker-body,.eel-area-marker:focus-visible .eel-area-marker-body{box-shadow:0 0 0 5px #1c9a9f30,0 3px 12px #0d3c5b60}
+.eel-area-marker:focus-visible{outline:2px solid #18747e;outline-offset:5px;border-radius:10px}
+.eel-area-popup .leaflet-popup-content-wrapper{padding:0;border:1px solid #dce8ed;border-radius:20px!important;overflow:hidden;box-shadow:0 16px 44px #153c5529,0 3px 10px #153c5514;background:#fff}
+.eel-area-popup .leaflet-popup-content{margin:0!important;width:min(340px,calc(100vw - 64px))!important;max-width:100%;border:0!important;border-radius:19px}
+.eel-area-popup .leaflet-popup-scrolled{overflow-x:hidden;border:0!important;scrollbar-width:thin}
+.eel-area-popup .leaflet-popup-tip{background:#fff;box-shadow:2px 2px 5px #153c5514}
+.eel-area-popup a.leaflet-popup-close-button{display:grid;place-items:center;top:11px;right:11px;width:27px;height:27px;border:1px solid #dbe7ec;border-radius:9px;background:#ffffffda;color:#7b929f;font:20px/1 Arial,sans-serif;z-index:2;transition:background .15s,color .15s}
+.eel-area-popup a.leaflet-popup-close-button:hover{background:#e7f0f3;color:#214c61}
+.eel-area-popup a.leaflet-popup-close-button:focus-visible{outline:2px solid #178d99;outline-offset:2px}
+.eel-map-card{display:flex;flex-direction:column;max-height:var(--gis-popup-height,360px);overflow:hidden;background:#fff;font-family:"Be Vietnam Pro","Segoe UI",sans-serif;color:#24475b;text-align:left}
+.eel-map-card-header{flex:none;padding:15px 16px 12px;background:linear-gradient(125deg,#edf8f6 0%,#f5f9fc 100%);border-bottom:1px solid #e4edf0}
+.eel-map-card-kind{display:block;padding-right:27px;font-size:9px;font-weight:700;letter-spacing:.85px;line-height:1.5;color:#72939b;margin-bottom:10px}
+.eel-map-card-heading{display:flex;align-items:center;gap:11px;min-width:0}
+.eel-map-card-heading>div{min-width:0;flex:1}
+.eel-map-card-heading>img,.eel-map-card-icon{width:45px;height:45px;flex:none;border-radius:12px}
+.eel-map-card-heading>img{object-fit:cover;border:2px solid #fff;box-shadow:0 2px 6px #173e5012}
+.eel-map-card-icon{display:grid;place-items:center;background:#dcefeb;color:#227c7b;box-shadow:inset 0 0 0 1px #cae4df}
+.eel-map-card h2{font-size:15px;line-height:1.45;font-weight:750;letter-spacing:-.2px;margin:0;color:#234b5e;overflow-wrap:anywhere}
+.eel-map-card-code{display:block;font-size:10px;line-height:1.6;color:#8097a3;margin-top:3px}
+.eel-map-card-place{display:flex;align-items:center;gap:5px;margin-top:10px;font-size:10px;color:#6e8b99;line-height:1.5;min-width:0}
+.eel-map-card-place>svg{flex:none;color:#7497a2}
+.eel-map-card-place>span{min-width:0;flex:1;overflow-wrap:anywhere}
+.eel-map-card-place>small{background:#ffffffc9;color:#688b92;flex:none;border:1px solid #d9e9e8;border-radius:6px;padding:2px 6px;font-size:8.5px;font-weight:500}
+.eel-map-card-body{flex:1 1 auto;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:13px 15px;scrollbar-width:thin;scrollbar-color:#c2d7dd transparent}
+.eel-map-card-body::-webkit-scrollbar{width:4px}
+.eel-map-card-body::-webkit-scrollbar-thumb{background:#c2d7dd;border-radius:6px}
+.eel-map-card-metrics{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:9px;margin:0}
+.eel-map-card-metrics>div{display:flex;flex-direction:column;align-items:flex-start;gap:7px;padding:10px 11px;border:1px solid #e6edf2;border-radius:12px;background:#f8fafc;min-width:0}
+.eel-map-card-metrics>div.is-area-metric{background:#f0f8f5;border-color:#daebe4}
+.eel-map-card-metrics dt{display:flex;align-items:center;gap:5px;color:#7c929f;font-size:10px;line-height:1.5;margin:0;white-space:nowrap}
+.eel-map-card-metrics dt>svg{flex:none;color:#89a4b0}
+.eel-map-card-metrics dd{display:flex;align-items:baseline;gap:4px;font-size:23px;line-height:1.15;font-weight:750;letter-spacing:-.5px;margin:0;color:#28586a;font-variant-numeric:tabular-nums;overflow-wrap:anywhere;max-width:100%}
+.eel-map-card-metrics .is-area-metric dd{color:#257463}
+.eel-map-card-metrics dd small{font-size:11px;font-weight:500;letter-spacing:0;color:#8da39f}
+.eel-map-card p.eel-map-card-area-note{font-size:9.5px;line-height:1.7;color:#8ca0ab;margin:10px 1px 0}
+.eel-map-card-more{margin:11px 0 0;border-top:1px solid #eaf0f3}
+.eel-map-card-more summary{display:flex;align-items:center;justify-content:space-between;gap:6px;list-style:none;padding:11px 1px 2px;font-size:10.5px;font-weight:550;line-height:1.5;color:#678b9c;cursor:pointer}
+.eel-map-card-more summary::-webkit-details-marker{display:none}
+.eel-map-card-more summary svg{transition:transform .15s;flex:none}
+.eel-map-card-more[open] summary svg{transform:rotate(180deg)}
+.eel-map-card-more summary:focus-visible{outline:2px solid #56abb2;outline-offset:3px;border-radius:4px}
+.eel-map-card-meta{display:grid;gap:9px;font-size:10px;line-height:1.65;padding:11px 0 6px}
+.eel-map-card-meta>span{display:flex;justify-content:space-between;gap:12px;color:#8aa0ad}
+.eel-map-card-meta strong{max-width:63%;text-align:right;color:#557689;font-size:10px;font-weight:600;overflow-wrap:anywhere}
+.eel-map-card-coordinate{font-size:9px;color:#8ba1af;line-height:1.7;margin-top:5px;font-variant-numeric:tabular-nums}
+.eel-map-card-actions{display:flex;gap:8px;flex:none;padding:11px 15px 13px;border-top:1px solid #e8eff3;background:#fff}
+.eel-map-card-actions button{display:flex;align-items:center;justify-content:center;gap:7px;min-height:40px;min-width:0;flex:1;padding:9px;border:1px solid #dee9ef;border-radius:11px;background:#f8fbfc;color:#54798c;font:inherit;font-size:10.5px;font-weight:600;cursor:pointer;transition:background .15s,box-shadow .15s}
+.eel-map-card-actions button:first-child{background:linear-gradient(110deg,#258b8a,#21778b);border-color:#258487;color:#fff;flex:1.6;box-shadow:0 3px 7px #1d82871a}
+.eel-map-card-actions button:hover{background:#eef5f8}
+.eel-map-card-actions button:first-child:hover{background:linear-gradient(110deg,#1e7c7b,#1e6d80);box-shadow:0 4px 9px #1d82872a}
+.eel-map-card-actions button>svg{flex:none}
+.eel-map-card-actions button:focus-visible{outline:2px solid #27a3b3;outline-offset:2px}
+.gis-area-list{display:grid;gap:7px;margin-top:10px}
+.gis-area-list>button{display:flex;align-items:center;gap:10px;width:100%;padding:11px;border:1px solid #e1eaf0;border-radius:11px;background:white;text-align:left;cursor:pointer;font:inherit}
+.gis-area-list>button:hover,.gis-area-list>button.is-selected{border-color:#69adb6;background:#f1f9fa}
+.gis-area-list-icon{display:grid;place-items:center;width:32px;height:32px;border-radius:9px;flex:none;color:#16818b;background:#e9f5f6}
+.gis-area-list-copy{min-width:0;flex:1}
+.gis-area-list-copy strong{display:block;font-size:11px;line-height:1.6;color:#294e64}
+.gis-area-list-copy small{display:block;font-size:10px;line-height:1.6;color:#7c929f}
+.gis-area-list>button>svg{flex:none;color:#7691a2}
+.gis-marker-hint{display:flex;align-items:center;gap:8px;font-size:11px;line-height:1.5;color:#668695}
+.gis-marker-hint i{display:inline-block;width:10px;height:10px;border-radius:3px;background:#16848c}
+@media(max-width:767px){.gis-page{overflow-y:auto}.gis-workspace{min-height:360px;flex:1 0 360px}.eel-map-card-header{padding:12px 13px 10px}.eel-map-card-kind{font-size:8px;margin-bottom:7px}.eel-map-card h2{font-size:14px}.eel-map-card-place{margin-top:7px}.eel-map-card-heading>img,.eel-map-card-icon{width:39px;height:39px;border-radius:10px}.eel-map-card-body{padding:10px 12px}.eel-map-card-metrics{gap:7px}.eel-map-card-metrics>div{padding:8px 9px;gap:5px}.eel-map-card-metrics dt{font-size:9.5px;gap:4px}.eel-map-card-metrics dd{font-size:21px}.eel-map-card-actions{padding:9px 12px 11px;gap:7px}.eel-map-card-actions button{min-height:42px;font-size:10px}}
+@media(prefers-reduced-motion:reduce){.eel-area-popup *{transition:none!important}}

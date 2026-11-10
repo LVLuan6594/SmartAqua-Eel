@@ -1,0 +1,5889 @@
+{
+  "type": "FeatureCollection",
+  "name": "pdf-cantho-facilities",
+  "metadata": {
+    "title": "Danh sách cơ sở nuôi trồng thuỷ sản đối tượng chủ lực — trích từ phụ lục PDF",
+    "source": "pl2-danh-sach-thuy-san-chu-luc-1.pdf",
+    "crs": "EPSG:4326",
+    "origin": "pdf_import",
+    "deidentified": true,
+    "note": "Điểm cơ sở (trung vị toạ độ các ao có trong phụ lục). Không phải ranh giới ao."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "92-01-000001",
+      "properties": {
+        "facilityId": "92-01-000001",
+        "sourceIndex": 1,
+        "communeCode": "31168",
+        "communeName": "Bình Thuỷ",
+        "pondCount": 26,
+        "species": "cá tra",
+        "areaM2Total": 106330,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.749895,
+          10.086666
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0003",
+      "properties": {
+        "facilityId": "92-01-0003",
+        "sourceIndex": 3,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.559105,
+          10.269424
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0004",
+      "properties": {
+        "facilityId": "92-01-0004",
+        "sourceIndex": 4,
+        "communeCode": "31246",
+        "communeName": "Thạnh Quới",
+        "pondCount": 6,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.365314,
+          10.239783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000006",
+      "properties": {
+        "facilityId": "92-01-000006",
+        "sourceIndex": 6,
+        "communeCode": "31157",
+        "communeName": "Thới Long",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 5000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.622584,
+          10.180512
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0007",
+      "properties": {
+        "facilityId": "92-01-0007",
+        "sourceIndex": 7,
+        "communeCode": "31153",
+        "communeName": "Ô Môn",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.632934,
+          10.169619
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000008",
+      "properties": {
+        "facilityId": "92-01-000008",
+        "sourceIndex": 8,
+        "communeCode": "31157",
+        "communeName": "Thới Long",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 4000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.627121,
+          10.170719
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0009",
+      "properties": {
+        "facilityId": "92-01-0009",
+        "sourceIndex": 9,
+        "communeCode": "31157",
+        "communeName": "Thới Long",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.621689,
+          10.180995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000010",
+      "properties": {
+        "facilityId": "92-01-000010",
+        "sourceIndex": 10,
+        "communeCode": "31157",
+        "communeName": "Thới Long",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 8700,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.627819,
+          10.17747
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000011",
+      "properties": {
+        "facilityId": "92-01-000011",
+        "sourceIndex": 11,
+        "communeCode": "31153",
+        "communeName": "Ô Môn",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 11500,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.633992,
+          10.169055
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000012",
+      "properties": {
+        "facilityId": "92-01-000012",
+        "sourceIndex": 12,
+        "communeCode": "31157",
+        "communeName": "Thới Long",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 16500,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.631391,
+          10.172555
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000013",
+      "properties": {
+        "facilityId": "92-01-000013",
+        "sourceIndex": 13,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 11000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.568319,
+          10.239696
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0014",
+      "properties": {
+        "facilityId": "92-01-0014",
+        "sourceIndex": 14,
+        "communeCode": "31120",
+        "communeName": "Cái Khế",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.772485,
+          10.069059
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000015",
+      "properties": {
+        "facilityId": "92-01-000015",
+        "sourceIndex": 15,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 9000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.555213,
+          10.223822
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000016",
+      "properties": {
+        "facilityId": "92-01-000016",
+        "sourceIndex": 16,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.483678,
+          10.26906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000017",
+      "properties": {
+        "facilityId": "92-01-000017",
+        "sourceIndex": 17,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 6500,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.480067,
+          10.263945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000018",
+      "properties": {
+        "facilityId": "92-01-000018",
+        "sourceIndex": 18,
+        "communeCode": "31232",
+        "communeName": "Vĩnh Thạnh",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 5000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.393931,
+          10.227654
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000019",
+      "properties": {
+        "facilityId": "92-01-000019",
+        "sourceIndex": 19,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 17,
+        "species": "cá tra",
+        "areaM2Total": 158400,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.536634,
+          10.288365
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000020",
+      "properties": {
+        "facilityId": "92-01-000020",
+        "sourceIndex": 21,
+        "communeCode": "31153",
+        "communeName": "Ô Môn",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 20759,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.637498,
+          10.167125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000021",
+      "properties": {
+        "facilityId": "92-01-000021",
+        "sourceIndex": 22,
+        "communeCode": "31157",
+        "communeName": "Thới Long",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 12000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.62452,
+          10.178824
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000022",
+      "properties": {
+        "facilityId": "92-01-000022",
+        "sourceIndex": 23,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 7300,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.539511,
+          10.287207
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000023",
+      "properties": {
+        "facilityId": "92-01-000023",
+        "sourceIndex": 24,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.560105,
+          10.269043
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000024",
+      "properties": {
+        "facilityId": "92-01-000024",
+        "sourceIndex": 25,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 28000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.589471,
+          10.242738
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000025",
+      "properties": {
+        "facilityId": "92-01-000025",
+        "sourceIndex": 26,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 13,
+        "species": "cá tra",
+        "areaM2Total": 84000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.556435,
+          10.271574
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000026",
+      "properties": {
+        "facilityId": "92-01-000026",
+        "sourceIndex": 26,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 28000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 1
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.452669,
+          10.287272
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000027",
+      "properties": {
+        "facilityId": "92-01-000027",
+        "sourceIndex": 28,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 7000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.561705,
+          10.225528
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000028",
+      "properties": {
+        "facilityId": "92-01-000028",
+        "sourceIndex": 29,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 6200,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.57348,
+          10.232381
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000029",
+      "properties": {
+        "facilityId": "92-01-000029",
+        "sourceIndex": 30,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 11300,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.558482,
+          10.228726
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000030",
+      "properties": {
+        "facilityId": "92-01-000030",
+        "sourceIndex": 31,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.556281,
+          10.227593
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000031",
+      "properties": {
+        "facilityId": "92-01-000031",
+        "sourceIndex": 32,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 16000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.571048,
+          10.226919
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000032",
+      "properties": {
+        "facilityId": "92-01-000032",
+        "sourceIndex": 33,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 6000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.55115,
+          10.214508
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000033",
+      "properties": {
+        "facilityId": "92-01-000033",
+        "sourceIndex": 34,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 5,
+        "species": "cá tra",
+        "areaM2Total": 29000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.558667,
+          10.229298
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000034",
+      "properties": {
+        "facilityId": "92-01-000034",
+        "sourceIndex": 35,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 6500,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.56478,
+          10.248549
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000035",
+      "properties": {
+        "facilityId": "92-01-000035",
+        "sourceIndex": 36,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 33000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.453045,
+          10.291392
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0036",
+      "properties": {
+        "facilityId": "92-01-0036",
+        "sourceIndex": 37,
+        "communeCode": "31153",
+        "communeName": "Ô Môn",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.646517,
+          10.113029
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000037",
+      "properties": {
+        "facilityId": "92-01-000037",
+        "sourceIndex": 38,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 14,
+        "species": "cá tra",
+        "areaM2Total": 169000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.569367,
+          10.247507
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000038",
+      "properties": {
+        "facilityId": "92-01-000038",
+        "sourceIndex": 39,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 13000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.555323,
+          10.225519
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0039",
+      "properties": {
+        "facilityId": "92-01-0039",
+        "sourceIndex": 40,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.558031,
+          10.228661
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000040",
+      "properties": {
+        "facilityId": "92-01-000040",
+        "sourceIndex": 41,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 16000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.576501,
+          10.228311
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000041",
+      "properties": {
+        "facilityId": "92-01-000041",
+        "sourceIndex": 42,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 4000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.565895,
+          10.24214
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000042",
+      "properties": {
+        "facilityId": "92-01-000042",
+        "sourceIndex": 43,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 7500,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.553163,
+          10.219452
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000043",
+      "properties": {
+        "facilityId": "92-01-000043",
+        "sourceIndex": 44,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 11442,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.564128,
+          10.2435
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000045",
+      "properties": {
+        "facilityId": "92-01-000045",
+        "sourceIndex": 46,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 7,
+        "species": "cá tra",
+        "areaM2Total": 49000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.572619,
+          10.234324
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000046",
+      "properties": {
+        "facilityId": "92-01-000046",
+        "sourceIndex": 47,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 7000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.489204,
+          10.276185
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000047",
+      "properties": {
+        "facilityId": "92-01-000047",
+        "sourceIndex": 48,
+        "communeCode": "31157",
+        "communeName": "Thới Long",
+        "pondCount": 10,
+        "species": "cá tra",
+        "areaM2Total": 61200,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.629122,
+          10.174045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000048",
+      "properties": {
+        "facilityId": "92-01-000048",
+        "sourceIndex": 49,
+        "communeCode": "31157",
+        "communeName": "Thới Long",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 10000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.63231,
+          10.171795
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000049",
+      "properties": {
+        "facilityId": "92-01-000049",
+        "sourceIndex": 50,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 12,
+        "species": "cá tra",
+        "areaM2Total": 136500,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.527828,
+          10.294136
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0050",
+      "properties": {
+        "facilityId": "92-01-0050",
+        "sourceIndex": 51,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.552196,
+          10.262499
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000051",
+      "properties": {
+        "facilityId": "92-01-000051",
+        "sourceIndex": 52,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 2000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.54416,
+          10.283441
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000052",
+      "properties": {
+        "facilityId": "92-01-000052",
+        "sourceIndex": 53,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 3000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.54995,
+          10.264239
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0053",
+      "properties": {
+        "facilityId": "92-01-0053",
+        "sourceIndex": 54,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.574184,
+          10.232052
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000054",
+      "properties": {
+        "facilityId": "92-01-000054",
+        "sourceIndex": 55,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 6200,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.57181,
+          10.23525
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0056",
+      "properties": {
+        "facilityId": "92-01-0056",
+        "sourceIndex": 56,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.560931,
+          10.229137
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000057",
+      "properties": {
+        "facilityId": "92-01-000057",
+        "sourceIndex": 57,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 20000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.557749,
+          10.251167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000058",
+      "properties": {
+        "facilityId": "92-01-000058",
+        "sourceIndex": 58,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.548999,
+          10.223244
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0059",
+      "properties": {
+        "facilityId": "92-01-0059",
+        "sourceIndex": 59,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.587723,
+          10.221179
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000060",
+      "properties": {
+        "facilityId": "92-01-000060",
+        "sourceIndex": 60,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 12800,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.580341,
+          10.222883
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000061",
+      "properties": {
+        "facilityId": "92-01-000061",
+        "sourceIndex": 61,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 5,
+        "species": "cá tra",
+        "areaM2Total": 42000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.581344,
+          10.221441
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000063",
+      "properties": {
+        "facilityId": "92-01-000063",
+        "sourceIndex": 64,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 8500,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.488678,
+          10.275739
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0064",
+      "properties": {
+        "facilityId": "92-01-0064",
+        "sourceIndex": 65,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.569231,
+          10.237078
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000065",
+      "properties": {
+        "facilityId": "92-01-000065",
+        "sourceIndex": 66,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 4600,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.561767,
+          10.242977
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0066",
+      "properties": {
+        "facilityId": "92-01-0066",
+        "sourceIndex": 67,
+        "communeCode": "31153",
+        "communeName": "Ô Môn",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.642014,
+          10.160786
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000067",
+      "properties": {
+        "facilityId": "92-01-000067",
+        "sourceIndex": 67,
+        "communeCode": "31153",
+        "communeName": "Ô Môn",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 5000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 2
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.643196,
+          10.159162
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000068",
+      "properties": {
+        "facilityId": "92-01-000068",
+        "sourceIndex": 69,
+        "communeCode": "31157",
+        "communeName": "Thới Long",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 16000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.628477,
+          10.174844
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0069",
+      "properties": {
+        "facilityId": "92-01-0069",
+        "sourceIndex": 70,
+        "communeCode": "31207",
+        "communeName": "Thốt Nốt",
+        "pondCount": 8,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.503187,
+          10.285337
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000070",
+      "properties": {
+        "facilityId": "92-01-000070",
+        "sourceIndex": 71,
+        "communeCode": "31153",
+        "communeName": "Ô Môn",
+        "pondCount": 6,
+        "species": "cá tra",
+        "areaM2Total": 35500,
+        "coordinateConfidence": "low",
+        "mappingMethod": "address",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.650211,
+          10.163558
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000071",
+      "properties": {
+        "facilityId": "92-01-000071",
+        "sourceIndex": 72,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.461751,
+          10.242278
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000072",
+      "properties": {
+        "facilityId": "92-01-000072",
+        "sourceIndex": 73,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 5,
+        "species": "cá tra",
+        "areaM2Total": 32000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.559276,
+          10.229747
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000073",
+      "properties": {
+        "facilityId": "92-01-000073",
+        "sourceIndex": 74,
+        "communeCode": "31207",
+        "communeName": "Thốt Nốt",
+        "pondCount": 12,
+        "species": "cá tra",
+        "areaM2Total": 72100,
+        "coordinateConfidence": "low",
+        "mappingMethod": "address",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.597624,
+          10.271026
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000074",
+      "properties": {
+        "facilityId": "92-01-000074",
+        "sourceIndex": 75,
+        "communeCode": "31157",
+        "communeName": "Thới Long",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 5500,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.62953,
+          10.17208
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0075",
+      "properties": {
+        "facilityId": "92-01-0075",
+        "sourceIndex": 76,
+        "communeCode": "31157",
+        "communeName": "Thới Long",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.612451,
+          10.189009
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000076",
+      "properties": {
+        "facilityId": "92-01-000076",
+        "sourceIndex": 77,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 19000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.594109,
+          10.206352
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000077",
+      "properties": {
+        "facilityId": "92-01-000077",
+        "sourceIndex": 78,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 11500,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.576252,
+          10.202767
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000078",
+      "properties": {
+        "facilityId": "92-01-000078",
+        "sourceIndex": 79,
+        "communeCode": "31232",
+        "communeName": "Vĩnh Thạnh",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 16000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.448767,
+          10.222152
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000079",
+      "properties": {
+        "facilityId": "92-01-000079",
+        "sourceIndex": 80,
+        "communeCode": "31153",
+        "communeName": "Ô Môn",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 12000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.642256,
+          10.16191
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000081",
+      "properties": {
+        "facilityId": "92-01-000081",
+        "sourceIndex": 82,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 17000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.55153,
+          10.220733
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000082",
+      "properties": {
+        "facilityId": "92-01-000082",
+        "sourceIndex": 83,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 9000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.556255,
+          10.272084
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0083",
+      "properties": {
+        "facilityId": "92-01-0083",
+        "sourceIndex": 84,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.555935,
+          10.272785
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000084",
+      "properties": {
+        "facilityId": "92-01-000084",
+        "sourceIndex": 85,
+        "communeCode": "31153",
+        "communeName": "Ô Môn",
+        "pondCount": 13,
+        "species": "cá tra",
+        "areaM2Total": 66100,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.65197,
+          10.150452
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000085",
+      "properties": {
+        "facilityId": "92-01-000085",
+        "sourceIndex": 86,
+        "communeCode": "31157",
+        "communeName": "Thới Long",
+        "pondCount": 5,
+        "species": "cá tra",
+        "areaM2Total": 19500,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.62574,
+          10.177793
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000086",
+      "properties": {
+        "facilityId": "92-01-000086",
+        "sourceIndex": 87,
+        "communeCode": "31153",
+        "communeName": "Ô Môn",
+        "pondCount": 5,
+        "species": "cá tra",
+        "areaM2Total": 38500,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.636423,
+          10.168294
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0087",
+      "properties": {
+        "facilityId": "92-01-0087",
+        "sourceIndex": 88,
+        "communeCode": "31153",
+        "communeName": "Ô Môn",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.638083,
+          10.168356
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0088",
+      "properties": {
+        "facilityId": "92-01-0088",
+        "sourceIndex": 89,
+        "communeCode": "31232",
+        "communeName": "Vĩnh Thạnh",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.438881,
+          10.208957
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000089",
+      "properties": {
+        "facilityId": "92-01-000089",
+        "sourceIndex": 90,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 14500,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.466174,
+          10.245119
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000090",
+      "properties": {
+        "facilityId": "92-01-000090",
+        "sourceIndex": 91,
+        "communeCode": "31232",
+        "communeName": "Vĩnh Thạnh",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 18000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.408627,
+          10.246836
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000091",
+      "properties": {
+        "facilityId": "92-01-000091",
+        "sourceIndex": 92,
+        "communeCode": "31207",
+        "communeName": "Thốt Nốt",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 6000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.492632,
+          10.279506
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000092",
+      "properties": {
+        "facilityId": "92-01-000092",
+        "sourceIndex": 93,
+        "communeCode": "31153",
+        "communeName": "Ô Môn",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 1000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.632851,
+          10.170939
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000093",
+      "properties": {
+        "facilityId": "92-01-000093",
+        "sourceIndex": 94,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 4700,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.558497,
+          10.270685
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000094",
+      "properties": {
+        "facilityId": "92-01-000094",
+        "sourceIndex": 95,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 11000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.562585,
+          10.267766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000095",
+      "properties": {
+        "facilityId": "92-01-000095",
+        "sourceIndex": 96,
+        "communeCode": "31207",
+        "communeName": "Thốt Nốt",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 12000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.492345,
+          10.279225
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000096",
+      "properties": {
+        "facilityId": "92-01-000096",
+        "sourceIndex": 97,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 6500,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.610879,
+          10.217079
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000097",
+      "properties": {
+        "facilityId": "92-01-000097",
+        "sourceIndex": 98,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 11800,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.545875,
+          10.281638
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000099",
+      "properties": {
+        "facilityId": "92-01-000099",
+        "sourceIndex": 99,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 3000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.551038,
+          10.276519
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0100",
+      "properties": {
+        "facilityId": "92-01-0100",
+        "sourceIndex": 99,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 100,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.55575,
+          10.273783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000101",
+      "properties": {
+        "facilityId": "92-01-000101",
+        "sourceIndex": null,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 7101,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.445537,
+          10.304727
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000102",
+      "properties": {
+        "facilityId": "92-01-000102",
+        "sourceIndex": null,
+        "communeCode": "31231",
+        "communeName": "Thạnh An",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 17000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.331619,
+          10.153804
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0104",
+      "properties": {
+        "facilityId": "92-01-0104",
+        "sourceIndex": null,
+        "communeCode": "31157",
+        "communeName": "Thới Long",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 5200,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.62989,
+          10.171725
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0105",
+      "properties": {
+        "facilityId": "92-01-0105",
+        "sourceIndex": null,
+        "communeCode": "31153",
+        "communeName": "Ô Môn",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 7565,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.649134,
+          10.153196
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000106",
+      "properties": {
+        "facilityId": "92-01-000106",
+        "sourceIndex": null,
+        "communeCode": "31153",
+        "communeName": "Ô Môn",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 6000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.651498,
+          10.158003
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000107",
+      "properties": {
+        "facilityId": "92-01-000107",
+        "sourceIndex": null,
+        "communeCode": "31264",
+        "communeName": "Thới Hưng",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 19500,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 3
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.536582,
+          10.141745
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0108",
+      "properties": {
+        "facilityId": "92-01-0108",
+        "sourceIndex": null,
+        "communeCode": "31264",
+        "communeName": "Thới Hưng",
+        "pondCount": 69,
+        "species": "cá tra",
+        "areaM2Total": 108,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.575927,
+          10.129651
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0109",
+      "properties": {
+        "facilityId": "92-01-0109",
+        "sourceIndex": null,
+        "communeCode": "31162",
+        "communeName": "Phước Thới",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 109,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.65667,
+          10.11647
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000110",
+      "properties": {
+        "facilityId": "92-01-000110",
+        "sourceIndex": null,
+        "communeCode": "31232",
+        "communeName": "Vĩnh Thạnh",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 17000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.405166,
+          10.238195
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0111",
+      "properties": {
+        "facilityId": "92-01-0111",
+        "sourceIndex": null,
+        "communeCode": "31232",
+        "communeName": "Vĩnh Thạnh",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 111,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.404745,
+          10.237702
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000112",
+      "properties": {
+        "facilityId": "92-01-000112",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 5,
+        "species": "cá tra",
+        "areaM2Total": 26500,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.553395,
+          10.274675
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000113",
+      "properties": {
+        "facilityId": "92-01-000113",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 17000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.571554,
+          10.259769
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000114",
+      "properties": {
+        "facilityId": "92-01-000114",
+        "sourceIndex": null,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 6,
+        "species": "cá tra",
+        "areaM2Total": 34000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.44974,
+          10.281913
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000115",
+      "properties": {
+        "facilityId": "92-01-000115",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 115,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.577769,
+          10.254343
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000116",
+      "properties": {
+        "facilityId": "92-01-000116",
+        "sourceIndex": null,
+        "communeCode": "31207",
+        "communeName": "Thốt Nốt",
+        "pondCount": 7,
+        "species": "cá tra",
+        "areaM2Total": 34600,
+        "coordinateConfidence": "low",
+        "mappingMethod": "address",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.59973,
+          10.263855
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000117",
+      "properties": {
+        "facilityId": "92-01-000117",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 22500,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.573696,
+          10.258843
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000118",
+      "properties": {
+        "facilityId": "92-01-000118",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 5,
+        "species": "cá tra",
+        "areaM2Total": 19000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.558839,
+          10.270267
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000119",
+      "properties": {
+        "facilityId": "92-01-000119",
+        "sourceIndex": null,
+        "communeCode": "31153",
+        "communeName": "Ô Môn",
+        "pondCount": 9,
+        "species": "cá tra",
+        "areaM2Total": 57670,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.650427,
+          10.152664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000120",
+      "properties": {
+        "facilityId": "92-01-000120",
+        "sourceIndex": null,
+        "communeCode": "31153",
+        "communeName": "Ô Môn",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 4800,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.654497,
+          10.148476
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000121",
+      "properties": {
+        "facilityId": "92-01-000121",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 16000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.564198,
+          10.267002
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000122",
+      "properties": {
+        "facilityId": "92-01-000122",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 4000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 4
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.532194,
+          10.291402
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000123",
+      "properties": {
+        "facilityId": "92-01-000123",
+        "sourceIndex": null,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 24000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.568319,
+          10.239696
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000124",
+      "properties": {
+        "facilityId": "92-01-000124",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 4200,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.582765,
+          10.249242
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0125",
+      "properties": {
+        "facilityId": "92-01-0125",
+        "sourceIndex": null,
+        "communeCode": "31207",
+        "communeName": "Thốt Nốt",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 125,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.501511,
+          10.280147
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0126",
+      "properties": {
+        "facilityId": "92-01-0126",
+        "sourceIndex": null,
+        "communeCode": "31153",
+        "communeName": "Ô Môn",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 126,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.614917,
+          10.117472
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0127",
+      "properties": {
+        "facilityId": "92-01-0127",
+        "sourceIndex": null,
+        "communeCode": "31207",
+        "communeName": "Thốt Nốt",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 127,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.500797,
+          10.275735
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000128",
+      "properties": {
+        "facilityId": "92-01-000128",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 31000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.554388,
+          10.260502
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000130",
+      "properties": {
+        "facilityId": "92-01-000130",
+        "sourceIndex": null,
+        "communeCode": "31157",
+        "communeName": "Thới Long",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 8000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.5676,
+          10.195947
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0131",
+      "properties": {
+        "facilityId": "92-01-0131",
+        "sourceIndex": null,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 132,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.464651,
+          10.302162
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0132",
+      "properties": {
+        "facilityId": "92-01-0132",
+        "sourceIndex": null,
+        "communeCode": "31157",
+        "communeName": "Thới Long",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 133,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.593628,
+          10.12971
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0133",
+      "properties": {
+        "facilityId": "92-01-0133",
+        "sourceIndex": null,
+        "communeCode": "31183",
+        "communeName": "Long Tuyền",
+        "pondCount": 11,
+        "species": "cá tra",
+        "areaM2Total": 134,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.712142,
+          10.058774
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0134",
+      "properties": {
+        "facilityId": "92-01-0134",
+        "sourceIndex": null,
+        "communeCode": "31168",
+        "communeName": "Bình Thuỷ",
+        "pondCount": 6,
+        "species": "cá tra",
+        "areaM2Total": 135,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.754621,
+          10.075099
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000135",
+      "properties": {
+        "facilityId": "92-01-000135",
+        "sourceIndex": null,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 9000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.584589,
+          10.218362
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000136",
+      "properties": {
+        "facilityId": "92-01-000136",
+        "sourceIndex": null,
+        "communeCode": "31264",
+        "communeName": "Thới Hưng",
+        "pondCount": 9,
+        "species": "cá tra",
+        "areaM2Total": 137,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.573912,
+          10.123576
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000137",
+      "properties": {
+        "facilityId": "92-01-000137",
+        "sourceIndex": null,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 138,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.441902,
+          10.282216
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0139",
+      "properties": {
+        "facilityId": "92-01-0139",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 139,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.56159,
+          10.267342
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000140",
+      "properties": {
+        "facilityId": "92-01-000140",
+        "sourceIndex": null,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 3000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.471808,
+          10.255641
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000141",
+      "properties": {
+        "facilityId": "92-01-000141",
+        "sourceIndex": null,
+        "communeCode": "31207",
+        "communeName": "Thốt Nốt",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 11000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.498026,
+          10.286025
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000142",
+      "properties": {
+        "facilityId": "92-01-000142",
+        "sourceIndex": null,
+        "communeCode": "31207",
+        "communeName": "Thốt Nốt",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 5000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.491468,
+          10.282719
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000143",
+      "properties": {
+        "facilityId": "92-01-000143",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 8000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.56167,
+          10.268029
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000144",
+      "properties": {
+        "facilityId": "92-01-000144",
+        "sourceIndex": null,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 6000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.489311,
+          10.274466
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000145",
+      "properties": {
+        "facilityId": "92-01-000145",
+        "sourceIndex": null,
+        "communeCode": "31153",
+        "communeName": "Ô Môn",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 12200,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.640992,
+          10.161718
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000146",
+      "properties": {
+        "facilityId": "92-01-000146",
+        "sourceIndex": null,
+        "communeCode": "31207",
+        "communeName": "Thốt Nốt",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 6500,
+        "coordinateConfidence": "high",
+        "mappingMethod": "address",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.587077,
+          10.252165
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000147",
+      "properties": {
+        "facilityId": "92-01-000147",
+        "sourceIndex": null,
+        "communeCode": "31157",
+        "communeName": "Thới Long",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 4300,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.572812,
+          10.198737
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0148",
+      "properties": {
+        "facilityId": "92-01-0148",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 148,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.609463,
+          10.198127
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0149",
+      "properties": {
+        "facilityId": "92-01-0149",
+        "sourceIndex": null,
+        "communeCode": "31207",
+        "communeName": "Thốt Nốt",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 149,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.493231,
+          10.280082
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000150",
+      "properties": {
+        "facilityId": "92-01-000150",
+        "sourceIndex": null,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 42000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.4887,
+          10.272798
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000152",
+      "properties": {
+        "facilityId": "92-01-000152",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 13500,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.617898,
+          10.193952
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000153",
+      "properties": {
+        "facilityId": "92-01-000153",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 11000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.58949,
+          10.219385
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0154",
+      "properties": {
+        "facilityId": "92-01-0154",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 154,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.566176,
+          10.265574
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0155",
+      "properties": {
+        "facilityId": "92-01-0155",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 155,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.551875,
+          10.263007
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0156",
+      "properties": {
+        "facilityId": "92-01-0156",
+        "sourceIndex": null,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 156,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.458944,
+          10.263594
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000157",
+      "properties": {
+        "facilityId": "92-01-000157",
+        "sourceIndex": null,
+        "communeCode": "31207",
+        "communeName": "Thốt Nốt",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 1000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.501644,
+          10.311293
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000158",
+      "properties": {
+        "facilityId": "92-01-000158",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 5,
+        "species": "cá tra",
+        "areaM2Total": 24000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.616396,
+          10.203123
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000159",
+      "properties": {
+        "facilityId": "92-01-000159",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 27350,
+        "coordinateConfidence": "medium",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.597089,
+          10.234351
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000160",
+      "properties": {
+        "facilityId": "92-01-000160",
+        "sourceIndex": null,
+        "communeCode": "31207",
+        "communeName": "Thốt Nốt",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 160,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.496464,
+          10.28386
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000161",
+      "properties": {
+        "facilityId": "92-01-000161",
+        "sourceIndex": null,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 12,
+        "species": "cá tra",
+        "areaM2Total": 83400,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.439274,
+          10.27744
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0162",
+      "properties": {
+        "facilityId": "92-01-0162",
+        "sourceIndex": null,
+        "communeCode": "31168",
+        "communeName": "Bình Thuỷ",
+        "pondCount": 12,
+        "species": "cá tra",
+        "areaM2Total": null,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 5
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.748745,
+          10.08425
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000163",
+      "properties": {
+        "facilityId": "92-01-000163",
+        "sourceIndex": null,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 9,
+        "species": "cá tra",
+        "areaM2Total": 58000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.482242,
+          10.266464
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000164",
+      "properties": {
+        "facilityId": "92-01-000164",
+        "sourceIndex": null,
+        "communeCode": "31232",
+        "communeName": "Vĩnh Thạnh",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 8000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.415919,
+          10.25375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0165",
+      "properties": {
+        "facilityId": "92-01-0165",
+        "sourceIndex": null,
+        "communeCode": "31207",
+        "communeName": "Thốt Nốt",
+        "pondCount": 13,
+        "species": "cá tra",
+        "areaM2Total": 165,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.506197,
+          10.2922
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0166",
+      "properties": {
+        "facilityId": "92-01-0166",
+        "sourceIndex": null,
+        "communeCode": "31135",
+        "communeName": "Ninh Kiều",
+        "pondCount": 7,
+        "species": "cá tra",
+        "areaM2Total": 166,
+        "coordinateConfidence": "low",
+        "mappingMethod": "address",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.756745,
+          10.226924
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000167",
+      "properties": {
+        "facilityId": "92-01-000167",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 6,
+        "species": "cá tra",
+        "areaM2Total": 21967,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.618507,
+          10.196009
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0168",
+      "properties": {
+        "facilityId": "92-01-0168",
+        "sourceIndex": null,
+        "communeCode": "31232",
+        "communeName": "Vĩnh Thạnh",
+        "pondCount": 13,
+        "species": "cá tra",
+        "areaM2Total": 168,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.398705,
+          10.240167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0169",
+      "properties": {
+        "facilityId": "92-01-0169",
+        "sourceIndex": null,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 169,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.46074,
+          10.264387
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000170",
+      "properties": {
+        "facilityId": "92-01-000170",
+        "sourceIndex": null,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 38500,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.454985,
+          10.288458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000171",
+      "properties": {
+        "facilityId": "92-01-000171",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 7000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.525062,
+          10.295414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000172",
+      "properties": {
+        "facilityId": "92-01-000172",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 10,
+        "species": "cá tra",
+        "areaM2Total": 127162,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.606842,
+          10.22257
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000173",
+      "properties": {
+        "facilityId": "92-01-000173",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 6,
+        "species": "cá tra",
+        "areaM2Total": 21000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.59926,
+          10.208758
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000174",
+      "properties": {
+        "facilityId": "92-01-000174",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 5,
+        "species": "cá tra",
+        "areaM2Total": 26000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.569706,
+          10.26262
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000175",
+      "properties": {
+        "facilityId": "92-01-000175",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 5500,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.593489,
+          10.239374
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000176",
+      "properties": {
+        "facilityId": "92-01-000176",
+        "sourceIndex": null,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 4000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.484426,
+          10.271239
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000177",
+      "properties": {
+        "facilityId": "92-01-000177",
+        "sourceIndex": null,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 3500,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.575722,
+          10.229805
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000178",
+      "properties": {
+        "facilityId": "92-01-000178",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 8,
+        "species": "cá tra",
+        "areaM2Total": 45278,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.57713,
+          10.236509
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000179",
+      "properties": {
+        "facilityId": "92-01-000179",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 5000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.598939,
+          10.232752
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0180",
+      "properties": {
+        "facilityId": "92-01-0180",
+        "sourceIndex": null,
+        "communeCode": "31162",
+        "communeName": "Phước Thới",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 180,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.649271,
+          10.113197
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000181",
+      "properties": {
+        "facilityId": "92-01-000181",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 12000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.52962,
+          10.29161
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000182",
+      "properties": {
+        "facilityId": "92-01-000182",
+        "sourceIndex": null,
+        "communeCode": "31232",
+        "communeName": "Vĩnh Thạnh",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 16735,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.415203,
+          10.253068
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000183",
+      "properties": {
+        "facilityId": "92-01-000183",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 49500,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.575461,
+          10.238505
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000184",
+      "properties": {
+        "facilityId": "92-01-000184",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 9000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.571429,
+          10.260649
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000185",
+      "properties": {
+        "facilityId": "92-01-000185",
+        "sourceIndex": null,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 17000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.446462,
+          10.28504
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0186",
+      "properties": {
+        "facilityId": "92-01-0186",
+        "sourceIndex": null,
+        "communeCode": "31120",
+        "communeName": "Cái Khế",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 186,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.767579,
+          10.070907
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0187",
+      "properties": {
+        "facilityId": "92-01-0187",
+        "sourceIndex": null,
+        "communeCode": "31120",
+        "communeName": "Cái Khế",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 187,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.768557,
+          10.07061
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0188",
+      "properties": {
+        "facilityId": "92-01-0188",
+        "sourceIndex": null,
+        "communeCode": "31168",
+        "communeName": "Bình Thuỷ",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 188,
+        "coordinateConfidence": "high",
+        "mappingMethod": "address",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.769739,
+          10.082009
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0189",
+      "properties": {
+        "facilityId": "92-01-0189",
+        "sourceIndex": null,
+        "communeCode": "31120",
+        "communeName": "Cái Khế",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 189,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.775918,
+          10.066438
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000190",
+      "properties": {
+        "facilityId": "92-01-000190",
+        "sourceIndex": null,
+        "communeCode": "31232",
+        "communeName": "Vĩnh Thạnh",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 18500,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.43222,
+          10.200738
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000192",
+      "properties": {
+        "facilityId": "92-01-000192",
+        "sourceIndex": null,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 23500,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.454085,
+          10.29206
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000193",
+      "properties": {
+        "facilityId": "92-01-000193",
+        "sourceIndex": null,
+        "communeCode": "31153",
+        "communeName": "Ô Môn",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 2500,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 6
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.632345,
+          10.17043
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0194",
+      "properties": {
+        "facilityId": "92-01-0194",
+        "sourceIndex": null,
+        "communeCode": "31217",
+        "communeName": "Trung Nhứt",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 194,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.532615,
+          10.256328
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000195",
+      "properties": {
+        "facilityId": "92-01-000195",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 391,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.598939,
+          10.232752
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000196",
+      "properties": {
+        "facilityId": "92-01-000196",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 12000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.598939,
+          10.232752
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000197",
+      "properties": {
+        "facilityId": "92-01-000197",
+        "sourceIndex": null,
+        "communeCode": "31153",
+        "communeName": "Ô Môn",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 12300,
+        "coordinateConfidence": "high",
+        "mappingMethod": "address",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.744074,
+          10.131442
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000198",
+      "properties": {
+        "facilityId": "92-01-000198",
+        "sourceIndex": null,
+        "communeCode": "31153",
+        "communeName": "Ô Môn",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 10199,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.638568,
+          10.165248
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000199",
+      "properties": {
+        "facilityId": "92-01-000199",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 8600,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.520907,
+          10.295561
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000200",
+      "properties": {
+        "facilityId": "92-01-000200",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 8,
+        "species": "cá tra",
+        "areaM2Total": 35000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.5669,
+          10.269043
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000201",
+      "properties": {
+        "facilityId": "92-01-000201",
+        "sourceIndex": null,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 4000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.56625,
+          10.228213
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000202",
+      "properties": {
+        "facilityId": "92-01-000202",
+        "sourceIndex": null,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 204,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.578076,
+          10.225717
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000203",
+      "properties": {
+        "facilityId": "92-01-000203",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 29000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.520019,
+          10.297128
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0204",
+      "properties": {
+        "facilityId": "92-01-0204",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 206,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.5524,
+          10.275192
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0205",
+      "properties": {
+        "facilityId": "92-01-0205",
+        "sourceIndex": null,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 415,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.478627,
+          10.264591
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000206",
+      "properties": {
+        "facilityId": "92-01-000206",
+        "sourceIndex": null,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 9000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.583164,
+          10.217803
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000207",
+      "properties": {
+        "facilityId": "92-01-000207",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 5400,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.592992,
+          10.240206
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000208",
+      "properties": {
+        "facilityId": "92-01-000208",
+        "sourceIndex": null,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 5500,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.490456,
+          10.275572
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000209",
+      "properties": {
+        "facilityId": "92-01-000209",
+        "sourceIndex": null,
+        "communeCode": "31157",
+        "communeName": "Thới Long",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 10700,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.621118,
+          10.162134
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-0210",
+      "properties": {
+        "facilityId": "92-01-0210",
+        "sourceIndex": null,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 213,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.463173,
+          10.266961
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000211",
+      "properties": {
+        "facilityId": "92-01-000211",
+        "sourceIndex": null,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 5000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.558232,
+          10.226791
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000212",
+      "properties": {
+        "facilityId": "92-01-000212",
+        "sourceIndex": null,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 8300,
+        "coordinateConfidence": "medium",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.486425,
+          10.269721
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000213",
+      "properties": {
+        "facilityId": "92-01-000213",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 10500,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.553441,
+          10.261352
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000214",
+      "properties": {
+        "facilityId": "92-01-000214",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 4000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.591405,
+          10.216142
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000215",
+      "properties": {
+        "facilityId": "92-01-000215",
+        "sourceIndex": null,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 8000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.479582,
+          10.268378
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000216",
+      "properties": {
+        "facilityId": "92-01-000216",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 4800,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.597122,
+          10.235113
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000217",
+      "properties": {
+        "facilityId": "92-01-000217",
+        "sourceIndex": null,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 2000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.489706,
+          10.274531
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000218",
+      "properties": {
+        "facilityId": "92-01-000218",
+        "sourceIndex": null,
+        "communeCode": "31232",
+        "communeName": "Vĩnh Thạnh",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 7000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.416149,
+          10.253725
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000219",
+      "properties": {
+        "facilityId": "92-01-000219",
+        "sourceIndex": null,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 4922,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.57319,
+          10.231326
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000221",
+      "properties": {
+        "facilityId": "92-01-000221",
+        "sourceIndex": null,
+        "communeCode": "31232",
+        "communeName": "Vĩnh Thạnh",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 42000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.398705,
+          10.240167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000222",
+      "properties": {
+        "facilityId": "92-01-000222",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 6000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.601472,
+          10.227502
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000223",
+      "properties": {
+        "facilityId": "92-01-000223",
+        "sourceIndex": null,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 26000,
+        "coordinateConfidence": "medium",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.55767,
+          10.251544
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000225",
+      "properties": {
+        "facilityId": "92-01-000225",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 1400,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.531576,
+          10.289684
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000226",
+      "properties": {
+        "facilityId": "92-01-000226",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 17500,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.610683,
+          10.197389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000227",
+      "properties": {
+        "facilityId": "92-01-000227",
+        "sourceIndex": null,
+        "communeCode": "31157",
+        "communeName": "Thới Long",
+        "pondCount": 8,
+        "species": "cá tra",
+        "areaM2Total": 36230,
+        "coordinateConfidence": "medium",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.623418,
+          10.179661
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000229",
+      "properties": {
+        "facilityId": "92-01-000229",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 6500,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.617859,
+          10.197433
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000230",
+      "properties": {
+        "facilityId": "92-01-000230",
+        "sourceIndex": null,
+        "communeCode": "31153",
+        "communeName": "Ô Môn",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 11400,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.640547,
+          10.164008
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000231",
+      "properties": {
+        "facilityId": "92-01-000231",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 4700,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.576424,
+          10.255435
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000232",
+      "properties": {
+        "facilityId": "92-01-000232",
+        "sourceIndex": null,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 236,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.471145,
+          10.307333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000233",
+      "properties": {
+        "facilityId": "92-01-000233",
+        "sourceIndex": null,
+        "communeCode": "31207",
+        "communeName": "Thốt Nốt",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 15000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.494624,
+          10.279235
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000234",
+      "properties": {
+        "facilityId": "92-01-000234",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 26,
+        "species": "cá tra",
+        "areaM2Total": 208538,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.55593,
+          10.259794
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000236",
+      "properties": {
+        "facilityId": "92-01-000236",
+        "sourceIndex": null,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 4,
+        "species": "cá tra",
+        "areaM2Total": 9240,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.566608,
+          10.2411
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000237",
+      "properties": {
+        "facilityId": "92-01-000237",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 11000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 7
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.525062,
+          10.295414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000238",
+      "properties": {
+        "facilityId": "92-01-000238",
+        "sourceIndex": null,
+        "communeCode": "31237",
+        "communeName": "Vĩnh Trinh",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 242,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.4794,
+          10.263562
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000300",
+      "properties": {
+        "facilityId": "92-01-000300",
+        "sourceIndex": null,
+        "communeCode": "31157",
+        "communeName": "Thới Long",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 2200,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.629443,
+          10.174407
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000301",
+      "properties": {
+        "facilityId": "92-01-000301",
+        "sourceIndex": null,
+        "communeCode": "31207",
+        "communeName": "Thốt Nốt",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 10000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.506996,
+          10.298114
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000302",
+      "properties": {
+        "facilityId": "92-01-000302",
+        "sourceIndex": null,
+        "communeCode": "31157",
+        "communeName": "Thới Long",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 491,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.568074,
+          10.193687
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000305",
+      "properties": {
+        "facilityId": "92-01-000305",
+        "sourceIndex": null,
+        "communeCode": "31231",
+        "communeName": "Thạnh An",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 15000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.333456,
+          10.161199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000317",
+      "properties": {
+        "facilityId": "92-01-000317",
+        "sourceIndex": null,
+        "communeCode": "31207",
+        "communeName": "Thốt Nốt",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 9000,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.503187,
+          10.285337
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000318",
+      "properties": {
+        "facilityId": "92-01-000318",
+        "sourceIndex": null,
+        "communeCode": "31213",
+        "communeName": "Tân Lộc",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 17000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.589453,
+          10.218291
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000320",
+      "properties": {
+        "facilityId": "92-01-000320",
+        "sourceIndex": null,
+        "communeCode": "31228",
+        "communeName": "Thuận Hưng",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 250,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.566896,
+          10.241552
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000321",
+      "properties": {
+        "facilityId": "92-01-000321",
+        "sourceIndex": null,
+        "communeCode": "31249",
+        "communeName": "Thạnh Phú",
+        "pondCount": 3,
+        "species": "cá tra",
+        "areaM2Total": 10252,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.36412,
+          10.125691
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000322",
+      "properties": {
+        "facilityId": "92-01-000322",
+        "sourceIndex": null,
+        "communeCode": "31249",
+        "communeName": "Thạnh Phú",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 9500,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.36191,
+          10.120992
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000323",
+      "properties": {
+        "facilityId": "92-01-000323",
+        "sourceIndex": null,
+        "communeCode": "31231",
+        "communeName": "Thạnh An",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 254,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.33207,
+          10.16256
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000324",
+      "properties": {
+        "facilityId": "92-01-000324",
+        "sourceIndex": null,
+        "communeCode": "31231",
+        "communeName": "Thạnh An",
+        "pondCount": 2,
+        "species": "cá tra",
+        "areaM2Total": 13000,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.343193,
+          10.141556
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000325",
+      "properties": {
+        "facilityId": "92-01-000325",
+        "sourceIndex": null,
+        "communeCode": "31231",
+        "communeName": "Thạnh An",
+        "pondCount": 1,
+        "species": "cá tra",
+        "areaM2Total": 256,
+        "coordinateConfidence": "high",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.325516,
+          10.16414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "92-01-000326",
+      "properties": {
+        "facilityId": "92-01-000326",
+        "sourceIndex": null,
+        "communeCode": "31264",
+        "communeName": "Thới Hưng",
+        "pondCount": 23,
+        "species": "cá tra",
+        "areaM2Total": 257,
+        "coordinateConfidence": "low",
+        "mappingMethod": "coordinate",
+        "verificationStatus": "verified",
+        "origin": "pdf_import",
+        "sourcePage": 8
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.558978,
+          10.138833
+        ]
+      }
+    }
+  ]
+}

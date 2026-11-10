@@ -1,0 +1,23 @@
+.pond-breadcrumb{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin:0 0 16px;font-size:11.5px;line-height:1.7;color:#7b8da1;overflow-wrap:anywhere}
+.pond-breadcrumb a{color:#5b7995;text-decoration:none}
+.pond-breadcrumb a:hover{color:#1f5ca9;text-decoration:underline}
+.pond-breadcrumb strong{color:#284b69;font-weight:650}
+.pond-harvest-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:20px}
+.pond-harvest-summary>div{display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #e0e9f2;border-radius:14px;padding:20px;min-width:0}
+.pond-harvest-summary>div>svg{flex:none;color:#237f8e}
+.pond-harvest-summary small{display:block;color:#70869a;font-size:12px;margin-bottom:6px}
+.pond-harvest-summary strong{display:block;color:#204660;font-size:23px;font-weight:700;overflow-wrap:anywhere}
+.image-demo-sample{display:flex;align-items:center;gap:14px;width:100%;margin-top:18px;padding:12px;text-align:left;background:#f1f8fb;border:1px solid #d5e7ed;border-radius:13px;font:inherit;cursor:pointer;color:#214d65}
+.image-demo-sample:hover{background:#e8f4f7;border-color:#7bb9c3}
+.image-demo-sample:focus-visible{outline:2px solid #1d8898;outline-offset:3px}
+.image-demo-sample:disabled{opacity:.6;cursor:wait}
+.image-demo-sample>img{width:88px;height:80px;flex:none;object-fit:cover;border-radius:9px}
+.image-demo-sample>span{min-width:0}
+.image-demo-sample small{display:block;font-size:9px;font-weight:750;letter-spacing:.9px;color:#6a8d9f;margin-bottom:5px}
+.image-demo-sample strong{display:block;font-size:13px;line-height:1.6;font-weight:650}
+.image-demo-sample>span>span{display:block;margin-top:5px;color:#1b8190;font-size:11px;font-weight:600}
+.image-reference-links{padding-left:20px;margin:10px 0 0}
+.image-reference-links li{margin-bottom:12px;line-height:1.6}
+.image-reference-links a{font-size:13px;font-weight:600;color:#1e659b;text-decoration:none;overflow-wrap:anywhere}
+.image-reference-links a:hover{text-decoration:underline}
+@media(max-width:600px){.pond-harvest-summary{grid-template-columns:1fr;gap:8px}.pond-harvest-summary>div{padding:14px 16px}.pond-harvest-summary>div>span{display:flex;align-items:center;justify-content:space-between;gap:12px;flex:1;min-width:0}.pond-harvest-summary small{margin:0}.pond-harvest-summary strong{font-size:20px}.image-demo-sample>img{width:72px;height:76px}.pond-breadcrumb{font-size:10.5px}}

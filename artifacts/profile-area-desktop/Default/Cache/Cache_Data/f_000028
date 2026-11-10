@@ -1,0 +1,440 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/features/gis/components/GisToolbar.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=3bc94ee6"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import __vite__cjsImport1_react from "/node_modules/.vite/deps/react.js?v=3bc94ee6"; const createElement = __vite__cjsImport1_react["createElement"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+import __vite__cjsImport4_react from "/node_modules/.vite/deps/react.js?v=3bc94ee6"; const useState = __vite__cjsImport4_react["useState"];
+import { Autocomplete, Box, Button, Chip, Divider, IconButton, Paper, Popover, TextField, ToggleButton, ToggleButtonGroup, Tooltip, Typography } from "/node_modules/.vite/deps/@mui_material.js?v=3bc94ee6";
+import { Crosshair, Layers, Map as MapIcon, PanelRight, Satellite, Target } from "/node_modules/.vite/deps/lucide-react.js?v=3bc94ee6";
+import { normalizeText } from "/src/features/gis/utils/text.ts";
+const fieldSx = { flex: "1 1 200px", minWidth: 168 };
+export default function GisToolbar({
+  query,
+  onQuery,
+  communes,
+  onPickCommune,
+  zones,
+  onPickZone,
+  facilities,
+  onPickFacility,
+  priority,
+  onPickPriority,
+  basemap,
+  onBasemap,
+  layersOpen,
+  onOpenLayers,
+  onCloseLayers,
+  layerPanel,
+  activeLayerCount,
+  showLayersPopover,
+  rightOpen,
+  onToggleRight,
+  onFitCity
+}) {
+  _s();
+  const [prioInput, setPrioInput] = useState("");
+  const [zoneInput, setZoneInput] = useState("");
+  const [facilityInput, setFacilityInput] = useState("");
+  const [layerAnchor, setLayerAnchor] = useState(null);
+  return /* @__PURE__ */ jsxDEV(
+    Paper,
+    {
+      elevation: 0,
+      sx: {
+        display: "flex",
+        alignItems: "center",
+        gap: 0.75,
+        flexWrap: "wrap",
+        p: 0.6,
+        border: "1px solid #E4EAF3",
+        borderRadius: 2.5
+      },
+      children: [
+        /* @__PURE__ */ jsxDEV(
+          Autocomplete,
+          {
+            size: "small",
+            sx: { ...fieldSx, flex: "1 1 240px", maxWidth: 380 },
+            options: communes,
+            inputValue: query,
+            onInputChange: (_e, v, reason) => {
+              if (reason === "input" || reason === "clear") onQuery(v);
+            },
+            onChange: (_e, v) => v && onPickCommune(v),
+            filterOptions: (options, state) => {
+              const q = normalizeText(state.inputValue);
+              if (q.length < 1) return options.slice(0, 40);
+              return options.filter((o) => normalizeText(`${o.properties.fullName} ${o.properties.name} ${o.properties.code}`).includes(q)).slice(0, 40);
+            },
+            getOptionLabel: (o) => o.properties.fullName,
+            isOptionEqualToValue: (a, b) => a.properties.code === b.properties.code,
+            noOptionsText: "Không tìm thấy xã/phường",
+            renderOption: (props, o) => /* @__PURE__ */ createElement(Box, { component: "li", ...props, key: o.properties.code, sx: { display: "flex", gap: 1, alignItems: "center" } }, /* @__PURE__ */ jsxDEV("span", { children: o.properties.fullName }, void 0, false, {
+              fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+              lineNumber: 113,
+              columnNumber: 13
+            }, this), /* @__PURE__ */ jsxDEV(Chip, { size: "small", label: o.properties.code, sx: { height: 20, fontSize: 12 } }, void 0, false, {
+              fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+              lineNumber: 114,
+              columnNumber: 13
+            }, this)),
+            renderInput: (params) => /* @__PURE__ */ jsxDEV(TextField, { ...params, placeholder: "Tìm xã/phường hoặc mã đơn vị…" }, void 0, false, {
+              fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+              lineNumber: 117,
+              columnNumber: 34
+            }, this)
+          },
+          void 0,
+          false,
+          {
+            fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+            lineNumber: 94,
+            columnNumber: 7
+          },
+          this
+        ),
+        /* @__PURE__ */ jsxDEV(
+          Autocomplete,
+          {
+            size: "small",
+            sx: { ...fieldSx, maxWidth: 300 },
+            options: zones,
+            value: null,
+            inputValue: zoneInput,
+            onInputChange: (_e, v, reason) => {
+              if (reason === "input" || reason === "clear") setZoneInput(v);
+            },
+            blurOnSelect: true,
+            onChange: (_e, v) => {
+              if (v) {
+                onPickZone(v);
+                setZoneInput("");
+              }
+            },
+            filterOptions: (options, state) => {
+              const q = normalizeText(state.inputValue);
+              if (q.length < 1) return options.slice(0, 30);
+              return options.filter((o) => normalizeText(`${o.name} ${o.code} ${o.aquacultureType}`).includes(q)).slice(0, 30);
+            },
+            getOptionLabel: (o) => o.name,
+            isOptionEqualToValue: (a, b) => a.zoneId === b.zoneId,
+            noOptionsText: "Không tìm thấy vùng nuôi",
+            renderOption: (props, o) => /* @__PURE__ */ createElement(Box, { component: "li", ...props, key: o.zoneId, sx: { display: "flex", gap: 1, alignItems: "center" } }, /* @__PURE__ */ jsxDEV("span", { style: { flex: 1, minWidth: 0, overflow: "hidden", textOverflow: "ellipsis" }, children: o.name }, void 0, false, {
+              fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+              lineNumber: 146,
+              columnNumber: 13
+            }, this), /* @__PURE__ */ jsxDEV(
+              Chip,
+              {
+                size: "small",
+                label: o.dataStatus === "verified" ? "Thực" : o.dataStatus === "partial" ? "Một phần" : "Mô phỏng",
+                sx: { height: 20, fontSize: 11, bgcolor: o.dataStatus === "verified" ? "#EFFBF5" : o.dataStatus === "partial" ? "#FFF8EF" : "#FDEEEE" }
+              },
+              void 0,
+              false,
+              {
+                fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+                lineNumber: 147,
+                columnNumber: 13
+              },
+              this
+            )),
+            renderInput: (params) => /* @__PURE__ */ jsxDEV(TextField, { ...params, placeholder: "Tìm vùng nuôi…" }, void 0, false, {
+              fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+              lineNumber: 154,
+              columnNumber: 34
+            }, this)
+          },
+          void 0,
+          false,
+          {
+            fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+            lineNumber: 120,
+            columnNumber: 7
+          },
+          this
+        ),
+        /* @__PURE__ */ jsxDEV(
+          Autocomplete,
+          {
+            size: "small",
+            sx: { ...fieldSx, maxWidth: 280 },
+            options: facilities,
+            value: null,
+            inputValue: facilityInput,
+            onInputChange: (_e, v, reason) => {
+              if (reason === "input" || reason === "clear") setFacilityInput(v);
+            },
+            blurOnSelect: true,
+            onChange: (_e, v) => {
+              if (v) {
+                onPickFacility(v.id);
+                setFacilityInput("");
+              }
+            },
+            filterOptions: (options, state) => {
+              const q = normalizeText(state.inputValue);
+              if (q.length < 1) return options.slice(0, 30);
+              return options.filter((o) => normalizeText(`${o.id} ${o.communeName || ""}`).includes(q)).slice(0, 30);
+            },
+            getOptionLabel: (o) => o.id,
+            isOptionEqualToValue: (a, b) => a.id === b.id,
+            noOptionsText: "Không tìm thấy cơ sở",
+            renderOption: (props, o) => /* @__PURE__ */ createElement(Box, { component: "li", ...props, key: o.id, sx: { display: "flex", gap: 1, alignItems: "center" } }, /* @__PURE__ */ jsxDEV("span", { style: { flex: 1, minWidth: 0, overflow: "hidden", textOverflow: "ellipsis" }, children: o.id }, void 0, false, {
+              fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+              lineNumber: 183,
+              columnNumber: 13
+            }, this), /* @__PURE__ */ jsxDEV(Chip, { size: "small", label: `${o.pondCountActual} ao`, sx: { height: 20, fontSize: 11 } }, void 0, false, {
+              fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+              lineNumber: 184,
+              columnNumber: 13
+            }, this), o.communeName && /* @__PURE__ */ jsxDEV(Chip, { size: "small", variant: "outlined", label: o.communeName, sx: { height: 20, fontSize: 11 } }, void 0, false, {
+              fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+              lineNumber: 185,
+              columnNumber: 31
+            }, this)),
+            renderInput: (params) => /* @__PURE__ */ jsxDEV(TextField, { ...params, placeholder: "Tìm cơ sở / xã…" }, void 0, false, {
+              fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+              lineNumber: 188,
+              columnNumber: 34
+            }, this)
+          },
+          void 0,
+          false,
+          {
+            fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+            lineNumber: 157,
+            columnNumber: 7
+          },
+          this
+        ),
+        /* @__PURE__ */ jsxDEV(
+          Autocomplete,
+          {
+            size: "small",
+            sx: { width: 168 },
+            options: priority,
+            getOptionLabel: (o) => o.label,
+            value: null,
+            inputValue: prioInput,
+            onInputChange: (_e, v, reason) => {
+              if (reason === "input" || reason === "clear") setPrioInput(v);
+            },
+            blurOnSelect: true,
+            onChange: (_e, v) => {
+              if (v) {
+                onPickPriority(v.code);
+                setPrioInput("");
+              }
+            },
+            renderInput: (params) => /* @__PURE__ */ jsxDEV(TextField, { ...params, placeholder: "Trọng tâm…" }, void 0, false, {
+              fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+              lineNumber: 208,
+              columnNumber: 34
+            }, this)
+          },
+          void 0,
+          false,
+          {
+            fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+            lineNumber: 191,
+            columnNumber: 7
+          },
+          this
+        ),
+        /* @__PURE__ */ jsxDEV(
+          ToggleButtonGroup,
+          {
+            size: "small",
+            exclusive: true,
+            value: basemap,
+            onChange: (_e, v) => v && onBasemap(v),
+            "aria-label": "Chọn nền bản đồ",
+            sx: { "& .MuiToggleButton-root": { px: 1, py: 0.45, gap: 0.5, fontSize: 13.5 } },
+            children: [
+              /* @__PURE__ */ jsxDEV(ToggleButton, { value: "osm", "aria-label": "Nền bản đồ đường phố", children: [
+                /* @__PURE__ */ jsxDEV(MapIcon, { size: 15 }, void 0, false, {
+                  fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+                  lineNumber: 219,
+                  columnNumber: 69
+                }, this),
+                " OSM"
+              ] }, void 0, true, {
+                fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+                lineNumber: 219,
+                columnNumber: 9
+              }, this),
+              /* @__PURE__ */ jsxDEV(ToggleButton, { value: "satellite", "aria-label": "Nền ảnh vệ tinh", children: [
+                /* @__PURE__ */ jsxDEV(Satellite, { size: 15 }, void 0, false, {
+                  fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+                  lineNumber: 220,
+                  columnNumber: 70
+                }, this),
+                " Vệ tinh"
+              ] }, void 0, true, {
+                fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+                lineNumber: 220,
+                columnNumber: 9
+              }, this)
+            ]
+          },
+          void 0,
+          true,
+          {
+            fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+            lineNumber: 211,
+            columnNumber: 7
+          },
+          this
+        ),
+        /* @__PURE__ */ jsxDEV(Divider, { orientation: "vertical", flexItem: true, sx: { mx: 0.2, display: { xs: "none", sm: "block" } } }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+          lineNumber: 223,
+          columnNumber: 7
+        }, this),
+        /* @__PURE__ */ jsxDEV(
+          Button,
+          {
+            size: "small",
+            variant: layersOpen ? "contained" : "text",
+            disableElevation: true,
+            onClick: (e) => {
+              setLayerAnchor(e.currentTarget);
+              if (layersOpen) onCloseLayers();
+              else
+                onOpenLayers();
+            },
+            startIcon: /* @__PURE__ */ jsxDEV(Layers, { size: 17 }, void 0, false, {
+              fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+              lineNumber: 234,
+              columnNumber: 20
+            }, this),
+            "aria-haspopup": showLayersPopover ? "dialog" : void 0,
+            "aria-expanded": showLayersPopover ? layersOpen : void 0,
+            sx: { textTransform: "none", fontSize: 13.5, fontWeight: 650, px: 1.1, whiteSpace: "nowrap" },
+            children: [
+              "Lớp bản đồ",
+              activeLayerCount > 0 && /* @__PURE__ */ jsxDEV(Chip, { size: "small", label: activeLayerCount, sx: { height: 18, fontSize: 11, ml: 0.8, bgcolor: layersOpen ? "rgba(255,255,255,.25)" : "#E8F1FB", color: layersOpen ? "#fff" : "#1F5CA9" } }, void 0, false, {
+                fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+                lineNumber: 241,
+                columnNumber: 9
+              }, this)
+            ]
+          },
+          void 0,
+          true,
+          {
+            fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+            lineNumber: 225,
+            columnNumber: 7
+          },
+          this
+        ),
+        /* @__PURE__ */ jsxDEV(Tooltip, { title: "Bật/tắt bảng thông tin", children: /* @__PURE__ */ jsxDEV(IconButton, { onClick: onToggleRight, color: rightOpen ? "primary" : "default", "aria-label": "Bảng thông tin", "aria-pressed": rightOpen, children: /* @__PURE__ */ jsxDEV(PanelRight, { size: 20 }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+          lineNumber: 247,
+          columnNumber: 11
+        }, this) }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+          lineNumber: 246,
+          columnNumber: 9
+        }, this) }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+          lineNumber: 245,
+          columnNumber: 7
+        }, this),
+        /* @__PURE__ */ jsxDEV(Tooltip, { title: "Về toàn cảnh TP. Cần Thơ", children: /* @__PURE__ */ jsxDEV(IconButton, { onClick: onFitCity, "aria-label": "Về toàn cảnh", children: /* @__PURE__ */ jsxDEV(Crosshair, { size: 20 }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+          lineNumber: 252,
+          columnNumber: 11
+        }, this) }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+          lineNumber: 251,
+          columnNumber: 9
+        }, this) }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+          lineNumber: 250,
+          columnNumber: 7
+        }, this),
+        /* @__PURE__ */ jsxDEV(Box, { sx: { display: { xs: "none", lg: "flex" }, alignItems: "center", gap: 0.6, color: "text.secondary", ml: "auto", pr: 0.5 }, children: [
+          /* @__PURE__ */ jsxDEV(Target, { size: 15 }, void 0, false, {
+            fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+            lineNumber: 257,
+            columnNumber: 9
+          }, this),
+          /* @__PURE__ */ jsxDEV(Typography, { sx: { fontSize: 13 }, children: "Chọn xã/phường để xem hồ sơ và dữ liệu xác minh" }, void 0, false, {
+            fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+            lineNumber: 258,
+            columnNumber: 9
+          }, this)
+        ] }, void 0, true, {
+          fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+          lineNumber: 256,
+          columnNumber: 7
+        }, this),
+        showLayersPopover && /* @__PURE__ */ jsxDEV(
+          Popover,
+          {
+            open: layersOpen,
+            anchorEl: layerAnchor,
+            onClose: onCloseLayers,
+            keepMounted: true,
+            anchorOrigin: { vertical: "bottom", horizontal: "right" },
+            transformOrigin: { vertical: "top", horizontal: "right" },
+            slotProps: { paper: { sx: { mt: 0.8, width: 296, borderRadius: 2.5, border: "1px solid #E4EAF3", boxShadow: "0 12px 32px rgba(15,50,80,.16)", overflow: "hidden" } } },
+            children: layerPanel
+          },
+          void 0,
+          false,
+          {
+            fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+            lineNumber: 262,
+            columnNumber: 7
+          },
+          this
+        )
+      ]
+    },
+    void 0,
+    true,
+    {
+      fileName: "F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx",
+      lineNumber: 82,
+      columnNumber: 5
+    },
+    this
+  );
+}
+_s(GisToolbar, "c0YwTwY+88yVZVJz7JfzHnTrQmY=");
+_c = GisToolbar;
+var _c;
+$RefreshReg$(_c, "GisToolbar");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("F:/SmartAquaDemo/src/features/gis/components/GisToolbar.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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dHRvbiIsIkNoaXAiLCJEaXZpZGVyIiwiSWNvbkJ1dHRvbiIsIlBhcGVyIiwiUG9wb3ZlciIsIlRleHRGaWVsZCIsIlRvZ2dsZUJ1dHRvbiIsIlRvZ2dsZUJ1dHRvbkdyb3VwIiwiVG9vbHRpcCIsIlR5cG9ncmFwaHkiLCJDcm9zc2hhaXIiLCJMYXllcnMiLCJNYXAiLCJNYXBJY29uIiwiUGFuZWxSaWdodCIsIlNhdGVsbGl0ZSIsIlRhcmdldCIsIm5vcm1hbGl6ZVRleHQiLCJmaWVsZFN4IiwiZmxleCIsIm1pbldpZHRoIiwiR2lzVG9vbGJhciIsInF1ZXJ5Iiwib25RdWVyeSIsImNvbW11bmVzIiwib25QaWNrQ29tbXVuZSIsInpvbmVzIiwib25QaWNrWm9uZSIsImZhY2lsaXRpZXMiLCJvblBpY2tGYWNpbGl0eSIsInByaW9yaXR5Iiwib25QaWNrUHJpb3JpdHkiLCJiYXNlbWFwIiwib25CYXNlbWFwIiwibGF5ZXJzT3BlbiIsIm9uT3BlbkxheWVycyIsIm9uQ2xvc2VMYXllcnMiLCJsYXllclBhbmVsIiwiYWN0aXZlTGF5ZXJDb3VudCIsInNob3dMYXllcnNQb3BvdmVyIiwicmlnaHRPcGVuIiwib25Ub2dnbGVSaWdodCIsIm9uRml0Q2l0eSIsIl9zIiwicHJpb0lucHV0Iiwic2V0UHJpb0lucHV0Iiwiem9uZUlucHV0Iiwic2V0Wm9uZUlucHV0IiwiZmFjaWxpdHlJbnB1dCIsInNldEZhY2lsaXR5SW5wdXQiLCJsYXllckFuY2hvciIsInNldExheWVyQW5jaG9yIiwiZGlzcGxheSIsImFsaWduSXRlbXMiLCJnYXAiLCJmbGV4V3JhcCIsInAiLCJib3JkZXIiLCJib3JkZXJSYWRpdXMiLCJtYXhXaWR0aCIsIl9lIiwidiIsInJlYXNvbiIsIm9wdGlvbnMiLCJzdGF0ZSIsInEiLCJpbnB1dFZhbHVlIiwibGVuZ3RoIiwic2xpY2UiLCJmaWx0ZXIiLCJvIiwicHJvcGVydGllcyIsImZ1bGxOYW1lIiwibmFtZSIsImNvZGUiLCJpbmNsdWRlcyIsImEiLCJiIiwicHJvcHMiLCJoZWlnaHQiLCJmb250U2l6ZSIsInBhcmFtcyIsImFxdWFjdWx0dXJlVHlwZSIsInpvbmVJZCIsIm92ZXJmbG93IiwidGV4dE92ZXJmbG93IiwiZGF0YVN0YXR1cyIsImJnY29sb3IiLCJpZCIsImNvbW11bmVOYW1lIiwicG9uZENvdW50QWN0dWFsIiwid2lkdGgiLCJsYWJlbCIsInB4IiwicHkiLCJteCIsInhzIiwic20iLCJlIiwiY3VycmVudFRhcmdldCIsInVuZGVmaW5lZCIsInRleHRUcmFuc2Zvcm0iLCJmb250V2VpZ2h0Iiwid2hpdGVTcGFjZSIsIm1sIiwiY29sb3IiLCJsZyIsInByIiwidmVydGljYWwiLCJob3Jpem9udGFsIiwicGFwZXIiLCJzeCIsIm10IiwiYm94U2hhZG93IiwiX2MiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiR2lzVG9vbGJhci50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0LCB7IHVzZVN0YXRlIH0gZnJvbSAncmVhY3QnO1xuaW1wb3J0IHsgQXV0b2NvbXBsZXRlLCBCb3gsIEJ1dHRvbiwgQ2hpcCwgRGl2aWRlciwgSWNvbkJ1dHRvbiwgUGFwZXIsIFBvcG92ZXIsIFRleHRGaWVsZCwgVG9nZ2xlQnV0dG9uLCBUb2dnbGVCdXR0b25Hcm91cCwgVG9vbHRpcCwgVHlwb2dyYXBoeSB9IGZyb20gJ0BtdWkvbWF0ZXJpYWwnO1xuaW1wb3J0IHsgQ3Jvc3NoYWlyLCBMYXllcnMsIE1hcCBhcyBNYXBJY29uLCBQYW5lbFJpZ2h0LCBTYXRlbGxpdGUsIFRhcmdldCB9IGZyb20gJ2x1Y2lkZS1yZWFjdCc7XG5pbXBvcnQgdHlwZSB7IENvbW11bmVQcm9wZXJ0aWVzLCBHZW9GZWF0dXJlLCBJbXBvcnRlZEZhY2lsaXR5IH0gZnJvbSAnLi4vdHlwZXMnO1xuaW1wb3J0IHR5cGUgeyBMaW5rZWRab25lIH0gZnJvbSAnLi4vc2VydmljZXMvYXF1YWN1bHR1cmVSZXBvc2l0b3J5JztcbmltcG9ydCB7IG5vcm1hbGl6ZVRleHQgfSBmcm9tICcuLi91dGlscy90ZXh0JztcblxuZXhwb3J0IGludGVyZmFjZSBHaXNUb29sYmFyUHJvcHMge1xuICBxdWVyeTogc3RyaW5nO1xuICBvblF1ZXJ5OiAodjogc3RyaW5nKSA9PiB2b2lkO1xuICBjb21tdW5lczogR2VvRmVhdHVyZTxDb21tdW5lUHJvcGVydGllcz5bXTtcbiAgb25QaWNrQ29tbXVuZTogKGY6IEdlb0ZlYXR1cmU8Q29tbXVuZVByb3BlcnRpZXM+KSA9PiB2b2lkO1xuICB6b25lczogTGlua2VkWm9uZVtdO1xuICBvblBpY2tab25lOiAoem9uZTogTGlua2VkWm9uZSkgPT4gdm9pZDtcbiAgZmFjaWxpdGllczogSW1wb3J0ZWRGYWNpbGl0eVtdO1xuICBvblBpY2tGYWNpbGl0eTogKGlkOiBzdHJpbmcpID0+IHZvaWQ7XG4gIHByaW9yaXR5OiB7IGNvZGU6IHN0cmluZzsgbGFiZWw6IHN0cmluZyB9W107XG4gIG9uUGlja1ByaW9yaXR5OiAoY29kZTogc3RyaW5nKSA9PiB2b2lkO1xuICBiYXNlbWFwOiAnb3NtJyB8ICdzYXRlbGxpdGUnO1xuICBvbkJhc2VtYXA6IChiOiAnb3NtJyB8ICdzYXRlbGxpdGUnKSA9PiB2b2lkO1xuICBsYXllcnNPcGVuOiBib29sZWFuO1xuICBvbk9wZW5MYXllcnM6ICgpID0+IHZvaWQ7XG4gIG9uQ2xvc2VMYXllcnM6ICgpID0+IHZvaWQ7XG4gIGxheWVyUGFuZWw6IFJlYWN0LlJlYWN0Tm9kZTtcbiAgYWN0aXZlTGF5ZXJDb3VudDogbnVtYmVyO1xuICBzaG93TGF5ZXJzUG9wb3ZlcjogYm9vbGVhbjtcbiAgcmlnaHRPcGVuOiBib29sZWFuO1xuICBvblRvZ2dsZVJpZ2h0OiAoKSA9PiB2b2lkO1xuICBvbkZpdENpdHk6ICgpID0+IHZvaWQ7XG59XG5cbmNvbnN0IGZpZWxkU3ggPSB7IGZsZXg6ICcxIDEgMjAwcHgnLCBtaW5XaWR0aDogMTY4IH0gYXMgY29uc3Q7XG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIEdpc1Rvb2xiYXIoe1xuICBxdWVyeSxcbiAgb25RdWVyeSxcbiAgY29tbXVuZXMsXG4gIG9uUGlja0NvbW11bmUsXG4gIHpvbmVzLFxuICBvblBpY2tab25lLFxuICBmYWNpbGl0aWVzLFxuICBvblBpY2tGYWNpbGl0eSxcbiAgcHJpb3JpdHksXG4gIG9uUGlja1ByaW9yaXR5LFxuICBiYXNlbWFwLFxuICBvbkJhc2VtYXAsXG4gIGxheWVyc09wZW4sXG4gIG9uT3BlbkxheWVycyxcbiAgb25DbG9zZUxheWVycyxcbiAgbGF5ZXJQYW5lbCxcbiAgYWN0aXZlTGF5ZXJDb3VudCxcbiAgc2hvd0xheWVyc1BvcG92ZXIsXG4gIHJpZ2h0T3BlbixcbiAgb25Ub2dnbGVSaWdodCxcbiAgb25GaXRDaXR5LFxufTogR2lzVG9vbGJhclByb3BzKSB7XG4gIGNvbnN0IFtwcmlvSW5wdXQsIHNldFByaW9JbnB1dF0gPSB1c2VTdGF0ZSgnJyk7XG4gIGNvbnN0IFt6b25lSW5wdXQsIHNldFpvbmVJbnB1dF0gPSB1c2VTdGF0ZSgnJyk7XG4gIGNvbnN0IFtmYWNpbGl0eUlucHV0LCBzZXRGYWNpbGl0eUlucHV0XSA9IHVzZVN0YXRlKCcnKTtcbiAgY29uc3QgW2xheWVyQW5jaG9yLCBzZXRMYXllckFuY2hvcl0gPSB1c2VTdGF0ZTxIVE1MRWxlbWVudCB8IG51bGw+KG51bGwpO1xuXG4gIHJldHVybiAoXG4gICAgPFBhcGVyXG4gICAgICBlbGV2YXRpb249ezB9XG4gICAgICBzeD17e1xuICAgICAgICBkaXNwbGF5OiAnZmxleCcsXG4gICAgICAgIGFsaWduSXRlbXM6ICdjZW50ZXInLFxuICAgICAgICBnYXA6IDAuNzUsXG4gICAgICAgIGZsZXhXcmFwOiAnd3JhcCcsXG4gICAgICAgIHA6IDAuNixcbiAgICAgICAgYm9yZGVyOiAnMXB4IHNvbGlkICNFNEVBRjMnLFxuICAgICAgICBib3JkZXJSYWRpdXM6IDIuNSxcbiAgICAgIH19XG4gICAgPlxuICAgICAgPEF1dG9jb21wbGV0ZVxuICAgICAgICBzaXplPVwic21hbGxcIlxuICAgICAgICBzeD17eyAuLi5maWVsZFN4LCBmbGV4OiAnMSAxIDI0MHB4JywgbWF4V2lkdGg6IDM4MCB9fVxuICAgICAgICBvcHRpb25zPXtjb21tdW5lc31cbiAgICAgICAgaW5wdXRWYWx1ZT17cXVlcnl9XG4gICAgICAgIG9uSW5wdXRDaGFuZ2U9eyhfZSwgdiwgcmVhc29uKSA9PiB7XG4gICAgICAgICAgaWYgKHJlYXNvbiA9PT0gJ2lucHV0JyB8fCByZWFzb24gPT09ICdjbGVhcicpIG9uUXVlcnkodik7XG4gICAgICAgIH19XG4gICAgICAgIG9uQ2hhbmdlPXsoX2UsIHYpID0+IHYgJiYgb25QaWNrQ29tbXVuZSh2KX1cbiAgICAgICAgZmlsdGVyT3B0aW9ucz17KG9wdGlvbnMsIHN0YXRlKSA9PiB7XG4gICAgICAgICAgY29uc3QgcSA9IG5vcm1hbGl6ZVRleHQoc3RhdGUuaW5wdXRWYWx1ZSk7XG4gICAgICAgICAgaWYgKHEubGVuZ3RoIDwgMSkgcmV0dXJuIG9wdGlvbnMuc2xpY2UoMCwgNDApO1xuICAgICAgICAgIHJldHVybiBvcHRpb25zLmZpbHRlcigobykgPT4gbm9ybWFsaXplVGV4dChgJHtvLnByb3BlcnRpZXMuZnVsbE5hbWV9ICR7by5wcm9wZXJ0aWVzLm5hbWV9ICR7by5wcm9wZXJ0aWVzLmNvZGV9YCkuaW5jbHVkZXMocSkpLnNsaWNlKDAsIDQwKTtcbiAgICAgICAgfX1cbiAgICAgICAgZ2V0T3B0aW9uTGFiZWw9eyhvKSA9PiBvLnByb3BlcnRpZXMuZnVsbE5hbWV9XG4gICAgICAgIGlzT3B0aW9uRXF1YWxUb1ZhbHVlPXsoYSwgYikgPT4gYS5wcm9wZXJ0aWVzLmNvZGUgPT09IGIucHJvcGVydGllcy5jb2RlfVxuICAgICAgICBub09wdGlvbnNUZXh0PVwiS2jDtG5nIHTDrG0gdGjhuqV5IHjDoy9waMaw4budbmdcIlxuICAgICAgICByZW5kZXJPcHRpb249eyhwcm9wcywgbykgPT4gKFxuICAgICAgICAgIDxCb3ggY29tcG9uZW50PVwibGlcIiB7Li4ucHJvcHN9IGtleT17by5wcm9wZXJ0aWVzLmNvZGV9IHN4PXt7IGRpc3BsYXk6ICdmbGV4JywgZ2FwOiAxLCBhbGlnbkl0ZW1zOiAnY2VudGVyJyB9fT5cbiAgICAgICAgICAgIDxzcGFuPntvLnByb3BlcnRpZXMuZnVsbE5hbWV9PC9zcGFuPlxuICAgICAgICAgICAgPENoaXAgc2l6ZT1cInNtYWxsXCIgbGFiZWw9e28ucHJvcGVydGllcy5jb2RlfSBzeD17eyBoZWlnaHQ6IDIwLCBmb250U2l6ZTogMTIgfX0gLz5cbiAgICAgICAgICA8L0JveD5cbiAgICAgICAgKX1cbiAgICAgICAgcmVuZGVySW5wdXQ9eyhwYXJhbXMpID0+IDxUZXh0RmllbGQgey4uLnBhcmFtc30gcGxhY2Vob2xkZXI9XCJUw6xtIHjDoy9waMaw4budbmcgaG/hurdjIG3DoyDEkcahbiB24buL4oCmXCIgLz59XG4gICAgICAvPlxuXG4gICAgICA8QXV0b2NvbXBsZXRlXG4gICAgICAgIHNpemU9XCJzbWFsbFwiXG4gICAgICAgIHN4PXt7IC4uLmZpZWxkU3gsIG1heFdpZHRoOiAzMDAgfX1cbiAgICAgICAgb3B0aW9ucz17em9uZXN9XG4gICAgICAgIHZhbHVlPXtudWxsfVxuICAgICAgICBpbnB1dFZhbHVlPXt6b25lSW5wdXR9XG4gICAgICAgIG9uSW5wdXRDaGFuZ2U9eyhfZSwgdiwgcmVhc29uKSA9PiB7XG4gICAgICAgICAgaWYgKHJlYXNvbiA9PT0gJ2lucHV0JyB8fCByZWFzb24gPT09ICdjbGVhcicpIHNldFpvbmVJbnB1dCh2KTtcbiAgICAgICAgfX1cbiAgICAgICAgYmx1ck9uU2VsZWN0XG4gICAgICAgIG9uQ2hhbmdlPXsoX2UsIHYpID0+IHtcbiAgICAgICAgICBpZiAodikge1xuICAgICAgICAgICAgb25QaWNrWm9uZSh2KTtcbiAgICAgICAgICAgIHNldFpvbmVJbnB1dCgnJyk7XG4gICAgICAgICAgfVxuICAgICAgICB9fVxuICAgICAgICBmaWx0ZXJPcHRpb25zPXsob3B0aW9ucywgc3RhdGUpID0+IHtcbiAgICAgICAgICBjb25zdCBxID0gbm9ybWFsaXplVGV4dChzdGF0ZS5pbnB1dFZhbHVlKTtcbiAgICAgICAgICBpZiAocS5sZW5ndGggPCAxKSByZXR1cm4gb3B0aW9ucy5zbGljZSgwLCAzMCk7XG4gICAgICAgICAgcmV0dXJuIG9wdGlvbnMuZmlsdGVyKChvKSA9PiBub3JtYWxpemVUZXh0KGAke28ubmFtZX0gJHtvLmNvZGV9ICR7by5hcXVhY3VsdHVyZVR5cGV9YCkuaW5jbHVkZXMocSkpLnNsaWNlKDAsIDMwKTtcbiAgICAgICAgfX1cbiAgICAgICAgZ2V0T3B0aW9uTGFiZWw9eyhvKSA9PiBvLm5hbWV9XG4gICAgICAgIGlzT3B0aW9uRXF1YWxUb1ZhbHVlPXsoYSwgYikgPT4gYS56b25lSWQgPT09IGIuem9uZUlkfVxuICAgICAgICBub09wdGlvbnNUZXh0PVwiS2jDtG5nIHTDrG0gdGjhuqV5IHbDuW5nIG51w7RpXCJcbiAgICAgICAgcmVuZGVyT3B0aW9uPXsocHJvcHMsIG8pID0+IChcbiAgICAgICAgICA8Qm94IGNvbXBvbmVudD1cImxpXCIgey4uLnByb3BzfSBrZXk9e28uem9uZUlkfSBzeD17eyBkaXNwbGF5OiAnZmxleCcsIGdhcDogMSwgYWxpZ25JdGVtczogJ2NlbnRlcicgfX0+XG4gICAgICAgICAgICA8c3BhbiBzdHlsZT17eyBmbGV4OiAxLCBtaW5XaWR0aDogMCwgb3ZlcmZsb3c6ICdoaWRkZW4nLCB0ZXh0T3ZlcmZsb3c6ICdlbGxpcHNpcycgfX0+e28ubmFtZX08L3NwYW4+XG4gICAgICAgICAgICA8Q2hpcFxuICAgICAgICAgICAgICBzaXplPVwic21hbGxcIlxuICAgICAgICAgICAgICBsYWJlbD17by5kYXRhU3RhdHVzID09PSAndmVyaWZpZWQnID8gJ1Ro4buxYycgOiBvLmRhdGFTdGF0dXMgPT09ICdwYXJ0aWFsJyA/ICdN4buZdCBwaOG6p24nIDogJ03DtCBwaOG7j25nJ31cbiAgICAgICAgICAgICAgc3g9e3sgaGVpZ2h0OiAyMCwgZm9udFNpemU6IDExLCBiZ2NvbG9yOiBvLmRhdGFTdGF0dXMgPT09ICd2ZXJpZmllZCcgPyAnI0VGRkJGNScgOiBvLmRhdGFTdGF0dXMgPT09ICdwYXJ0aWFsJyA/ICcjRkZGOEVGJyA6ICcjRkRFRUVFJyB9fVxuICAgICAgICAgICAgLz5cbiAgICAgICAgICA8L0JveD5cbiAgICAgICAgKX1cbiAgICAgICAgcmVuZGVySW5wdXQ9eyhwYXJhbXMpID0+IDxUZXh0RmllbGQgey4uLnBhcmFtc30gcGxhY2Vob2xkZXI9XCJUw6xtIHbDuW5nIG51w7Rp4oCmXCIgLz59XG4gICAgICAvPlxuXG4gICAgICA8QXV0b2NvbXBsZXRlXG4gICAgICAgIHNpemU9XCJzbWFsbFwiXG4gICAgICAgIHN4PXt7IC4uLmZpZWxkU3gsIG1heFdpZHRoOiAyODAgfX1cbiAgICAgICAgb3B0aW9ucz17ZmFjaWxpdGllc31cbiAgICAgICAgdmFsdWU9e251bGx9XG4gICAgICAgIGlucHV0VmFsdWU9e2ZhY2lsaXR5SW5wdXR9XG4gICAgICAgIG9uSW5wdXRDaGFuZ2U9eyhfZSwgdiwgcmVhc29uKSA9PiB7XG4gICAgICAgICAgaWYgKHJlYXNvbiA9PT0gJ2lucHV0JyB8fCByZWFzb24gPT09ICdjbGVhcicpIHNldEZhY2lsaXR5SW5wdXQodik7XG4gICAgICAgIH19XG4gICAgICAgIGJsdXJPblNlbGVjdFxuICAgICAgICBvbkNoYW5nZT17KF9lLCB2KSA9PiB7XG4gICAgICAgICAgaWYgKHYpIHtcbiAgICAgICAgICAgIG9uUGlja0ZhY2lsaXR5KHYuaWQpO1xuICAgICAgICAgICAgc2V0RmFjaWxpdHlJbnB1dCgnJyk7XG4gICAgICAgICAgfVxuICAgICAgICB9fVxuICAgICAgICBmaWx0ZXJPcHRpb25zPXsob3B0aW9ucywgc3RhdGUpID0+IHtcbiAgICAgICAgICBjb25zdCBxID0gbm9ybWFsaXplVGV4dChzdGF0ZS5pbnB1dFZhbHVlKTtcbiAgICAgICAgICBpZiAocS5sZW5ndGggPCAxKSByZXR1cm4gb3B0aW9ucy5zbGljZSgwLCAzMCk7XG4gICAgICAgICAgcmV0dXJuIG9wdGlvbnMuZmlsdGVyKChvKSA9PiBub3JtYWxpemVUZXh0KGAke28uaWR9ICR7by5jb21tdW5lTmFtZSB8fCAnJ31gKS5pbmNsdWRlcyhxKSkuc2xpY2UoMCwgMzApO1xuICAgICAgICB9fVxuICAgICAgICBnZXRPcHRpb25MYWJlbD17KG8pID0+IG8uaWR9XG4gICAgICAgIGlzT3B0aW9uRXF1YWxUb1ZhbHVlPXsoYSwgYikgPT4gYS5pZCA9PT0gYi5pZH1cbiAgICAgICAgbm9PcHRpb25zVGV4dD1cIktow7RuZyB0w6xtIHRo4bqleSBjxqEgc+G7n1wiXG4gICAgICAgIHJlbmRlck9wdGlvbj17KHByb3BzLCBvKSA9PiAoXG4gICAgICAgICAgPEJveCBjb21wb25lbnQ9XCJsaVwiIHsuLi5wcm9wc30ga2V5PXtvLmlkfSBzeD17eyBkaXNwbGF5OiAnZmxleCcsIGdhcDogMSwgYWxpZ25JdGVtczogJ2NlbnRlcicgfX0+XG4gICAgICAgICAgICA8c3BhbiBzdHlsZT17eyBmbGV4OiAxLCBtaW5XaWR0aDogMCwgb3ZlcmZsb3c6ICdoaWRkZW4nLCB0ZXh0T3ZlcmZsb3c6ICdlbGxpcHNpcycgfX0+e28uaWR9PC9zcGFuPlxuICAgICAgICAgICAgPENoaXAgc2l6ZT1cInNtYWxsXCIgbGFiZWw9e2Ake28ucG9uZENvdW50QWN0dWFsfSBhb2B9IHN4PXt7IGhlaWdodDogMjAsIGZvbnRTaXplOiAxMSB9fSAvPlxuICAgICAgICAgICAge28uY29tbXVuZU5hbWUgJiYgPENoaXAgc2l6ZT1cInNtYWxsXCIgdmFyaWFudD1cIm91dGxpbmVkXCIgbGFiZWw9e28uY29tbXVuZU5hbWV9IHN4PXt7IGhlaWdodDogMjAsIGZvbnRTaXplOiAxMSB9fSAvPn1cbiAgICAgICAgICA8L0JveD5cbiAgICAgICAgKX1cbiAgICAgICAgcmVuZGVySW5wdXQ9eyhwYXJhbXMpID0+IDxUZXh0RmllbGQgey4uLnBhcmFtc30gcGxhY2Vob2xkZXI9XCJUw6xtIGPGoSBz4bufIC8geMOj4oCmXCIgLz59XG4gICAgICAvPlxuXG4gICAgICA8QXV0b2NvbXBsZXRlXG4gICAgICAgIHNpemU9XCJzbWFsbFwiXG4gICAgICAgIHN4PXt7IHdpZHRoOiAxNjggfX1cbiAgICAgICAgb3B0aW9ucz17cHJpb3JpdHl9XG4gICAgICAgIGdldE9wdGlvbkxhYmVsPXsobykgPT4gby5sYWJlbH1cbiAgICAgICAgdmFsdWU9e251bGx9XG4gICAgICAgIGlucHV0VmFsdWU9e3ByaW9JbnB1dH1cbiAgICAgICAgb25JbnB1dENoYW5nZT17KF9lLCB2LCByZWFzb24pID0+IHtcbiAgICAgICAgICBpZiAocmVhc29uID09PSAnaW5wdXQnIHx8IHJlYXNvbiA9PT0gJ2NsZWFyJykgc2V0UHJpb0lucHV0KHYpO1xuICAgICAgICB9fVxuICAgICAgICBibHVyT25TZWxlY3RcbiAgICAgICAgb25DaGFuZ2U9eyhfZSwgdikgPT4ge1xuICAgICAgICAgIGlmICh2KSB7XG4gICAgICAgICAgICBvblBpY2tQcmlvcml0eSh2LmNvZGUpO1xuICAgICAgICAgICAgc2V0UHJpb0lucHV0KCcnKTtcbiAgICAgICAgICB9XG4gICAgICAgIH19XG4gICAgICAgIHJlbmRlcklucHV0PXsocGFyYW1zKSA9PiA8VGV4dEZpZWxkIHsuLi5wYXJhbXN9IHBsYWNlaG9sZGVyPVwiVHLhu41uZyB0w6Jt4oCmXCIgLz59XG4gICAgICAvPlxuXG4gICAgICA8VG9nZ2xlQnV0dG9uR3JvdXBcbiAgICAgICAgc2l6ZT1cInNtYWxsXCJcbiAgICAgICAgZXhjbHVzaXZlXG4gICAgICAgIHZhbHVlPXtiYXNlbWFwfVxuICAgICAgICBvbkNoYW5nZT17KF9lLCB2OiAnb3NtJyB8ICdzYXRlbGxpdGUnIHwgbnVsbCkgPT4gdiAmJiBvbkJhc2VtYXAodil9XG4gICAgICAgIGFyaWEtbGFiZWw9XCJDaOG7jW4gbuG7gW4gYuG6o24gxJHhu5NcIlxuICAgICAgICBzeD17eyAnJiAuTXVpVG9nZ2xlQnV0dG9uLXJvb3QnOiB7IHB4OiAxLCBweTogMC40NSwgZ2FwOiAwLjUsIGZvbnRTaXplOiAxMy41IH0gfX1cbiAgICAgID5cbiAgICAgICAgPFRvZ2dsZUJ1dHRvbiB2YWx1ZT1cIm9zbVwiIGFyaWEtbGFiZWw9XCJO4buBbiBi4bqjbiDEkeG7kyDEkcaw4budbmcgcGjhu5FcIj48TWFwSWNvbiBzaXplPXsxNX0gLz4gT1NNPC9Ub2dnbGVCdXR0b24+XG4gICAgICAgIDxUb2dnbGVCdXR0b24gdmFsdWU9XCJzYXRlbGxpdGVcIiBhcmlhLWxhYmVsPVwiTuG7gW4g4bqjbmggduG7hyB0aW5oXCI+PFNhdGVsbGl0ZSBzaXplPXsxNX0gLz4gVuG7hyB0aW5oPC9Ub2dnbGVCdXR0b24+XG4gICAgICA8L1RvZ2dsZUJ1dHRvbkdyb3VwPlxuXG4gICAgICA8RGl2aWRlciBvcmllbnRhdGlvbj1cInZlcnRpY2FsXCIgZmxleEl0ZW0gc3g9e3sgbXg6IDAuMiwgZGlzcGxheTogeyB4czogJ25vbmUnLCBzbTogJ2Jsb2NrJyB9IH19IC8+XG5cbiAgICAgIDxCdXR0b25cbiAgICAgICAgc2l6ZT1cInNtYWxsXCJcbiAgICAgICAgdmFyaWFudD17bGF5ZXJzT3BlbiA/ICdjb250YWluZWQnIDogJ3RleHQnfVxuICAgICAgICBkaXNhYmxlRWxldmF0aW9uXG4gICAgICAgIG9uQ2xpY2s9eyhlKSA9PiB7XG4gICAgICAgICAgc2V0TGF5ZXJBbmNob3IoZS5jdXJyZW50VGFyZ2V0KTtcbiAgICAgICAgICBpZiAobGF5ZXJzT3Blbikgb25DbG9zZUxheWVycygpO1xuICAgICAgICAgIGVsc2Ugb25PcGVuTGF5ZXJzKCk7XG4gICAgICAgIH19XG4gICAgICAgIHN0YXJ0SWNvbj17PExheWVycyBzaXplPXsxN30gLz59XG4gICAgICAgIGFyaWEtaGFzcG9wdXA9e3Nob3dMYXllcnNQb3BvdmVyID8gJ2RpYWxvZycgOiB1bmRlZmluZWR9XG4gICAgICAgIGFyaWEtZXhwYW5kZWQ9e3Nob3dMYXllcnNQb3BvdmVyID8gbGF5ZXJzT3BlbiA6IHVuZGVmaW5lZH1cbiAgICAgICAgc3g9e3sgdGV4dFRyYW5zZm9ybTogJ25vbmUnLCBmb250U2l6ZTogMTMuNSwgZm9udFdlaWdodDogNjUwLCBweDogMS4xLCB3aGl0ZVNwYWNlOiAnbm93cmFwJyB9fVxuICAgICAgPlxuICAgICAgICBM4bubcCBi4bqjbiDEkeG7k1xuICAgICAgICB7YWN0aXZlTGF5ZXJDb3VudCA+IDAgJiYgKFxuICAgICAgICAgIDxDaGlwIHNpemU9XCJzbWFsbFwiIGxhYmVsPXthY3RpdmVMYXllckNvdW50fSBzeD17eyBoZWlnaHQ6IDE4LCBmb250U2l6ZTogMTEsIG1sOiAwLjgsIGJnY29sb3I6IGxheWVyc09wZW4gPyAncmdiYSgyNTUsMjU1LDI1NSwuMjUpJyA6ICcjRThGMUZCJywgY29sb3I6IGxheWVyc09wZW4gPyAnI2ZmZicgOiAnIzFGNUNBOScgfX0gLz5cbiAgICAgICAgKX1cbiAgICAgIDwvQnV0dG9uPlxuXG4gICAgICA8VG9vbHRpcCB0aXRsZT1cIkLhuq10L3Thuq90IGLhuqNuZyB0aMO0bmcgdGluXCI+XG4gICAgICAgIDxJY29uQnV0dG9uIG9uQ2xpY2s9e29uVG9nZ2xlUmlnaHR9IGNvbG9yPXtyaWdodE9wZW4gPyAncHJpbWFyeScgOiAnZGVmYXVsdCd9IGFyaWEtbGFiZWw9XCJC4bqjbmcgdGjDtG5nIHRpblwiIGFyaWEtcHJlc3NlZD17cmlnaHRPcGVufT5cbiAgICAgICAgICA8UGFuZWxSaWdodCBzaXplPXsyMH0gLz5cbiAgICAgICAgPC9JY29uQnV0dG9uPlxuICAgICAgPC9Ub29sdGlwPlxuICAgICAgPFRvb2x0aXAgdGl0bGU9XCJW4buBIHRvw6BuIGPhuqNuaCBUUC4gQ+G6p24gVGjGoVwiPlxuICAgICAgICA8SWNvbkJ1dHRvbiBvbkNsaWNrPXtvbkZpdENpdHl9IGFyaWEtbGFiZWw9XCJW4buBIHRvw6BuIGPhuqNuaFwiPlxuICAgICAgICAgIDxDcm9zc2hhaXIgc2l6ZT17MjB9IC8+XG4gICAgICAgIDwvSWNvbkJ1dHRvbj5cbiAgICAgIDwvVG9vbHRpcD5cblxuICAgICAgPEJveCBzeD17eyBkaXNwbGF5OiB7IHhzOiAnbm9uZScsIGxnOiAnZmxleCcgfSwgYWxpZ25JdGVtczogJ2NlbnRlcicsIGdhcDogMC42LCBjb2xvcjogJ3RleHQuc2Vjb25kYXJ5JywgbWw6ICdhdXRvJywgcHI6IDAuNSB9fT5cbiAgICAgICAgPFRhcmdldCBzaXplPXsxNX0gLz5cbiAgICAgICAgPFR5cG9ncmFwaHkgc3g9e3sgZm9udFNpemU6IDEzIH19PkNo4buNbiB4w6MvcGjGsOG7nW5nIMSR4buDIHhlbSBo4buTIHPGoSB2w6AgZOG7ryBsaeG7h3UgeMOhYyBtaW5oPC9UeXBvZ3JhcGh5PlxuICAgICAgPC9Cb3g+XG5cbiAgICAgIHtzaG93TGF5ZXJzUG9wb3ZlciAmJiAoXG4gICAgICAgIDxQb3BvdmVyXG4gICAgICAgICAgb3Blbj17bGF5ZXJzT3Blbn1cbiAgICAgICAgICBhbmNob3JFbD17bGF5ZXJBbmNob3J9XG4gICAgICAgICAgb25DbG9zZT17b25DbG9zZUxheWVyc31cbiAgICAgICAgICBrZWVwTW91bnRlZFxuICAgICAgICAgIGFuY2hvck9yaWdpbj17eyB2ZXJ0aWNhbDogJ2JvdHRvbScsIGhvcml6b250YWw6ICdyaWdodCcgfX1cbiAgICAgICAgICB0cmFuc2Zvcm1PcmlnaW49e3sgdmVydGljYWw6ICd0b3AnLCBob3Jpem9udGFsOiAncmlnaHQnIH19XG4gICAgICAgICAgc2xvdFByb3BzPXt7IHBhcGVyOiB7IHN4OiB7IG10OiAwLjgsIHdpZHRoOiAyOTYsIGJvcmRlclJhZGl1czogMi41LCBib3JkZXI6ICcxcHggc29saWQgI0U0RUFGMycsIGJveFNoYWRvdzogJzAgMTJweCAzMnB4IHJnYmEoMTUsNTAsODAsLjE2KScsIG92ZXJmbG93OiAnaGlkZGVuJyB9IH0gfX1cbiAgICAgICAgPlxuICAgICAgICAgIHtsYXllclBhbmVsfVxuICAgICAgICA8L1BvcG92ZXI+XG4gICAgICApfVxuICAgIDwvUGFwZXI+XG4gICk7XG59XG4iXSwiZmlsZSI6IkY6L1NtYXJ0QXF1YURlbW8vc3JjL2ZlYXR1cmVzL2dpcy9jb21wb25lbnRzL0dpc1Rvb2xiYXIudHN4In0=

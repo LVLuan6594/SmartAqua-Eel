@@ -1,0 +1,90 @@
+[
+  {
+    "zoneId": "ZEEL01",
+    "communeCode": "31441",
+    "communeName": "Xã Vị Thuỷ",
+    "intersectionAreaKm2": 0,
+    "shareOfZone": 1,
+    "method": "declared_demo",
+    "source": "MOCK_DATA",
+    "verificationStatus": "needs_review",
+    "isSynthetic": true
+  },
+  {
+    "zoneId": "ZEEL02",
+    "communeCode": "31342",
+    "communeName": "Xã Tân Hoà",
+    "intersectionAreaKm2": 0,
+    "shareOfZone": 1,
+    "method": "declared_demo",
+    "source": "MOCK_DATA",
+    "verificationStatus": "needs_review",
+    "isSynthetic": true
+  },
+  {
+    "zoneId": "ZEEL03",
+    "communeCode": "31237",
+    "communeName": "Xã Vĩnh Trinh",
+    "intersectionAreaKm2": 0,
+    "shareOfZone": 1,
+    "method": "declared_demo",
+    "source": "MOCK_DATA",
+    "verificationStatus": "needs_review",
+    "isSynthetic": true
+  },
+  {
+    "zoneId": "ZEEL04",
+    "communeCode": "31168",
+    "communeName": "Phường Bình Thuỷ",
+    "intersectionAreaKm2": 0,
+    "shareOfZone": 1,
+    "method": "declared_demo",
+    "source": "MOCK_DATA",
+    "verificationStatus": "needs_review",
+    "isSynthetic": true
+  },
+  {
+    "zoneId": "ZEEL05",
+    "communeCode": "31741",
+    "communeName": "Xã Tân Long",
+    "intersectionAreaKm2": 0,
+    "shareOfZone": 1,
+    "method": "declared_demo",
+    "source": "MOCK_DATA",
+    "verificationStatus": "needs_review",
+    "isSynthetic": true
+  },
+  {
+    "zoneId": "ZEEL06",
+    "communeCode": "31537",
+    "communeName": "Xã Phong Nẫm",
+    "intersectionAreaKm2": 0,
+    "shareOfZone": 1,
+    "method": "declared_demo",
+    "source": "MOCK_DATA",
+    "verificationStatus": "needs_review",
+    "isSynthetic": true
+  },
+  {
+    "zoneId": "ZEEL07",
+    "communeCode": "31258",
+    "communeName": "Xã Thới Lai",
+    "intersectionAreaKm2": 0,
+    "shareOfZone": 1,
+    "method": "declared_demo",
+    "source": "MOCK_DATA",
+    "verificationStatus": "needs_review",
+    "isSynthetic": true
+  },
+  {
+    "zoneId": "ZEEL08",
+    "communeCode": "31396",
+    "communeName": "Xã Hiệp Hưng",
+    "intersectionAreaKm2": 0,
+    "shareOfZone": 1,
+    "method": "declared_demo",
+    "source": "MOCK_DATA",
+    "verificationStatus": "needs_review",
+    "isSynthetic": true
+  }
+]

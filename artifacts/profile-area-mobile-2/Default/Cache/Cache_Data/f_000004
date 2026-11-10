@@ -1,0 +1,299 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/App.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=3bc94ee6"; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("F:/SmartAquaDemo/src/App.tsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+import { Navigate, Route, Routes } from "/node_modules/.vite/deps/react-router-dom.js?v=3bc94ee6";
+import Layout from "/src/app/Layout.tsx?t=1792383185775";
+import Dashboard from "/src/features/Dashboard.tsx?t=1792383194540";
+import IOCDashboard from "/src/features/IOCDashboard.tsx?t=1792383185775";
+import { useDemo } from "/src/store/demoStore.ts";
+import EntityManager from "/src/features/EntityManager.tsx?t=1792383185775";
+import AreaHierarchy from "/src/features/AreaHierarchy.tsx?t=1792383275895";
+import GisWorkspace from "/src/features/gis/GisWorkspace.tsx";
+import PondDetail from "/src/features/PondDetail.tsx?t=1792383185775";
+import Cycles from "/src/features/Cycles.tsx?t=1792383185775";
+import Diaries from "/src/features/Diaries.tsx?t=1792383185775";
+import Harvests from "/src/features/Harvests.tsx?t=1792383185775";
+import Reports from "/src/features/Reports.tsx?t=1792383185775";
+import Portal from "/src/features/Portal.tsx?t=1792383185775";
+import Admin from "/src/features/Admin.tsx";
+import Review from "/src/features/Review.tsx";
+import Integration from "/src/features/Integration.tsx";
+import { AIChat, AIImage, AIPredict } from "/src/features/AI.tsx?t=1792383185775";
+function RoleDashboard() {
+  _s();
+  const { role } = useDemo();
+  return role === "manager" ? /* @__PURE__ */ jsxDEV(IOCDashboard, {}, void 0, false, {
+    fileName: "F:/SmartAquaDemo/src/App.tsx",
+    lineNumber: 39,
+    columnNumber: 87
+  }, this) : role === "farmer" ? /* @__PURE__ */ jsxDEV(Portal, {}, void 0, false, {
+    fileName: "F:/SmartAquaDemo/src/App.tsx",
+    lineNumber: 39,
+    columnNumber: 126
+  }, this) : /* @__PURE__ */ jsxDEV(Dashboard, {}, void 0, false, {
+    fileName: "F:/SmartAquaDemo/src/App.tsx",
+    lineNumber: 39,
+    columnNumber: 139
+  }, this);
+}
+_s(RoleDashboard, "lcZUqGxIT2Q5MAJMllnw5LaHX3E=", false, function() {
+  return [useDemo];
+});
+_c = RoleDashboard;
+export default function App() {
+  return /* @__PURE__ */ jsxDEV(Routes, { children: /* @__PURE__ */ jsxDEV(Route, { path: "/", element: /* @__PURE__ */ jsxDEV(Layout, {}, void 0, false, {
+    fileName: "F:/SmartAquaDemo/src/App.tsx",
+    lineNumber: 40,
+    columnNumber: 72
+  }, this), children: [
+    /* @__PURE__ */ jsxDEV(Route, { index: true, element: /* @__PURE__ */ jsxDEV(Navigate, { to: "/dashboard", replace: true }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 106
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 84
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "dashboard", element: /* @__PURE__ */ jsxDEV(RoleDashboard, {}, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 179
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 146
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "gis", element: /* @__PURE__ */ jsxDEV(GisWorkspace, {}, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 227
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 200
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "areas", element: /* @__PURE__ */ jsxDEV(AreaHierarchy, {}, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 276
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 247
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "areas/manage", element: /* @__PURE__ */ jsxDEV(EntityManager, { type: "areas" }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 333
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 297
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "areas/:areaId", element: /* @__PURE__ */ jsxDEV(AreaHierarchy, {}, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 404
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 367
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "areas/:areaId/farms/:farmId", element: /* @__PURE__ */ jsxDEV(AreaHierarchy, {}, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 476
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 425
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "cooperatives", element: /* @__PURE__ */ jsxDEV(EntityManager, { type: "cooperatives" }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 533
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 497
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "farmers", element: /* @__PURE__ */ jsxDEV(EntityManager, { type: "farmers" }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 605
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 574
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "ponds", element: /* @__PURE__ */ jsxDEV(EntityManager, { type: "ponds" }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 670
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 641
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "ponds/:id", element: /* @__PURE__ */ jsxDEV(PondDetail, {}, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 737
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 704
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "cycles", element: /* @__PURE__ */ jsxDEV(Cycles, {}, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 785
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 755
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "diaries", element: /* @__PURE__ */ jsxDEV(Diaries, {}, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 830
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 799
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "harvests", element: /* @__PURE__ */ jsxDEV(Harvests, {}, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 877
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 845
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "reports", element: /* @__PURE__ */ jsxDEV(Reports, {}, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 924
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 893
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "portal", element: /* @__PURE__ */ jsxDEV(Portal, {}, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 969
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 939
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "review", element: /* @__PURE__ */ jsxDEV(Review, {}, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 1013
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 983
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "admin", element: /* @__PURE__ */ jsxDEV(Admin, {}, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 1056
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 1027
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "integration", element: /* @__PURE__ */ jsxDEV(Integration, {}, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 1104
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 1069
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "ai/chat", element: /* @__PURE__ */ jsxDEV(AIChat, {}, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 1154
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 1123
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "ai/image", element: /* @__PURE__ */ jsxDEV(AIImage, {}, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 1200
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 1168
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "ai/predict", element: /* @__PURE__ */ jsxDEV(AIPredict, {}, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 1249
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 1215
+    }, this),
+    /* @__PURE__ */ jsxDEV(Route, { path: "*", element: /* @__PURE__ */ jsxDEV(Navigate, { to: "/dashboard", replace: true }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 1291
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/App.tsx",
+      lineNumber: 40,
+      columnNumber: 1266
+    }, this)
+  ] }, void 0, true, {
+    fileName: "F:/SmartAquaDemo/src/App.tsx",
+    lineNumber: 40,
+    columnNumber: 47
+  }, this) }, void 0, false, {
+    fileName: "F:/SmartAquaDemo/src/App.tsx",
+    lineNumber: 40,
+    columnNumber: 39
+  }, this);
+}
+_c2 = App;
+var _c, _c2;
+$RefreshReg$(_c, "RoleDashboard");
+$RefreshReg$(_c2, "App");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("F:/SmartAquaDemo/src/App.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("F:/SmartAquaDemo/src/App.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJtYXBwaW5ncyI6IkFBbUJ3RTs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFsQnhFLFNBQVFBLFVBQVNDLE9BQU1DLGNBQWE7QUFDcEMsT0FBT0MsWUFBWTtBQUNuQixPQUFPQyxlQUFlO0FBQ3RCLE9BQU9DLGtCQUFrQjtBQUN6QixTQUFRQyxlQUFjO0FBQ3RCLE9BQU9DLG1CQUFtQjtBQUMxQixPQUFPQyxtQkFBbUI7QUFDMUIsT0FBT0Msa0JBQWtCO0FBQ3pCLE9BQU9DLGdCQUFnQjtBQUN2QixPQUFPQyxZQUFZO0FBQ25CLE9BQU9DLGFBQWE7QUFDcEIsT0FBT0MsY0FBYztBQUNyQixPQUFPQyxhQUFhO0FBQ3BCLE9BQU9DLFlBQVk7QUFDbkIsT0FBT0MsV0FBVztBQUNsQixPQUFPQyxZQUFZO0FBQ25CLE9BQU9DLGlCQUFpQjtBQUN4QixTQUFRQyxRQUFPQyxTQUFRQyxpQkFBZ0I7QUFDdkMsU0FBU0MsZ0JBQWU7QUFBQUMsS0FBQTtBQUFDLFFBQU0sRUFBQ0MsS0FBSSxJQUFFbEIsUUFBUTtBQUFFLFNBQU9rQixTQUFPLFlBQVUsdUJBQUMsa0JBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQUFhLElBQUdBLFNBQU8sV0FBUyx1QkFBQyxZQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FBTyxJQUFHLHVCQUFDLGVBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQUFVO0FBQUU7QUFBQ0QsR0FBdEhELGVBQWE7QUFBQSxVQUFnQmhCLE9BQU87QUFBQTtBQUFBLEtBQXBDZ0I7QUFDVCx3QkFBd0JHLE1BQUs7QUFBQyxTQUFPLHVCQUFDLFVBQU8saUNBQUMsU0FBTSxNQUFLLEtBQUksU0FBUyx1QkFBQyxZQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUEsU0FBTyxHQUFJO0FBQUEsMkJBQUMsU0FBTSxPQUFLLE1BQUMsU0FBUyx1QkFBQyxZQUFTLElBQUcsY0FBYSxTQUFPLFFBQWpDO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBaUMsS0FBdkQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUEwRDtBQUFBLElBQUUsdUJBQUMsU0FBTSxNQUFLLGFBQVksU0FBUyx1QkFBQyxtQkFBRDtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQWMsS0FBL0M7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUFrRDtBQUFBLElBQUUsdUJBQUMsU0FBTSxNQUFLLE9BQU0sU0FBUyx1QkFBQyxrQkFBRDtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQWEsS0FBeEM7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUEyQztBQUFBLElBQUUsdUJBQUMsU0FBTSxNQUFLLFNBQVEsU0FBUyx1QkFBQyxtQkFBRDtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQWMsS0FBM0M7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUE4QztBQUFBLElBQUUsdUJBQUMsU0FBTSxNQUFLLGdCQUFlLFNBQVMsdUJBQUMsaUJBQWMsTUFBSyxXQUFwQjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQTJCLEtBQS9EO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBa0U7QUFBQSxJQUFFLHVCQUFDLFNBQU0sTUFBSyxpQkFBZ0IsU0FBUyx1QkFBQyxtQkFBRDtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQWMsS0FBbkQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUFzRDtBQUFBLElBQUUsdUJBQUMsU0FBTSxNQUFLLCtCQUE4QixTQUFTLHVCQUFDLG1CQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBYyxLQUFqRTtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQW9FO0FBQUEsSUFBRSx1QkFBQyxTQUFNLE1BQUssZ0JBQWUsU0FBUyx1QkFBQyxpQkFBYyxNQUFLLGtCQUFwQjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQWtDLEtBQXRFO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBeUU7QUFBQSxJQUFFLHVCQUFDLFNBQU0sTUFBSyxXQUFVLFNBQVMsdUJBQUMsaUJBQWMsTUFBSyxhQUFwQjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQTZCLEtBQTVEO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBK0Q7QUFBQSxJQUFFLHVCQUFDLFNBQU0sTUFBSyxTQUFRLFNBQVMsdUJBQUMsaUJBQWMsTUFBSyxXQUFwQjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQTJCLEtBQXhEO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBMkQ7QUFBQSxJQUFFLHVCQUFDLFNBQU0sTUFBSyxhQUFZLFNBQVMsdUJBQUMsZ0JBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUFXLEtBQTVDO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBK0M7QUFBQSxJQUFFLHVCQUFDLFNBQU0sTUFBSyxVQUFTLFNBQVMsdUJBQUMsWUFBRDtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQU8sS0FBckM7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUF3QztBQUFBLElBQUUsdUJBQUMsU0FBTSxNQUFLLFdBQVUsU0FBUyx1QkFBQyxhQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBUSxLQUF2QztBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQTBDO0FBQUEsSUFBRSx1QkFBQyxTQUFNLE1BQUssWUFBVyxTQUFTLHVCQUFDLGNBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUFTLEtBQXpDO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBNEM7QUFBQSxJQUFFLHVCQUFDLFNBQU0sTUFBSyxXQUFVLFNBQVMsdUJBQUMsYUFBRDtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQVEsS0FBdkM7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUEwQztBQUFBLElBQUUsdUJBQUMsU0FBTSxNQUFLLFVBQVMsU0FBUyx1QkFBQyxZQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBTyxLQUFyQztBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQXdDO0FBQUEsSUFBRSx1QkFBQyxTQUFNLE1BQUssVUFBUyxTQUFTLHVCQUFDLFlBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUFPLEtBQXJDO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBd0M7QUFBQSxJQUFFLHVCQUFDLFNBQU0sTUFBSyxTQUFRLFNBQVMsdUJBQUMsV0FBRDtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQU0sS0FBbkM7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUFzQztBQUFBLElBQUUsdUJBQUMsU0FBTSxNQUFLLGVBQWMsU0FBUyx1QkFBQyxpQkFBRDtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQVksS0FBL0M7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUFrRDtBQUFBLElBQUUsdUJBQUMsU0FBTSxNQUFLLFdBQVUsU0FBUyx1QkFBQyxZQUFEO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBTyxLQUF0QztBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQXlDO0FBQUEsSUFBRSx1QkFBQyxTQUFNLE1BQUssWUFBVyxTQUFTLHVCQUFDLGFBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUFRLEtBQXhDO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBMkM7QUFBQSxJQUFFLHVCQUFDLFNBQU0sTUFBSyxjQUFhLFNBQVMsdUJBQUMsZUFBRDtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQVUsS0FBNUM7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUErQztBQUFBLElBQUUsdUJBQUMsU0FBTSxNQUFLLEtBQUksU0FBUyx1QkFBQyxZQUFTLElBQUcsY0FBYSxTQUFPLFFBQWpDO0FBQUE7QUFBQTtBQUFBO0FBQUEsV0FBaUMsS0FBMUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUE2RDtBQUFBLE9BQW50QztBQUFBO0FBQUE7QUFBQTtBQUFBLFNBQXF0QyxLQUE3dEM7QUFBQTtBQUFBO0FBQUE7QUFBQSxTQUFxdUM7QUFBUztBQUFDQyxNQUE1dkNEO0FBQUcsSUFBQUUsSUFBQUQ7QUFBQSxhQUFBQyxJQUFBO0FBQUEsYUFBQUQsS0FBQSIsIm5hbWVzIjpbIk5hdmlnYXRlIiwiUm91dGUiLCJSb3V0ZXMiLCJMYXlvdXQiLCJEYXNoYm9hcmQiLCJJT0NEYXNoYm9hcmQiLCJ1c2VEZW1vIiwiRW50aXR5TWFuYWdlciIsIkFyZWFIaWVyYXJjaHkiLCJHaXNXb3Jrc3BhY2UiLCJQb25kRGV0YWlsIiwiQ3ljbGVzIiwiRGlhcmllcyIsIkhhcnZlc3RzIiwiUmVwb3J0cyIsIlBvcnRhbCIsIkFkbWluIiwiUmV2aWV3IiwiSW50ZWdyYXRpb24iLCJBSUNoYXQiLCJBSUltYWdlIiwiQUlQcmVkaWN0IiwiUm9sZURhc2hib2FyZCIsIl9zIiwicm9sZSIsIkFwcCIsIl9jMiIsIl9jIl0sImlnbm9yZUxpc3QiOltdLCJzb3VyY2VzIjpbIkFwcC50c3giXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7TmF2aWdhdGUsUm91dGUsUm91dGVzfSBmcm9tICdyZWFjdC1yb3V0ZXItZG9tJztcbmltcG9ydCBMYXlvdXQgZnJvbSAnLi9hcHAvTGF5b3V0JztcbmltcG9ydCBEYXNoYm9hcmQgZnJvbSAnLi9mZWF0dXJlcy9EYXNoYm9hcmQnO1xuaW1wb3J0IElPQ0Rhc2hib2FyZCBmcm9tICcuL2ZlYXR1cmVzL0lPQ0Rhc2hib2FyZCc7XG5pbXBvcnQge3VzZURlbW99IGZyb20gJy4vc3RvcmUvZGVtb1N0b3JlJztcbmltcG9ydCBFbnRpdHlNYW5hZ2VyIGZyb20gJy4vZmVhdHVyZXMvRW50aXR5TWFuYWdlcic7XG5pbXBvcnQgQXJlYUhpZXJhcmNoeSBmcm9tICcuL2ZlYXR1cmVzL0FyZWFIaWVyYXJjaHknO1xuaW1wb3J0IEdpc1dvcmtzcGFjZSBmcm9tICcuL2ZlYXR1cmVzL2dpcy9HaXNXb3Jrc3BhY2UnO1xuaW1wb3J0IFBvbmREZXRhaWwgZnJvbSAnLi9mZWF0dXJlcy9Qb25kRGV0YWlsJztcbmltcG9ydCBDeWNsZXMgZnJvbSAnLi9mZWF0dXJlcy9DeWNsZXMnO1xuaW1wb3J0IERpYXJpZXMgZnJvbSAnLi9mZWF0dXJlcy9EaWFyaWVzJztcbmltcG9ydCBIYXJ2ZXN0cyBmcm9tICcuL2ZlYXR1cmVzL0hhcnZlc3RzJztcbmltcG9ydCBSZXBvcnRzIGZyb20gJy4vZmVhdHVyZXMvUmVwb3J0cyc7XG5pbXBvcnQgUG9ydGFsIGZyb20gJy4vZmVhdHVyZXMvUG9ydGFsJztcbmltcG9ydCBBZG1pbiBmcm9tICcuL2ZlYXR1cmVzL0FkbWluJztcbmltcG9ydCBSZXZpZXcgZnJvbSAnLi9mZWF0dXJlcy9SZXZpZXcnO1xuaW1wb3J0IEludGVncmF0aW9uIGZyb20gJy4vZmVhdHVyZXMvSW50ZWdyYXRpb24nO1xuaW1wb3J0IHtBSUNoYXQsQUlJbWFnZSxBSVByZWRpY3R9IGZyb20gJy4vZmVhdHVyZXMvQUknO1xuZnVuY3Rpb24gUm9sZURhc2hib2FyZCgpe2NvbnN0IHtyb2xlfT11c2VEZW1vKCk7cmV0dXJuIHJvbGU9PT0nbWFuYWdlcic/PElPQ0Rhc2hib2FyZC8+OnJvbGU9PT0nZmFybWVyJz88UG9ydGFsLz46PERhc2hib2FyZC8+fVxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gQXBwKCl7cmV0dXJuIDxSb3V0ZXM+PFJvdXRlIHBhdGg9XCIvXCIgZWxlbWVudD17PExheW91dC8+fT48Um91dGUgaW5kZXggZWxlbWVudD17PE5hdmlnYXRlIHRvPVwiL2Rhc2hib2FyZFwiIHJlcGxhY2UvPn0vPjxSb3V0ZSBwYXRoPVwiZGFzaGJvYXJkXCIgZWxlbWVudD17PFJvbGVEYXNoYm9hcmQvPn0vPjxSb3V0ZSBwYXRoPVwiZ2lzXCIgZWxlbWVudD17PEdpc1dvcmtzcGFjZS8+fS8+PFJvdXRlIHBhdGg9XCJhcmVhc1wiIGVsZW1lbnQ9ezxBcmVhSGllcmFyY2h5Lz59Lz48Um91dGUgcGF0aD1cImFyZWFzL21hbmFnZVwiIGVsZW1lbnQ9ezxFbnRpdHlNYW5hZ2VyIHR5cGU9XCJhcmVhc1wiLz59Lz48Um91dGUgcGF0aD1cImFyZWFzLzphcmVhSWRcIiBlbGVtZW50PXs8QXJlYUhpZXJhcmNoeS8+fS8+PFJvdXRlIHBhdGg9XCJhcmVhcy86YXJlYUlkL2Zhcm1zLzpmYXJtSWRcIiBlbGVtZW50PXs8QXJlYUhpZXJhcmNoeS8+fS8+PFJvdXRlIHBhdGg9XCJjb29wZXJhdGl2ZXNcIiBlbGVtZW50PXs8RW50aXR5TWFuYWdlciB0eXBlPVwiY29vcGVyYXRpdmVzXCIvPn0vPjxSb3V0ZSBwYXRoPVwiZmFybWVyc1wiIGVsZW1lbnQ9ezxFbnRpdHlNYW5hZ2VyIHR5cGU9XCJmYXJtZXJzXCIvPn0vPjxSb3V0ZSBwYXRoPVwicG9uZHNcIiBlbGVtZW50PXs8RW50aXR5TWFuYWdlciB0eXBlPVwicG9uZHNcIi8+fS8+PFJvdXRlIHBhdGg9XCJwb25kcy86aWRcIiBlbGVtZW50PXs8UG9uZERldGFpbC8+fS8+PFJvdXRlIHBhdGg9XCJjeWNsZXNcIiBlbGVtZW50PXs8Q3ljbGVzLz59Lz48Um91dGUgcGF0aD1cImRpYXJpZXNcIiBlbGVtZW50PXs8RGlhcmllcy8+fS8+PFJvdXRlIHBhdGg9XCJoYXJ2ZXN0c1wiIGVsZW1lbnQ9ezxIYXJ2ZXN0cy8+fS8+PFJvdXRlIHBhdGg9XCJyZXBvcnRzXCIgZWxlbWVudD17PFJlcG9ydHMvPn0vPjxSb3V0ZSBwYXRoPVwicG9ydGFsXCIgZWxlbWVudD17PFBvcnRhbC8+fS8+PFJvdXRlIHBhdGg9XCJyZXZpZXdcIiBlbGVtZW50PXs8UmV2aWV3Lz59Lz48Um91dGUgcGF0aD1cImFkbWluXCIgZWxlbWVudD17PEFkbWluLz59Lz48Um91dGUgcGF0aD1cImludGVncmF0aW9uXCIgZWxlbWVudD17PEludGVncmF0aW9uLz59Lz48Um91dGUgcGF0aD1cImFpL2NoYXRcIiBlbGVtZW50PXs8QUlDaGF0Lz59Lz48Um91dGUgcGF0aD1cImFpL2ltYWdlXCIgZWxlbWVudD17PEFJSW1hZ2UvPn0vPjxSb3V0ZSBwYXRoPVwiYWkvcHJlZGljdFwiIGVsZW1lbnQ9ezxBSVByZWRpY3QvPn0vPjxSb3V0ZSBwYXRoPVwiKlwiIGVsZW1lbnQ9ezxOYXZpZ2F0ZSB0bz1cIi9kYXNoYm9hcmRcIiByZXBsYWNlLz59Lz48L1JvdXRlPjwvUm91dGVzPn1cbiJdLCJmaWxlIjoiRjovU21hcnRBcXVhRGVtby9zcmMvQXBwLnRzeCJ9

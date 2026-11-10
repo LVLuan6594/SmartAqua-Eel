@@ -1,0 +1,784 @@
+import { createHotContext as __vite__createHotContext } from "/@vite/client";import.meta.hot = __vite__createHotContext("/src/features/Dashboard.tsx");import __vite__cjsImport0_react_jsxDevRuntime from "/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=3bc94ee6"; const Fragment = __vite__cjsImport0_react_jsxDevRuntime["Fragment"]; const jsxDEV = __vite__cjsImport0_react_jsxDevRuntime["jsxDEV"];
+import * as RefreshRuntime from "/@react-refresh";
+const inWebWorker = typeof WorkerGlobalScope !== "undefined" && self instanceof WorkerGlobalScope;
+let prevRefreshReg;
+let prevRefreshSig;
+if (import.meta.hot && !inWebWorker) {
+  if (!window.$RefreshReg$) {
+    throw new Error(
+      "@vitejs/plugin-react can't detect preamble. Something is wrong."
+    );
+  }
+  prevRefreshReg = window.$RefreshReg$;
+  prevRefreshSig = window.$RefreshSig$;
+  window.$RefreshReg$ = RefreshRuntime.getRefreshReg("F:/SmartAquaDemo/src/features/Dashboard.tsx");
+  window.$RefreshSig$ = RefreshRuntime.createSignatureFunctionForTransform;
+}
+var _s = $RefreshSig$();
+import __vite__cjsImport3_react from "/node_modules/.vite/deps/react.js?v=3bc94ee6"; const useMemo = __vite__cjsImport3_react["useMemo"]; const useState = __vite__cjsImport3_react["useState"];
+import { useNavigate } from "/node_modules/.vite/deps/react-router-dom.js?v=3bc94ee6";
+import { Activity, ArrowUpRight, BarChart3, Fish, Layers3, MapPinned, UsersRound, Warehouse, Waves, Weight } from "/node_modules/.vite/deps/lucide-react.js?v=3bc94ee6";
+import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, BarChart, Bar, Legend, PieChart, Pie, Cell } from "/node_modules/.vite/deps/recharts.js?v=3bc94ee6";
+import { PageTitle, Card, Button, Select, Badge, Table, NextLink, Empty } from "/src/components/UI.tsx";
+import { useDemo, getLabel } from "/src/store/demoStore.ts";
+import { metrics, productionByMonth, num, daysSince } from "/src/domain/selectors.ts?t=1792383185775";
+import { areaAnalytics } from "/src/domain/analytics/areaAnalytics.ts?t=1792383185775";
+import { useDataSummary, useSourceBreakdown } from "/src/services/repositories/useDataAccess.ts";
+import { SOURCE_FILTERS } from "/src/domain/scope.ts";
+import { DATA_SOURCE_LABELS } from "/src/domain/sources.ts";
+const palette = ["#13919a", "#28b8a5", "#4c8fcc", "#f0ae55", "#917ad3"];
+function Metric({ icon: Icon, title, value, caption, tone = "" }) {
+  return /* @__PURE__ */ jsxDEV(Card, { className: "metric", children: [
+    /* @__PURE__ */ jsxDEV("div", { children: [
+      /* @__PURE__ */ jsxDEV("h4", { children: title }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 32,
+        columnNumber: 177
+      }, this),
+      /* @__PURE__ */ jsxDEV("strong", { children: value }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 32,
+        columnNumber: 193
+      }, this),
+      /* @__PURE__ */ jsxDEV("small", { children: caption }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 32,
+        columnNumber: 217
+      }, this)
+    ] }, void 0, true, {
+      fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+      lineNumber: 32,
+      columnNumber: 172
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: `metric-icon ${tone}`, children: /* @__PURE__ */ jsxDEV(Icon, { size: 23 }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+      lineNumber: 32,
+      columnNumber: 286
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+      lineNumber: 32,
+      columnNumber: 247
+    }, this)
+  ] }, void 0, true, {
+    fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+    lineNumber: 32,
+    columnNumber: 147
+  }, this);
+}
+_c = Metric;
+export default function Dashboard() {
+  _s();
+  const { db, role } = useDemo(), go = useNavigate();
+  const [area, setArea] = useState(""), [species, setSpecies] = useState(""), [source, setSource] = useState("all"), [year, setYear] = useState(2026);
+  const { summary } = useDataSummary(source);
+  const facilityBreak = useSourceBreakdown("facilities", source);
+  const pondBreak = useSourceBreakdown("ponds", source);
+  const fil = { areaId: area || void 0, speciesId: species || void 0 }, m = metrics(db, role, fil), monthly = productionByMonth(db, role, fil, year), years = areaAnalytics(db, role).years;
+  const speciesData = useMemo(() => db.species.map((s) => ({ name: s.name, value: m.cycles.filter((c) => c.speciesId === s.id).length })).filter((x) => x.value > 0), [m.cycles, db.species]);
+  const areaData = useMemo(() => db.aquacultureAreas.filter((a) => !area || a.id === area).map((a) => ({ name: a.code, kg: Math.round(m.harvests.filter((h) => {
+    const c = db.farmingCycles.find((c2) => c2.id === h.cycleId);
+    return db.ponds.find((p) => p.id === c?.pondId)?.areaId === a.id;
+  }).reduce((n, h) => n + h.quantityKg, 0)) })).sort((a, b) => b.kg - a.kg).slice(0, 7), [m.harvests, db, area]);
+  const recent = m.cycles.filter((c) => c.status !== "completed").sort((a, b) => b.stockingDate.localeCompare(a.stockingDate)).slice(0, 6);
+  return /* @__PURE__ */ jsxDEV(Fragment, { children: [
+    /* @__PURE__ */ jsxDEV(PageTitle, { kicker: "TRUNG TÂM ĐIỀU HÀNH NUÔI TRỒNG THỦY SẢN", title: role === "farmer" ? "Tổng quan hộ nuôi" : "Tổng quan SmartAqua", description: "Giám sát vùng nuôi, ao nuôi và sản lượng qua dữ liệu liên thông. Tất cả giá trị trong bản trình diễn là mô phỏng.", actions: /* @__PURE__ */ jsxDEV(Fragment, { children: [
+      /* @__PURE__ */ jsxDEV(Button, { variant: "secondary", onClick: () => go("/gis"), children: [
+        /* @__PURE__ */ jsxDEV(MapPinned, { size: 16 }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 37,
+          columnNumber: 338
+        }, this),
+        " Khám phá bản đồ"
+      ] }, void 0, true, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 37,
+        columnNumber: 283
+      }, this),
+      /* @__PURE__ */ jsxDEV(Button, { onClick: () => go("/reports"), children: [
+        /* @__PURE__ */ jsxDEV(BarChart3, { size: 16 }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 37,
+          columnNumber: 425
+        }, this),
+        " Báo cáo chi tiết"
+      ] }, void 0, true, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 37,
+        columnNumber: 386
+      }, this)
+    ] }, void 0, true, {
+      fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+      lineNumber: 37,
+      columnNumber: 281
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+      lineNumber: 37,
+      columnNumber: 12
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "filters", children: [
+      /* @__PURE__ */ jsxDEV(Select, { value: area, onChange: setArea, options: db.aquacultureAreas.map((a) => ({ value: a.id, label: a.name })), allLabel: "Tất cả vùng nuôi" }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 38,
+        columnNumber: 27
+      }, this),
+      /* @__PURE__ */ jsxDEV(Select, { value: species, onChange: setSpecies, options: db.species.map((s) => ({ value: s.id, label: s.name })), allLabel: "Tất cả loài nuôi" }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 38,
+        columnNumber: 177
+      }, this),
+      /* @__PURE__ */ jsxDEV(Select, { value: source, onChange: (v) => setSource(v), options: SOURCE_FILTERS.map((f) => ({ value: f.id, label: f.label })), allLabel: "Tổng hợp (tất cả nguồn)" }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 38,
+        columnNumber: 324
+      }, this),
+      /* @__PURE__ */ jsxDEV(Badge, { tone: "green", children: [
+        "Nguồn dữ liệu: ",
+        SOURCE_FILTERS.find((f) => f.id === source)?.label
+      ] }, void 0, true, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 38,
+        columnNumber: 491
+      }, this)
+    ] }, void 0, true, {
+      fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+      lineNumber: 38,
+      columnNumber: 2
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "cards-grid", children: [
+      /* @__PURE__ */ jsxDEV(Metric, { icon: Layers3, title: "VÙNG NUÔI", value: num(m.areas), caption: "Vùng có hồ sơ ao" }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 39,
+        columnNumber: 30
+      }, this),
+      /* @__PURE__ */ jsxDEV(Metric, { icon: Warehouse, title: "HỢP TÁC XÃ", value: num(m.coops), caption: "Đơn vị quản lý", tone: "blue" }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 39,
+        columnNumber: 121
+      }, this),
+      /* @__PURE__ */ jsxDEV(Metric, { icon: UsersRound, title: "HỘ NUÔI", value: num(m.farmerCount), caption: "Hồ sơ thuộc phạm vi", tone: "amber" }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 39,
+        columnNumber: 225
+      }, this),
+      /* @__PURE__ */ jsxDEV(Metric, { icon: Waves, title: "AO NUÔI", value: num(m.pondCount), caption: "Ao trên bản đồ GIS", tone: "purple" }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 39,
+        columnNumber: 339
+      }, this)
+    ] }, void 0, true, {
+      fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+      lineNumber: 39,
+      columnNumber: 2
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "cards-grid area-kpi-grid", children: [
+      /* @__PURE__ */ jsxDEV(Metric, { icon: MapPinned, title: "DIỆN TÍCH VÙNG NUÔI", value: `${num(m.zoneAreaHa, 1)} ha`, caption: "Quy mô vùng theo hồ sơ", tone: "blue" }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 40,
+        columnNumber: 44
+      }, this),
+      /* @__PURE__ */ jsxDEV(Metric, { icon: Waves, title: "DIỆN TÍCH AO", value: `${num(m.areaHa, 1)} ha`, caption: "Tổng diện tích mặt ao" }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 40,
+        columnNumber: 181
+      }, this),
+      /* @__PURE__ */ jsxDEV(Metric, { icon: Fish, title: "VỤ ĐANG HOẠT ĐỘNG", value: num(m.active), caption: "Đang nuôi / đang thu hoạch" }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 40,
+        columnNumber: 290
+      }, this),
+      /* @__PURE__ */ jsxDEV(Metric, { icon: Weight, title: "SẢN LƯỢNG ĐÃ THU", value: `${num(m.harvestKg / 1e3, 1)} tấn`, caption: "Theo phiếu thu hoạch", tone: "amber" }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 40,
+        columnNumber: 397
+      }, this),
+      /* @__PURE__ */ jsxDEV(Metric, { icon: Activity, title: "TỔNG VỤ NUÔI", value: num(m.cycles.length), caption: "Bao gồm lịch sử vụ", tone: "purple" }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 40,
+        columnNumber: 534
+      }, this)
+    ] }, void 0, true, {
+      fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+      lineNumber: 40,
+      columnNumber: 2
+    }, this),
+    /* @__PURE__ */ jsxDEV(Card, { title: "Dữ liệu liên thông (đa nguồn)", subtitle: "Tổng hợp theo chuỗi xã/phường → vùng nuôi → cơ sở → ao → vụ nuôi; mỗi bản ghi giữ nhãn nguồn và tình trạng xác minh.", action: /* @__PURE__ */ jsxDEV(Badge, { tone: "blue", children: summary ? `${summary.sources.length} nguồn` : "Đang tải…" }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+      lineNumber: 41,
+      columnNumber: 182
+    }, this), children: [
+      /* @__PURE__ */ jsxDEV("div", { className: "split-stat", children: [
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("small", { children: "Xã / phường" }, void 0, false, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 42,
+            columnNumber: 36
+          }, this),
+          /* @__PURE__ */ jsxDEV("strong", { children: num(summary?.administrativeUnits) }, void 0, false, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 42,
+            columnNumber: 62
+          }, this)
+        ] }, void 0, true, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 42,
+          columnNumber: 31
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("small", { children: "Vùng nuôi" }, void 0, false, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 42,
+            columnNumber: 125
+          }, this),
+          /* @__PURE__ */ jsxDEV("strong", { children: num(summary?.zones) }, void 0, false, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 42,
+            columnNumber: 149
+          }, this)
+        ] }, void 0, true, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 42,
+          columnNumber: 120
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("small", { children: "Cơ sở / hộ" }, void 0, false, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 42,
+            columnNumber: 198
+          }, this),
+          /* @__PURE__ */ jsxDEV("strong", { children: num(summary?.facilities) }, void 0, false, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 42,
+            columnNumber: 223
+          }, this)
+        ] }, void 0, true, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 42,
+          columnNumber: 193
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("small", { children: "Ao nuôi" }, void 0, false, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 42,
+            columnNumber: 277
+          }, this),
+          /* @__PURE__ */ jsxDEV("strong", { children: num(summary?.ponds) }, void 0, false, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 42,
+            columnNumber: 299
+          }, this)
+        ] }, void 0, true, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 42,
+          columnNumber: 272
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("small", { children: "Vụ nuôi" }, void 0, false, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 42,
+            columnNumber: 348
+          }, this),
+          /* @__PURE__ */ jsxDEV("strong", { children: num(summary?.cycles) }, void 0, false, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 42,
+            columnNumber: 370
+          }, this)
+        ] }, void 0, true, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 42,
+          columnNumber: 343
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("small", { children: "Sản lượng" }, void 0, false, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 42,
+            columnNumber: 420
+          }, this),
+          /* @__PURE__ */ jsxDEV("strong", { children: [
+            num((summary?.harvestKg || 0) / 1e3, 1),
+            " tấn"
+          ] }, void 0, true, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 42,
+            columnNumber: 444
+          }, this)
+        ] }, void 0, true, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 42,
+          columnNumber: 415
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { children: [
+          /* @__PURE__ */ jsxDEV("small", { children: "Cơ sở có toạ độ" }, void 0, false, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 42,
+            columnNumber: 518
+          }, this),
+          /* @__PURE__ */ jsxDEV("strong", { children: num(summary?.facilitiesWithCoordinates) }, void 0, false, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 42,
+            columnNumber: 548
+          }, this)
+        ] }, void 0, true, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 42,
+          columnNumber: 513
+        }, this)
+      ] }, void 0, true, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 42,
+        columnNumber: 3
+      }, this),
+      /* @__PURE__ */ jsxDEV("div", { className: "divider" }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 43,
+        columnNumber: 3
+      }, this),
+      /* @__PURE__ */ jsxDEV(Table, { headers: ["Nguồn dữ liệu", "Cơ sở / hộ", "Ao nuôi"], children: ["MOCK_DATA", "PDF_SOURCE", "OSM_SOURCE", "OFFICIAL_GIS", "USER_INPUT", "DERIVED_DATA"].map((k) => {
+        const f = facilityBreak?.[k] || 0, p = pondBreak?.[k] || 0;
+        if (!f && !p) return null;
+        return /* @__PURE__ */ jsxDEV("tr", { children: [
+          /* @__PURE__ */ jsxDEV("td", { children: DATA_SOURCE_LABELS[k] }, void 0, false, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 44,
+            columnNumber: 278
+          }, this),
+          /* @__PURE__ */ jsxDEV("td", { children: num(f) }, void 0, false, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 44,
+            columnNumber: 310
+          }, this),
+          /* @__PURE__ */ jsxDEV("td", { children: num(p) }, void 0, false, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 44,
+            columnNumber: 327
+          }, this)
+        ] }, k, true, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 44,
+          columnNumber: 266
+        }, this);
+      }) }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 44,
+        columnNumber: 3
+      }, this)
+    ] }, void 0, true, {
+      fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+      lineNumber: 41,
+      columnNumber: 2
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "two-col", children: [
+      /* @__PURE__ */ jsxDEV(Card, { title: "Sản lượng thu hoạch theo tháng", subtitle: `Phiếu thu hoạch theo năm ${year}`, action: /* @__PURE__ */ jsxDEV(Select, { value: String(year), onChange: (value) => setYear(Number(value)), options: years.map((value) => ({ value: String(value), label: String(value) })) }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 46,
+        columnNumber: 126
+      }, this), children: /* @__PURE__ */ jsxDEV("div", { className: "chart-box", children: /* @__PURE__ */ jsxDEV(ResponsiveContainer, { width: "100%", height: "100%", children: /* @__PURE__ */ jsxDEV(AreaChart, { data: monthly, margin: { top: 14, right: 10, left: -16, bottom: 0 }, children: [
+        /* @__PURE__ */ jsxDEV("defs", { children: /* @__PURE__ */ jsxDEV("linearGradient", { id: "gradAqua", x1: "0", y1: "0", x2: "0", y2: "1", children: [
+          /* @__PURE__ */ jsxDEV("stop", { offset: "0%", stopColor: "#25aba6", stopOpacity: ".27" }, void 0, false, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 46,
+            columnNumber: 512
+          }, this),
+          /* @__PURE__ */ jsxDEV("stop", { offset: "100%", stopColor: "#25aba6", stopOpacity: "0" }, void 0, false, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 46,
+            columnNumber: 570
+          }, this)
+        ] }, void 0, true, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 46,
+          columnNumber: 454
+        }, this) }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 46,
+          columnNumber: 448
+        }, this),
+        /* @__PURE__ */ jsxDEV(CartesianGrid, { stroke: "#edf2f4", vertical: false }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 46,
+          columnNumber: 652
+        }, this),
+        /* @__PURE__ */ jsxDEV(XAxis, { dataKey: "month", tickLine: false, axisLine: false, tick: { fill: "#91a4aa", fontSize: 11 } }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 46,
+          columnNumber: 703
+        }, this),
+        /* @__PURE__ */ jsxDEV(YAxis, { tickLine: false, axisLine: false, tick: { fill: "#91a4aa", fontSize: 11 } }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 46,
+          columnNumber: 803
+        }, this),
+        /* @__PURE__ */ jsxDEV(Tooltip, { formatter: (v) => `${num(Number(v))} kg`, labelFormatter: (v) => `Tháng ${v}` }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 46,
+          columnNumber: 887
+        }, this),
+        /* @__PURE__ */ jsxDEV(Area, { dataKey: "value", type: "monotone", stroke: "#199e9d", strokeWidth: 3, fill: "url(#gradAqua)", name: "Sản lượng" }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 46,
+          columnNumber: 982
+        }, this)
+      ] }, void 0, true, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 46,
+        columnNumber: 368
+      }, this) }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 46,
+        columnNumber: 320
+      }, this) }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 46,
+        columnNumber: 293
+      }, this) }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 46,
+        columnNumber: 27
+      }, this),
+      /* @__PURE__ */ jsxDEV(Card, { title: "Cơ cấu loại thủy sản", subtitle: "Tỷ lệ theo số lượng vụ nuôi", action: /* @__PURE__ */ jsxDEV(Badge, { children: "Vụ nuôi" }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 47,
+        columnNumber: 84
+      }, this), children: /* @__PURE__ */ jsxDEV("div", { className: "chart-box", children: /* @__PURE__ */ jsxDEV(ResponsiveContainer, { width: "100%", height: "100%", children: /* @__PURE__ */ jsxDEV(PieChart, { children: [
+        /* @__PURE__ */ jsxDEV(Pie, { data: speciesData, dataKey: "value", nameKey: "name", innerRadius: "59%", outerRadius: "84%", paddingAngle: 3, children: speciesData.map((_, i) => /* @__PURE__ */ jsxDEV(Cell, { fill: palette[i % palette.length] }, i, false, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 47,
+          columnNumber: 341
+        }, this)) }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 47,
+          columnNumber: 193
+        }, this),
+        /* @__PURE__ */ jsxDEV(Tooltip, { formatter: (v) => `${v} vụ` }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 47,
+          columnNumber: 400
+        }, this),
+        /* @__PURE__ */ jsxDEV(Legend, { iconType: "circle", iconSize: 8, wrapperStyle: { fontSize: 11 } }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 47,
+          columnNumber: 445
+        }, this)
+      ] }, void 0, true, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 47,
+        columnNumber: 183
+      }, this) }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 47,
+        columnNumber: 135
+      }, this) }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 47,
+        columnNumber: 108
+      }, this) }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 47,
+        columnNumber: 2
+      }, this)
+    ] }, void 0, true, {
+      fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+      lineNumber: 46,
+      columnNumber: 2
+    }, this),
+    /* @__PURE__ */ jsxDEV("div", { className: "two-col", children: [
+      /* @__PURE__ */ jsxDEV(Card, { title: "Sản lượng theo vùng", subtitle: "Tổng hợp từ các phiếu thu hoạch có liên kết với ao", children: /* @__PURE__ */ jsxDEV("div", { className: "chart-box short", children: /* @__PURE__ */ jsxDEV(ResponsiveContainer, { width: "100%", height: "100%", children: /* @__PURE__ */ jsxDEV(BarChart, { data: areaData, layout: "vertical", margin: { top: 5, right: 25, left: 0, bottom: 5 }, children: [
+        /* @__PURE__ */ jsxDEV(CartesianGrid, { stroke: "#eff3f4", horizontal: false }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 48,
+          columnNumber: 299
+        }, this),
+        /* @__PURE__ */ jsxDEV(XAxis, { type: "number", tick: { fontSize: 10 } }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 48,
+          columnNumber: 352
+        }, this),
+        /* @__PURE__ */ jsxDEV(YAxis, { dataKey: "name", type: "category", tick: { fontSize: 11 }, width: 62 }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 48,
+          columnNumber: 399
+        }, this),
+        /* @__PURE__ */ jsxDEV(Tooltip, { formatter: (v) => `${num(Number(v))} kg` }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 48,
+          columnNumber: 474
+        }, this),
+        /* @__PURE__ */ jsxDEV(Bar, { dataKey: "kg", name: "Sản lượng", fill: "#41a9ac", radius: [0, 5, 5, 0] }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 48,
+          columnNumber: 532
+        }, this)
+      ] }, void 0, true, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 48,
+        columnNumber: 204
+      }, this) }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 48,
+        columnNumber: 156
+      }, this) }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 48,
+        columnNumber: 123
+      }, this) }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 48,
+        columnNumber: 27
+      }, this),
+      /* @__PURE__ */ jsxDEV(Card, { title: "Vận hành và truy cập nhanh", subtitle: "Các bước quan trọng trong bản trình diễn", children: [
+        /* @__PURE__ */ jsxDEV("div", { className: "shortcut-links", children: [
+          /* @__PURE__ */ jsxDEV("a", { href: "/gis", children: [
+            "Khám phá GIS ",
+            /* @__PURE__ */ jsxDEV(ArrowUpRight, { size: 13 }, void 0, false, {
+              fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+              lineNumber: 49,
+              columnNumber: 155
+            }, this)
+          ] }, void 0, true, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 49,
+            columnNumber: 127
+          }, this),
+          /* @__PURE__ */ jsxDEV("a", { href: "/cycles", children: [
+            "Theo dõi vụ ",
+            /* @__PURE__ */ jsxDEV(ArrowUpRight, { size: 13 }, void 0, false, {
+              fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+              lineNumber: 49,
+              columnNumber: 215
+            }, this)
+          ] }, void 0, true, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 49,
+            columnNumber: 185
+          }, this),
+          /* @__PURE__ */ jsxDEV("a", { href: "/diaries", children: [
+            "Nhập nhật ký ",
+            /* @__PURE__ */ jsxDEV(ArrowUpRight, { size: 13 }, void 0, false, {
+              fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+              lineNumber: 49,
+              columnNumber: 277
+            }, this)
+          ] }, void 0, true, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 49,
+            columnNumber: 245
+          }, this),
+          /* @__PURE__ */ jsxDEV("a", { href: "/harvests", children: [
+            "Ghi thu hoạch ",
+            /* @__PURE__ */ jsxDEV(ArrowUpRight, { size: 13 }, void 0, false, {
+              fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+              lineNumber: 49,
+              columnNumber: 341
+            }, this)
+          ] }, void 0, true, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 49,
+            columnNumber: 307
+          }, this),
+          /* @__PURE__ */ jsxDEV("a", { href: "/ai/predict", children: [
+            "Dự báo AI ",
+            /* @__PURE__ */ jsxDEV(ArrowUpRight, { size: 13 }, void 0, false, {
+              fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+              lineNumber: 49,
+              columnNumber: 403
+            }, this)
+          ] }, void 0, true, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 49,
+            columnNumber: 371
+          }, this)
+        ] }, void 0, true, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 49,
+          columnNumber: 95
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "divider" }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 49,
+          columnNumber: 439
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "infobar", children: [
+          /* @__PURE__ */ jsxDEV(Activity, { size: 18 }, void 0, false, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 49,
+            columnNumber: 491
+          }, this),
+          " Mọi KPI được tính từ cùng bộ dữ liệu với GIS, hồ sơ nuôi và báo cáo. Thao tác tạo/sửa nhật ký hoặc thu hoạch sẽ cập nhật các kết quả liên quan."
+        ] }, void 0, true, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 49,
+          columnNumber: 466
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "divider" }, void 0, false, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 49,
+          columnNumber: 663
+        }, this),
+        /* @__PURE__ */ jsxDEV("div", { className: "split-stat", children: [
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("small", { children: "Nhật ký thức ăn" }, void 0, false, {
+              fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+              lineNumber: 49,
+              columnNumber: 723
+            }, this),
+            /* @__PURE__ */ jsxDEV("strong", { children: num(db.feedDiaries.length) }, void 0, false, {
+              fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+              lineNumber: 49,
+              columnNumber: 753
+            }, this)
+          ] }, void 0, true, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 49,
+            columnNumber: 718
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("small", { children: "Quan sát môi trường" }, void 0, false, {
+              fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+              lineNumber: 49,
+              columnNumber: 809
+            }, this),
+            /* @__PURE__ */ jsxDEV("strong", { children: num(db.environmentObservations.length) }, void 0, false, {
+              fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+              lineNumber: 49,
+              columnNumber: 843
+            }, this)
+          ] }, void 0, true, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 49,
+            columnNumber: 804
+          }, this),
+          /* @__PURE__ */ jsxDEV("div", { children: [
+            /* @__PURE__ */ jsxDEV("small", { children: "Lần thu hoạch" }, void 0, false, {
+              fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+              lineNumber: 49,
+              columnNumber: 911
+            }, this),
+            /* @__PURE__ */ jsxDEV("strong", { children: num(db.harvests.length) }, void 0, false, {
+              fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+              lineNumber: 49,
+              columnNumber: 939
+            }, this)
+          ] }, void 0, true, {
+            fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+            lineNumber: 49,
+            columnNumber: 906
+          }, this)
+        ] }, void 0, true, {
+          fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+          lineNumber: 49,
+          columnNumber: 690
+        }, this)
+      ] }, void 0, true, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 49,
+        columnNumber: 2
+      }, this)
+    ] }, void 0, true, {
+      fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+      lineNumber: 48,
+      columnNumber: 2
+    }, this),
+    /* @__PURE__ */ jsxDEV(Card, { title: "Các vụ nuôi đang theo dõi", subtitle: "Đi sâu từ từng vụ đến hồ sơ ao và nhật ký", action: /* @__PURE__ */ jsxDEV(Button, { variant: "ghost", onClick: () => go("/cycles"), children: [
+      "Xem tất cả ",
+      /* @__PURE__ */ jsxDEV(ArrowUpRight, { size: 15 }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 50,
+        columnNumber: 168
+      }, this)
+    ] }, void 0, true, {
+      fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+      lineNumber: 50,
+      columnNumber: 103
+    }, this), children: recent.length ? /* @__PURE__ */ jsxDEV(Table, { headers: ["Mã vụ", "Ao nuôi", "Loài nuôi", "Ngày thả", "Số ngày nuôi", "Trạng thái", "Hồ sơ"], children: recent.map((c) => /* @__PURE__ */ jsxDEV("tr", { children: [
+      /* @__PURE__ */ jsxDEV("td", { children: /* @__PURE__ */ jsxDEV("strong", { children: c.code }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 51,
+        columnNumber: 164
+      }, this) }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 51,
+        columnNumber: 160
+      }, this),
+      /* @__PURE__ */ jsxDEV("td", { children: getLabel(db, "ponds", c.pondId) }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 51,
+        columnNumber: 194
+      }, this),
+      /* @__PURE__ */ jsxDEV("td", { children: getLabel(db, "species", c.speciesId) }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 51,
+        columnNumber: 236
+      }, this),
+      /* @__PURE__ */ jsxDEV("td", { children: c.stockingDate.split("-").reverse().join("/") }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 51,
+        columnNumber: 283
+      }, this),
+      /* @__PURE__ */ jsxDEV("td", { children: daysSince(c.stockingDate) }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 51,
+        columnNumber: 339
+      }, this),
+      /* @__PURE__ */ jsxDEV("td", { children: /* @__PURE__ */ jsxDEV(Badge, { tone: c.status === "harvesting" ? "amber" : "green", children: c.status === "harvesting" ? "Đang thu hoạch" : "Đang nuôi" }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 51,
+        columnNumber: 379
+      }, this) }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 51,
+        columnNumber: 375
+      }, this),
+      /* @__PURE__ */ jsxDEV("td", { children: /* @__PURE__ */ jsxDEV(NextLink, { onClick: () => go("/ponds/" + c.pondId), children: "Chi tiết" }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 51,
+        columnNumber: 516
+      }, this) }, void 0, false, {
+        fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+        lineNumber: 51,
+        columnNumber: 512
+      }, this)
+    ] }, c.id, true, {
+      fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+      lineNumber: 51,
+      columnNumber: 145
+    }, this)) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+      lineNumber: 51,
+      columnNumber: 19
+    }, this) : /* @__PURE__ */ jsxDEV(Empty, {}, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+      lineNumber: 51,
+      columnNumber: 609
+    }, this) }, void 0, false, {
+      fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+      lineNumber: 50,
+      columnNumber: 2
+    }, this)
+  ] }, void 0, true, {
+    fileName: "F:/SmartAquaDemo/src/features/Dashboard.tsx",
+    lineNumber: 37,
+    columnNumber: 10
+  }, this);
+}
+_s(Dashboard, "a58toSUqbgJjH1EtX7rFtO0omKc=", false, function() {
+  return [useDemo, useNavigate, useDataSummary, useSourceBreakdown, useSourceBreakdown];
+});
+_c2 = Dashboard;
+var _c, _c2;
+$RefreshReg$(_c, "Metric");
+$RefreshReg$(_c2, "Dashboard");
+if (import.meta.hot && !inWebWorker) {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+if (import.meta.hot && !inWebWorker) {
+  RefreshRuntime.__hmr_import(import.meta.url).then((currentExports) => {
+    RefreshRuntime.registerExportsForReactRefresh("F:/SmartAquaDemo/src/features/Dashboard.tsx", currentExports);
+    import.meta.hot.accept((nextExports) => {
+      if (!nextExports) return;
+      const invalidateMessage = RefreshRuntime.validateRefreshBoundaryAndEnqueueUpdate("F:/SmartAquaDemo/src/features/Dashboard.tsx", currentExports, nextExports);
+      if (invalidateMessage) import.meta.hot.invalidate(invalidateMessage);
+    });
+  });
+}
+
+//# sourceMappingURL=data:application/json;base64,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YUFBK0I7QUFBQSxNQUFLLHVCQUFDLFFBQUcsaUNBQUMsU0FBTSxNQUFNM0IsRUFBRTBCLFdBQVMsZUFBYSxVQUFRLFNBQVUxQixZQUFFMEIsV0FBUyxlQUFhLG1CQUFpQixlQUFoRztBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQTRHLEtBQWhIO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFBd0g7QUFBQSxNQUFLLHVCQUFDLFFBQUcsaUNBQUMsWUFBUyxTQUFTLE1BQUluRCxHQUFHLFlBQVV5QixFQUFFa0IsTUFBTSxHQUFHLHdCQUEvQztBQUFBO0FBQUE7QUFBQTtBQUFBLGFBQXVELEtBQTNEO0FBQUE7QUFBQTtBQUFBO0FBQUEsYUFBc0U7QUFBQSxTQUE1WmxCLEVBQUVDLElBQVg7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUEwYSxDQUFLLEtBQXBpQjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQXNpQixJQUFTLHVCQUFDLFdBQUQ7QUFBQTtBQUFBO0FBQUE7QUFBQSxXQUFNLEtBRHBrQjtBQUFBO0FBQUE7QUFBQTtBQUFBLFdBQ3VrQjtBQUFBLE9BZGhrQjtBQUFBO0FBQUE7QUFBQTtBQUFBLFNBZVA7QUFDRDtBQUFDN0IsR0FwQnVCRCxXQUFTO0FBQUEsVUFBbUJwQixTQUFhaEMsYUFBbUx1QyxnQkFBMkNDLG9CQUF3REEsa0JBQWtCO0FBQUE7QUFBQSxNQUFqVlk7QUFBUyxJQUFBRCxJQUFBMkY7QUFBQSxhQUFBM0YsSUFBQTtBQUFBLGFBQUEyRixLQUFBIiwibmFtZXMiOlsidXNlTWVtbyIsInVzZVN0YXRlIiwidXNlTmF2aWdhdGUiLCJBY3Rpdml0eSIsIkFycm93VXBSaWdodCIsIkJhckNoYXJ0MyIsIkZpc2giLCJMYXllcnMzIiwiTWFwUGlubmVkIiwiVXNlcnNSb3VuZCIsIldhcmVob3VzZSIsIldhdmVzIiwiV2VpZ2h0IiwiUmVzcG9uc2l2ZUNvbnRhaW5lciIsIkFyZWFDaGFydCIsIkFyZWEiLCJYQXhpcyIsIllBeGlzIiwiQ2FydGVzaWFuR3JpZCIsIlRvb2x0aXAiLCJCYXJDaGFydCIsIkJhciIsIkxlZ2VuZCIsIlBpZUNoYXJ0IiwiUGllIiwiQ2VsbCIsIlBhZ2VUaXRsZSIsIkNhcmQiLCJCdXR0b24iLCJTZWxlY3QiLCJCYWRnZSIsIlRhYmxlIiwiTmV4dExpbmsiLCJFbXB0eSIsInVzZURlbW8iLCJnZXRMYWJlbCIsIm1ldHJpY3MiLCJwcm9kdWN0aW9uQnlNb250aCIsIm51bSIsImRheXNTaW5jZSIsImFyZWFBbmFseXRpY3MiLCJ1c2VEYXRhU3VtbWFyeSIsInVzZVNvdXJjZUJyZWFrZG93biIsIlNPVVJDRV9GSUxURVJTIiwiREFUQV9TT1VSQ0VfTEFCRUxTIiwicGFsZXR0ZSIsIk1ldHJpYyIsImljb24iLCJJY29uIiwidGl0bGUiLCJ2YWx1ZSIsImNhcHRpb24iLCJ0b25lIiwiX2MiLCJEYXNoYm9hcmQiLCJfcyIsImRiIiwicm9sZSIsImdvIiwiYXJlYSIsInNldEFyZWEiLCJzcGVjaWVzIiwic2V0U3BlY2llcyIsInNvdXJjZSIsInNldFNvdXJjZSIsInllYXIiLCJzZXRZZWFyIiwic3VtbWFyeSIsImZhY2lsaXR5QnJlYWsiLCJwb25kQnJlYWsiLCJmaWwiLCJhcmVhSWQiLCJ1bmRlZmluZWQiLCJzcGVjaWVzSWQiLCJtIiwibW9udGhseSIsInllYXJzIiwic3BlY2llc0RhdGEiLCJtYXAiLCJzIiwibmFtZSIsImN5Y2xlcyIsImZpbHRlciIsImMiLCJpZCIsImxlbmd0aCIsIngiLCJhcmVhRGF0YSIsImFxdWFjdWx0dXJlQXJlYXMiLCJhIiwiY29kZSIsImtnIiwiTWF0aCIsInJvdW5kIiwiaGFydmVzdHMiLCJoIiwiZmFybWluZ0N5Y2xlcyIsImZpbmQiLCJjeWNsZUlkIiwicG9uZHMiLCJwIiwicG9uZElkIiwicmVkdWNlIiwibiIsInF1YW50aXR5S2ciLCJzb3J0IiwiYiIsInNsaWNlIiwicmVjZW50Iiwic3RhdHVzIiwic3RvY2tpbmdEYXRlIiwibG9jYWxlQ29tcGFyZSIsImxhYmVsIiwidiIsImYiLCJhcmVhcyIsImNvb3BzIiwiZmFybWVyQ291bnQiLCJwb25kQ291bnQiLCJ6b25lQXJlYUhhIiwiYXJlYUhhIiwiYWN0aXZlIiwiaGFydmVzdEtnIiwic291cmNlcyIsImFkbWluaXN0cmF0aXZlVW5pdHMiLCJ6b25lcyIsImZhY2lsaXRpZXMiLCJmYWNpbGl0aWVzV2l0aENvb3JkaW5hdGVzIiwiayIsIlN0cmluZyIsIk51bWJlciIsInRvcCIsInJpZ2h0IiwibGVmdCIsImJvdHRvbSIsImZpbGwiLCJmb250U2l6ZSIsIl8iLCJpIiwiZmVlZERpYXJpZXMiLCJlbnZpcm9ubWVudE9ic2VydmF0aW9ucyIsInNwbGl0IiwicmV2ZXJzZSIsImpvaW4iLCJfYzIiXSwiaWdub3JlTGlzdCI6W10sInNvdXJjZXMiOlsiRGFzaGJvYXJkLnRzeCJdLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgUmVhY3Qse3VzZU1lbW8sdXNlU3RhdGV9IGZyb20gJ3JlYWN0JztcbmltcG9ydCB7dXNlTmF2aWdhdGV9IGZyb20gJ3JlYWN0LXJvdXRlci1kb20nO1xuaW1wb3J0IHtBY3Rpdml0eSxBcnJvd1VwUmlnaHQsQmFyQ2hhcnQzLEZpc2gsTGF5ZXJzMyxNYXBQaW5uZWQsVXNlcnNSb3VuZCxXYXJlaG91c2UsV2F2ZXMsV2VpZ2h0LFRyZW5kaW5nVXAsQ2FsZW5kYXJEYXlzfSBmcm9tICdsdWNpZGUtcmVhY3QnO1xuaW1wb3J0IHtSZXNwb25zaXZlQ29udGFpbmVyLEFyZWFDaGFydCxBcmVhLFhBeGlzLFlBeGlzLENhcnRlc2lhbkdyaWQsVG9vbHRpcCxCYXJDaGFydCxCYXIsTGVnZW5kLFBpZUNoYXJ0LFBpZSxDZWxsfSBmcm9tICdyZWNoYXJ0cyc7XG5pbXBvcnQge1BhZ2VUaXRsZSxDYXJkLEJ1dHRvbixTZWxlY3QsQmFkZ2UsVGFibGUsTmV4dExpbmssRW1wdHl9IGZyb20gJy4uL2NvbXBvbmVudHMvVUknO1xuaW1wb3J0IHt1c2VEZW1vLGdldExhYmVsfSBmcm9tICcuLi9zdG9yZS9kZW1vU3RvcmUnO1xuaW1wb3J0IHttZXRyaWNzLHByb2R1Y3Rpb25CeU1vbnRoLG51bSxrZyxkYXlzU2luY2V9IGZyb20gJy4uL2RvbWFpbi9zZWxlY3RvcnMnO1xuaW1wb3J0IHsgYXJlYUFuYWx5dGljcyB9IGZyb20gJy4uL2RvbWFpbi9hbmFseXRpY3MvYXJlYUFuYWx5dGljcyc7XG5pbXBvcnQge3VzZURhdGFTdW1tYXJ5LHVzZVNvdXJjZUJyZWFrZG93bn0gZnJvbSAnLi4vc2VydmljZXMvcmVwb3NpdG9yaWVzL3VzZURhdGFBY2Nlc3MnO1xuaW1wb3J0IHtTT1VSQ0VfRklMVEVSUyx0eXBlIFNvdXJjZUZpbHRlcklkfSBmcm9tICcuLi9kb21haW4vc2NvcGUnO1xuaW1wb3J0IHtEQVRBX1NPVVJDRV9MQUJFTFN9IGZyb20gJy4uL2RvbWFpbi9zb3VyY2VzJztcbmNvbnN0IHBhbGV0dGU9WycjMTM5MTlhJywnIzI4YjhhNScsJyM0YzhmY2MnLCcjZjBhZTU1JywnIzkxN2FkMyddO1xuZnVuY3Rpb24gTWV0cmljKHtpY29uOkljb24sdGl0bGUsdmFsdWUsY2FwdGlvbix0b25lPScnfTp7aWNvbjphbnk7dGl0bGU6c3RyaW5nO3ZhbHVlOnN0cmluZztjYXB0aW9uOnN0cmluZzt0b25lPzpzdHJpbmd9KXtyZXR1cm4gPENhcmQgY2xhc3NOYW1lPVwibWV0cmljXCI+PGRpdj48aDQ+e3RpdGxlfTwvaDQ+PHN0cm9uZz57dmFsdWV9PC9zdHJvbmc+PHNtYWxsPntjYXB0aW9ufTwvc21hbGw+PC9kaXY+PGRpdiBjbGFzc05hbWU9e2BtZXRyaWMtaWNvbiAke3RvbmV9YH0+PEljb24gc2l6ZT17MjN9Lz48L2Rpdj48L0NhcmQ+fVxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gRGFzaGJvYXJkKCl7Y29uc3Qge2RiLHJvbGV9PXVzZURlbW8oKSxnbz11c2VOYXZpZ2F0ZSgpO2NvbnN0IFthcmVhLHNldEFyZWFdPXVzZVN0YXRlKCcnKSxbc3BlY2llcyxzZXRTcGVjaWVzXT11c2VTdGF0ZSgnJyksW3NvdXJjZSxzZXRTb3VyY2VdPXVzZVN0YXRlPFNvdXJjZUZpbHRlcklkPignYWxsJyksW3llYXIsc2V0WWVhcl09dXNlU3RhdGUoMjAyNik7Y29uc3Qge3N1bW1hcnl9PXVzZURhdGFTdW1tYXJ5KHNvdXJjZSk7Y29uc3QgZmFjaWxpdHlCcmVhaz11c2VTb3VyY2VCcmVha2Rvd24oJ2ZhY2lsaXRpZXMnLHNvdXJjZSk7Y29uc3QgcG9uZEJyZWFrPXVzZVNvdXJjZUJyZWFrZG93bigncG9uZHMnLHNvdXJjZSk7Y29uc3QgZmlsPXthcmVhSWQ6YXJlYXx8dW5kZWZpbmVkLHNwZWNpZXNJZDpzcGVjaWVzfHx1bmRlZmluZWR9LG09bWV0cmljcyhkYixyb2xlLGZpbCksbW9udGhseT1wcm9kdWN0aW9uQnlNb250aChkYixyb2xlLGZpbCx5ZWFyKSx5ZWFycz1hcmVhQW5hbHl0aWNzKGRiLHJvbGUpLnllYXJzO1xuIGNvbnN0IHNwZWNpZXNEYXRhPXVzZU1lbW8oKCk9PmRiLnNwZWNpZXMubWFwKChzOmFueSk9Pih7bmFtZTpzLm5hbWUsdmFsdWU6bS5jeWNsZXMuZmlsdGVyKChjOmFueSk9PmMuc3BlY2llc0lkPT09cy5pZCkubGVuZ3RofSkpLmZpbHRlcigoeDphbnkpPT54LnZhbHVlPjApLFttLmN5Y2xlcyxkYi5zcGVjaWVzXSk7XG4gY29uc3QgYXJlYURhdGE9dXNlTWVtbygoKT0+ZGIuYXF1YWN1bHR1cmVBcmVhcy5maWx0ZXIoKGE6YW55KT0+IWFyZWF8fGEuaWQ9PT1hcmVhKS5tYXAoKGE6YW55KT0+KHtuYW1lOmEuY29kZSxrZzpNYXRoLnJvdW5kKG0uaGFydmVzdHMuZmlsdGVyKChoOmFueSk9Pntjb25zdCBjPWRiLmZhcm1pbmdDeWNsZXMuZmluZCgoYzphbnkpPT5jLmlkPT09aC5jeWNsZUlkKTtyZXR1cm4gZGIucG9uZHMuZmluZCgocDphbnkpPT5wLmlkPT09Yz8ucG9uZElkKT8uYXJlYUlkPT09YS5pZH0pLnJlZHVjZSgobjpudW1iZXIsaDphbnkpPT5uK2gucXVhbnRpdHlLZywwKSl9KSkuc29ydCgoYTphbnksYjphbnkpPT5iLmtnLWEua2cpLnNsaWNlKDAsNyksW20uaGFydmVzdHMsZGIsYXJlYV0pO1xuIGNvbnN0IHJlY2VudD1tLmN5Y2xlcy5maWx0ZXIoKGM6YW55KT0+Yy5zdGF0dXMhPT0nY29tcGxldGVkJykuc29ydCgoYTphbnksYjphbnkpPT5iLnN0b2NraW5nRGF0ZS5sb2NhbGVDb21wYXJlKGEuc3RvY2tpbmdEYXRlKSkuc2xpY2UoMCw2KTtcbiByZXR1cm4gPD48UGFnZVRpdGxlIGtpY2tlcj1cIlRSVU5HIFTDgk0gxJBJ4buAVSBIw4BOSCBOVcOUSSBUUuG7kk5HIFRI4bumWSBT4bqiTlwiIHRpdGxlPXtyb2xlPT09J2Zhcm1lcic/J1Thu5VuZyBxdWFuIGjhu5kgbnXDtGknOidU4buVbmcgcXVhbiBTbWFydEFxdWEnfSBkZXNjcmlwdGlvbj1cIkdpw6FtIHPDoXQgdsO5bmcgbnXDtGksIGFvIG51w7RpIHbDoCBz4bqjbiBsxrDhu6NuZyBxdWEgZOG7ryBsaeG7h3UgbGnDqm4gdGjDtG5nLiBU4bqldCBj4bqjIGdpw6EgdHLhu4sgdHJvbmcgYuG6o24gdHLDrG5oIGRp4buFbiBsw6AgbcO0IHBo4buPbmcuXCIgYWN0aW9ucz17PD48QnV0dG9uIHZhcmlhbnQ9XCJzZWNvbmRhcnlcIiBvbkNsaWNrPXsoKT0+Z28oJy9naXMnKX0+PE1hcFBpbm5lZCBzaXplPXsxNn0vPiBLaMOhbSBwaMOhIGLhuqNuIMSR4buTPC9CdXR0b24+PEJ1dHRvbiBvbkNsaWNrPXsoKT0+Z28oJy9yZXBvcnRzJyl9PjxCYXJDaGFydDMgc2l6ZT17MTZ9Lz4gQsOhbyBjw6FvIGNoaSB0aeG6v3Q8L0J1dHRvbj48Lz59Lz5cbiA8ZGl2IGNsYXNzTmFtZT1cImZpbHRlcnNcIj48U2VsZWN0IHZhbHVlPXthcmVhfSBvbkNoYW5nZT17c2V0QXJlYX0gb3B0aW9ucz17ZGIuYXF1YWN1bHR1cmVBcmVhcy5tYXAoKGE6YW55KT0+KHt2YWx1ZTphLmlkLGxhYmVsOmEubmFtZX0pKX0gYWxsTGFiZWw9XCJU4bqldCBj4bqjIHbDuW5nIG51w7RpXCIvPjxTZWxlY3QgdmFsdWU9e3NwZWNpZXN9IG9uQ2hhbmdlPXtzZXRTcGVjaWVzfSBvcHRpb25zPXtkYi5zcGVjaWVzLm1hcCgoczphbnkpPT4oe3ZhbHVlOnMuaWQsbGFiZWw6cy5uYW1lfSkpfSBhbGxMYWJlbD1cIlThuqV0IGPhuqMgbG/DoGkgbnXDtGlcIi8+PFNlbGVjdCB2YWx1ZT17c291cmNlfSBvbkNoYW5nZT17KHY6YW55KT0+c2V0U291cmNlKHYpfSBvcHRpb25zPXtTT1VSQ0VfRklMVEVSUy5tYXAoZj0+KHt2YWx1ZTpmLmlkLGxhYmVsOmYubGFiZWx9KSl9IGFsbExhYmVsPVwiVOG7lW5nIGjhu6NwICh04bqldCBj4bqjIG5ndeG7k24pXCIvPjxCYWRnZSB0b25lPVwiZ3JlZW5cIj5OZ3Xhu5NuIGThu68gbGnhu4d1OiB7U09VUkNFX0ZJTFRFUlMuZmluZChmPT5mLmlkPT09c291cmNlKT8ubGFiZWx9PC9CYWRnZT48L2Rpdj5cbiA8ZGl2IGNsYXNzTmFtZT1cImNhcmRzLWdyaWRcIj48TWV0cmljIGljb249e0xheWVyczN9IHRpdGxlPVwiVsOZTkcgTlXDlElcIiB2YWx1ZT17bnVtKG0uYXJlYXMpfSBjYXB0aW9uPVwiVsO5bmcgY8OzIGjhu5Mgc8ahIGFvXCIvPjxNZXRyaWMgaWNvbj17V2FyZWhvdXNlfSB0aXRsZT1cIkjhu6JQIFTDgUMgWMODXCIgdmFsdWU9e251bShtLmNvb3BzKX0gY2FwdGlvbj1cIsSQxqFuIHbhu4sgcXXhuqNuIGzDvVwiIHRvbmU9XCJibHVlXCIvPjxNZXRyaWMgaWNvbj17VXNlcnNSb3VuZH0gdGl0bGU9XCJI4buYIE5Vw5RJXCIgdmFsdWU9e251bShtLmZhcm1lckNvdW50KX0gY2FwdGlvbj1cIkjhu5Mgc8ahIHRodeG7mWMgcGjhuqFtIHZpXCIgdG9uZT1cImFtYmVyXCIvPjxNZXRyaWMgaWNvbj17V2F2ZXN9IHRpdGxlPVwiQU8gTlXDlElcIiB2YWx1ZT17bnVtKG0ucG9uZENvdW50KX0gY2FwdGlvbj1cIkFvIHRyw6puIGLhuqNuIMSR4buTIEdJU1wiIHRvbmU9XCJwdXJwbGVcIi8+PC9kaXY+XG4gPGRpdiBjbGFzc05hbWU9XCJjYXJkcy1ncmlkIGFyZWEta3BpLWdyaWRcIj48TWV0cmljIGljb249e01hcFBpbm5lZH0gdGl0bGU9XCJESeG7hk4gVMONQ0ggVsOZTkcgTlXDlElcIiB2YWx1ZT17YCR7bnVtKG0uem9uZUFyZWFIYSwxKX0gaGFgfSBjYXB0aW9uPVwiUXV5IG3DtCB2w7luZyB0aGVvIGjhu5Mgc8ahXCIgdG9uZT1cImJsdWVcIi8+PE1ldHJpYyBpY29uPXtXYXZlc30gdGl0bGU9XCJESeG7hk4gVMONQ0ggQU9cIiB2YWx1ZT17YCR7bnVtKG0uYXJlYUhhLDEpfSBoYWB9IGNhcHRpb249XCJU4buVbmcgZGnhu4duIHTDrWNoIG3hurd0IGFvXCIvPjxNZXRyaWMgaWNvbj17RmlzaH0gdGl0bGU9XCJW4bukIMSQQU5HIEhP4bqgVCDEkOG7mE5HXCIgdmFsdWU9e251bShtLmFjdGl2ZSl9IGNhcHRpb249XCLEkGFuZyBudcO0aSAvIMSRYW5nIHRodSBob+G6oWNoXCIvPjxNZXRyaWMgaWNvbj17V2VpZ2h0fSB0aXRsZT1cIlPhuqJOIEzGr+G7ok5HIMSQw4MgVEhVXCIgdmFsdWU9e2Ake251bShtLmhhcnZlc3RLZy8xMDAwLDEpfSB04bqlbmB9IGNhcHRpb249XCJUaGVvIHBoaeG6v3UgdGh1IGhv4bqhY2hcIiB0b25lPVwiYW1iZXJcIi8+PE1ldHJpYyBpY29uPXtBY3Rpdml0eX0gdGl0bGU9XCJU4buUTkcgVuG7pCBOVcOUSVwiIHZhbHVlPXtudW0obS5jeWNsZXMubGVuZ3RoKX0gY2FwdGlvbj1cIkJhbyBn4buTbSBs4buLY2ggc+G7rSB24bulXCIgdG9uZT1cInB1cnBsZVwiLz48L2Rpdj5cbiA8Q2FyZCB0aXRsZT1cIkThu68gbGnhu4d1IGxpw6puIHRow7RuZyAoxJFhIG5ndeG7k24pXCIgc3VidGl0bGU9XCJU4buVbmcgaOG7o3AgdGhlbyBjaHXhu5dpIHjDoy9waMaw4budbmcg4oaSIHbDuW5nIG51w7RpIOKGkiBjxqEgc+G7nyDihpIgYW8g4oaSIHbhu6UgbnXDtGk7IG3hu5dpIGLhuqNuIGdoaSBnaeG7ryBuaMOjbiBuZ3Xhu5NuIHbDoCB0w6xuaCB0cuG6oW5nIHjDoWMgbWluaC5cIiBhY3Rpb249ezxCYWRnZSB0b25lPVwiYmx1ZVwiPntzdW1tYXJ5P2Ake3N1bW1hcnkuc291cmNlcy5sZW5ndGh9IG5ndeG7k25gOifEkGFuZyB04bqjaeKApid9PC9CYWRnZT59PlxuICA8ZGl2IGNsYXNzTmFtZT1cInNwbGl0LXN0YXRcIj48ZGl2PjxzbWFsbD5Yw6MgLyBwaMaw4budbmc8L3NtYWxsPjxzdHJvbmc+e251bShzdW1tYXJ5Py5hZG1pbmlzdHJhdGl2ZVVuaXRzKX08L3N0cm9uZz48L2Rpdj48ZGl2PjxzbWFsbD5Ww7luZyBudcO0aTwvc21hbGw+PHN0cm9uZz57bnVtKHN1bW1hcnk/LnpvbmVzKX08L3N0cm9uZz48L2Rpdj48ZGl2PjxzbWFsbD5DxqEgc+G7nyAvIGjhu5k8L3NtYWxsPjxzdHJvbmc+e251bShzdW1tYXJ5Py5mYWNpbGl0aWVzKX08L3N0cm9uZz48L2Rpdj48ZGl2PjxzbWFsbD5BbyBudcO0aTwvc21hbGw+PHN0cm9uZz57bnVtKHN1bW1hcnk/LnBvbmRzKX08L3N0cm9uZz48L2Rpdj48ZGl2PjxzbWFsbD5W4bulIG51w7RpPC9zbWFsbD48c3Ryb25nPntudW0oc3VtbWFyeT8uY3ljbGVzKX08L3N0cm9uZz48L2Rpdj48ZGl2PjxzbWFsbD5T4bqjbiBsxrDhu6NuZzwvc21hbGw+PHN0cm9uZz57bnVtKChzdW1tYXJ5Py5oYXJ2ZXN0S2d8fDApLzEwMDAsMSl9IHThuqVuPC9zdHJvbmc+PC9kaXY+PGRpdj48c21hbGw+Q8ahIHPhu58gY8OzIHRv4bqhIMSR4buZPC9zbWFsbD48c3Ryb25nPntudW0oc3VtbWFyeT8uZmFjaWxpdGllc1dpdGhDb29yZGluYXRlcyl9PC9zdHJvbmc+PC9kaXY+PC9kaXY+XG4gIDxkaXYgY2xhc3NOYW1lPVwiZGl2aWRlclwiLz5cbiAgPFRhYmxlIGhlYWRlcnM9e1snTmd14buTbiBk4buvIGxp4buHdScsJ0PGoSBz4bufIC8gaOG7mScsJ0FvIG51w7RpJ119PnsoWydNT0NLX0RBVEEnLCdQREZfU09VUkNFJywnT1NNX1NPVVJDRScsJ09GRklDSUFMX0dJUycsJ1VTRVJfSU5QVVQnLCdERVJJVkVEX0RBVEEnXSBhcyBjb25zdCkubWFwKGs9Pntjb25zdCBmPWZhY2lsaXR5QnJlYWs/LltrXXx8MCxwPXBvbmRCcmVhaz8uW2tdfHwwO2lmKCFmJiYhcClyZXR1cm4gbnVsbDtyZXR1cm4gPHRyIGtleT17a30+PHRkPntEQVRBX1NPVVJDRV9MQUJFTFNba119PC90ZD48dGQ+e251bShmKX08L3RkPjx0ZD57bnVtKHApfTwvdGQ+PC90cj59KX08L1RhYmxlPlxuIDwvQ2FyZD5cbiA8ZGl2IGNsYXNzTmFtZT1cInR3by1jb2xcIj48Q2FyZCB0aXRsZT1cIlPhuqNuIGzGsOG7o25nIHRodSBob+G6oWNoIHRoZW8gdGjDoW5nXCIgc3VidGl0bGU9e2BQaGnhur91IHRodSBob+G6oWNoIHRoZW8gbsSDbSAke3llYXJ9YH0gYWN0aW9uPXs8U2VsZWN0IHZhbHVlPXtTdHJpbmcoeWVhcil9IG9uQ2hhbmdlPXsodmFsdWU6c3RyaW5nKT0+c2V0WWVhcihOdW1iZXIodmFsdWUpKX0gb3B0aW9ucz17eWVhcnMubWFwKCh2YWx1ZSk9Pih7dmFsdWU6U3RyaW5nKHZhbHVlKSxsYWJlbDpTdHJpbmcodmFsdWUpfSkpfS8+fT48ZGl2IGNsYXNzTmFtZT1cImNoYXJ0LWJveFwiPjxSZXNwb25zaXZlQ29udGFpbmVyIHdpZHRoPVwiMTAwJVwiIGhlaWdodD1cIjEwMCVcIj48QXJlYUNoYXJ0IGRhdGE9e21vbnRobHl9IG1hcmdpbj17e3RvcDoxNCxyaWdodDoxMCxsZWZ0Oi0xNixib3R0b206MH19PjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD1cImdyYWRBcXVhXCIgeDE9XCIwXCIgeTE9XCIwXCIgeDI9XCIwXCIgeTI9XCIxXCI+PHN0b3Agb2Zmc2V0PVwiMCVcIiBzdG9wQ29sb3I9XCIjMjVhYmE2XCIgc3RvcE9wYWNpdHk9XCIuMjdcIi8+PHN0b3Agb2Zmc2V0PVwiMTAwJVwiIHN0b3BDb2xvcj1cIiMyNWFiYTZcIiBzdG9wT3BhY2l0eT1cIjBcIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PENhcnRlc2lhbkdyaWQgc3Ryb2tlPVwiI2VkZjJmNFwiIHZlcnRpY2FsPXtmYWxzZX0vPjxYQXhpcyBkYXRhS2V5PVwibW9udGhcIiB0aWNrTGluZT17ZmFsc2V9IGF4aXNMaW5lPXtmYWxzZX0gdGljaz17e2ZpbGw6JyM5MWE0YWEnLGZvbnRTaXplOjExfX0vPjxZQXhpcyB0aWNrTGluZT17ZmFsc2V9IGF4aXNMaW5lPXtmYWxzZX0gdGljaz17e2ZpbGw6JyM5MWE0YWEnLGZvbnRTaXplOjExfX0vPjxUb29sdGlwIGZvcm1hdHRlcj17KHY6YW55KT0+YCR7bnVtKE51bWJlcih2KSl9IGtnYH0gbGFiZWxGb3JtYXR0ZXI9e3Y9PmBUaMOhbmcgJHt2fWB9Lz48QXJlYSBkYXRhS2V5PVwidmFsdWVcIiB0eXBlPVwibW9ub3RvbmVcIiBzdHJva2U9XCIjMTk5ZTlkXCIgc3Ryb2tlV2lkdGg9ezN9IGZpbGw9XCJ1cmwoI2dyYWRBcXVhKVwiIG5hbWU9XCJT4bqjbiBsxrDhu6NuZ1wiLz48L0FyZWFDaGFydD48L1Jlc3BvbnNpdmVDb250YWluZXI+PC9kaXY+PC9DYXJkPlxuIDxDYXJkIHRpdGxlPVwiQ8ahIGPhuqV1IGxv4bqhaSB0aOG7p3kgc+G6o25cIiBzdWJ0aXRsZT1cIlThu7cgbOG7hyB0aGVvIHPhu5EgbMaw4bujbmcgduG7pSBudcO0aVwiIGFjdGlvbj17PEJhZGdlPlbhu6UgbnXDtGk8L0JhZGdlPn0+PGRpdiBjbGFzc05hbWU9XCJjaGFydC1ib3hcIj48UmVzcG9uc2l2ZUNvbnRhaW5lciB3aWR0aD1cIjEwMCVcIiBoZWlnaHQ9XCIxMDAlXCI+PFBpZUNoYXJ0PjxQaWUgZGF0YT17c3BlY2llc0RhdGF9IGRhdGFLZXk9XCJ2YWx1ZVwiIG5hbWVLZXk9XCJuYW1lXCIgaW5uZXJSYWRpdXM9XCI1OSVcIiBvdXRlclJhZGl1cz1cIjg0JVwiIHBhZGRpbmdBbmdsZT17M30+e3NwZWNpZXNEYXRhLm1hcCgoXzphbnksaTpudW1iZXIpPT48Q2VsbCBrZXk9e2l9IGZpbGw9e3BhbGV0dGVbaSVwYWxldHRlLmxlbmd0aF19Lz4pfTwvUGllPjxUb29sdGlwIGZvcm1hdHRlcj17KHY6YW55KT0+YCR7dn0gduG7pWB9Lz48TGVnZW5kIGljb25UeXBlPVwiY2lyY2xlXCIgaWNvblNpemU9ezh9IHdyYXBwZXJTdHlsZT17e2ZvbnRTaXplOjExfX0vPjwvUGllQ2hhcnQ+PC9SZXNwb25zaXZlQ29udGFpbmVyPjwvZGl2PjwvQ2FyZD48L2Rpdj5cbiA8ZGl2IGNsYXNzTmFtZT1cInR3by1jb2xcIj48Q2FyZCB0aXRsZT1cIlPhuqNuIGzGsOG7o25nIHRoZW8gdsO5bmdcIiBzdWJ0aXRsZT1cIlThu5VuZyBo4bujcCB04burIGPDoWMgcGhp4bq/dSB0aHUgaG/huqFjaCBjw7MgbGnDqm4ga+G6v3QgduG7m2kgYW9cIj48ZGl2IGNsYXNzTmFtZT1cImNoYXJ0LWJveCBzaG9ydFwiPjxSZXNwb25zaXZlQ29udGFpbmVyIHdpZHRoPVwiMTAwJVwiIGhlaWdodD1cIjEwMCVcIj48QmFyQ2hhcnQgZGF0YT17YXJlYURhdGF9IGxheW91dD1cInZlcnRpY2FsXCIgbWFyZ2luPXt7dG9wOjUscmlnaHQ6MjUsbGVmdDowLGJvdHRvbTo1fX0+PENhcnRlc2lhbkdyaWQgc3Ryb2tlPVwiI2VmZjNmNFwiIGhvcml6b250YWw9e2ZhbHNlfS8+PFhBeGlzIHR5cGU9XCJudW1iZXJcIiB0aWNrPXt7Zm9udFNpemU6MTB9fS8+PFlBeGlzIGRhdGFLZXk9XCJuYW1lXCIgdHlwZT1cImNhdGVnb3J5XCIgdGljaz17e2ZvbnRTaXplOjExfX0gd2lkdGg9ezYyfS8+PFRvb2x0aXAgZm9ybWF0dGVyPXsodjphbnkpPT5gJHtudW0oTnVtYmVyKHYpKX0ga2dgfS8+PEJhciBkYXRhS2V5PVwia2dcIiBuYW1lPVwiU+G6o24gbMaw4bujbmdcIiBmaWxsPVwiIzQxYTlhY1wiIHJhZGl1cz17WzAsNSw1LDBdfS8+PC9CYXJDaGFydD48L1Jlc3BvbnNpdmVDb250YWluZXI+PC9kaXY+PC9DYXJkPlxuIDxDYXJkIHRpdGxlPVwiVuG6rW4gaMOgbmggdsOgIHRydXkgY+G6rXAgbmhhbmhcIiBzdWJ0aXRsZT1cIkPDoWMgYsaw4bubYyBxdWFuIHRy4buNbmcgdHJvbmcgYuG6o24gdHLDrG5oIGRp4buFblwiPjxkaXYgY2xhc3NOYW1lPVwic2hvcnRjdXQtbGlua3NcIj48YSBocmVmPVwiL2dpc1wiPktow6FtIHBow6EgR0lTIDxBcnJvd1VwUmlnaHQgc2l6ZT17MTN9Lz48L2E+PGEgaHJlZj1cIi9jeWNsZXNcIj5UaGVvIGTDtWkgduG7pSA8QXJyb3dVcFJpZ2h0IHNpemU9ezEzfS8+PC9hPjxhIGhyZWY9XCIvZGlhcmllc1wiPk5o4bqtcCBuaOG6rXQga8O9IDxBcnJvd1VwUmlnaHQgc2l6ZT17MTN9Lz48L2E+PGEgaHJlZj1cIi9oYXJ2ZXN0c1wiPkdoaSB0aHUgaG/huqFjaCA8QXJyb3dVcFJpZ2h0IHNpemU9ezEzfS8+PC9hPjxhIGhyZWY9XCIvYWkvcHJlZGljdFwiPkThu7EgYsOhbyBBSSA8QXJyb3dVcFJpZ2h0IHNpemU9ezEzfS8+PC9hPjwvZGl2PjxkaXYgY2xhc3NOYW1lPVwiZGl2aWRlclwiLz48ZGl2IGNsYXNzTmFtZT1cImluZm9iYXJcIj48QWN0aXZpdHkgc2l6ZT17MTh9Lz4gTeG7jWkgS1BJIMSRxrDhu6NjIHTDrW5oIHThu6sgY8O5bmcgYuG7mSBk4buvIGxp4buHdSB24bubaSBHSVMsIGjhu5Mgc8ahIG51w7RpIHbDoCBiw6FvIGPDoW8uIFRoYW8gdMOhYyB04bqhby9z4butYSBuaOG6rXQga8O9IGhv4bq3YyB0aHUgaG/huqFjaCBz4bq9IGPhuq1wIG5o4bqtdCBjw6FjIGvhur90IHF14bqjIGxpw6puIHF1YW4uPC9kaXY+PGRpdiBjbGFzc05hbWU9XCJkaXZpZGVyXCIvPjxkaXYgY2xhc3NOYW1lPVwic3BsaXQtc3RhdFwiPjxkaXY+PHNtYWxsPk5o4bqtdCBrw70gdGjhu6ljIMSDbjwvc21hbGw+PHN0cm9uZz57bnVtKGRiLmZlZWREaWFyaWVzLmxlbmd0aCl9PC9zdHJvbmc+PC9kaXY+PGRpdj48c21hbGw+UXVhbiBzw6F0IG3DtGkgdHLGsOG7nW5nPC9zbWFsbD48c3Ryb25nPntudW0oZGIuZW52aXJvbm1lbnRPYnNlcnZhdGlvbnMubGVuZ3RoKX08L3N0cm9uZz48L2Rpdj48ZGl2PjxzbWFsbD5M4bqnbiB0aHUgaG/huqFjaDwvc21hbGw+PHN0cm9uZz57bnVtKGRiLmhhcnZlc3RzLmxlbmd0aCl9PC9zdHJvbmc+PC9kaXY+PC9kaXY+PC9DYXJkPjwvZGl2PlxuIDxDYXJkIHRpdGxlPVwiQ8OhYyB24bulIG51w7RpIMSRYW5nIHRoZW8gZMO1aVwiIHN1YnRpdGxlPVwixJBpIHPDonUgdOG7qyB04burbmcgduG7pSDEkeG6v24gaOG7kyBzxqEgYW8gdsOgIG5o4bqtdCBrw71cIiBhY3Rpb249ezxCdXR0b24gdmFyaWFudD1cImdob3N0XCIgb25DbGljaz17KCk9PmdvKCcvY3ljbGVzJyl9PlhlbSB04bqldCBj4bqjIDxBcnJvd1VwUmlnaHQgc2l6ZT17MTV9Lz48L0J1dHRvbj59PlxuIHtyZWNlbnQubGVuZ3RoPzxUYWJsZSBoZWFkZXJzPXtbJ03DoyB24bulJywnQW8gbnXDtGknLCdMb8OgaSBudcO0aScsJ05nw6B5IHRo4bqjJywnU+G7kSBuZ8OgeSBudcO0aScsJ1Ry4bqhbmcgdGjDoWknLCdI4buTIHPGoSddfT57cmVjZW50Lm1hcCgoYzphbnkpPT48dHIga2V5PXtjLmlkfT48dGQ+PHN0cm9uZz57Yy5jb2RlfTwvc3Ryb25nPjwvdGQ+PHRkPntnZXRMYWJlbChkYiwncG9uZHMnLGMucG9uZElkKX08L3RkPjx0ZD57Z2V0TGFiZWwoZGIsJ3NwZWNpZXMnLGMuc3BlY2llc0lkKX08L3RkPjx0ZD57Yy5zdG9ja2luZ0RhdGUuc3BsaXQoJy0nKS5yZXZlcnNlKCkuam9pbignLycpfTwvdGQ+PHRkPntkYXlzU2luY2UoYy5zdG9ja2luZ0RhdGUpfTwvdGQ+PHRkPjxCYWRnZSB0b25lPXtjLnN0YXR1cz09PSdoYXJ2ZXN0aW5nJz8nYW1iZXInOidncmVlbid9PntjLnN0YXR1cz09PSdoYXJ2ZXN0aW5nJz8nxJBhbmcgdGh1IGhv4bqhY2gnOifEkGFuZyBudcO0aSd9PC9CYWRnZT48L3RkPjx0ZD48TmV4dExpbmsgb25DbGljaz17KCk9PmdvKCcvcG9uZHMvJytjLnBvbmRJZCl9PkNoaSB0aeG6v3Q8L05leHRMaW5rPjwvdGQ+PC90cj4pfTwvVGFibGU+OjxFbXB0eS8+fTwvQ2FyZD5cbiA8Lz5cbn1cbiJdLCJmaWxlIjoiRjovU21hcnRBcXVhRGVtby9zcmMvZmVhdHVyZXMvRGFzaGJvYXJkLnRzeCJ9

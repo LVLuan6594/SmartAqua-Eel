@@ -1,0 +1,43 @@
+{
+  "generatedAt": "2026-10-15T08:26:22.275Z",
+  "administrativeDecision": "Nghị quyết 1668/NQ-UBTVQH15 ngày 16/06/2025",
+  "totals": {
+    "communes": 103,
+    "wards": 31,
+    "communesOnly": 72
+  },
+  "simplification": null,
+  "coordinatePrecisionDecimals": 6,
+  "layers": {
+    "can-tho/communes-103.geojson": {
+      "provider": "ThangLeQuoc/vietnamese-provinces-database (MIT)",
+      "url": "https://github.com/ThangLeQuoc/vietnamese-provinces-database/tree/master/json/geojson/92_can_tho",
+      "upstream": "Bản đồ Đơn vị hành chính Việt Nam 2025 – NXB Tài nguyên, Môi trường và Bản đồ Việt Nam (Bộ Nông nghiệp & Môi trường)",
+      "license": "MIT (dữ liệu tham chiếu từ nguồn bản đồ nhà nước; xem README kho dữ liệu)",
+      "adminSource": "Nghị quyết 1668/NQ-UBTVQH15 (16/06/2025) – 103 xã/phường",
+      "retrievedAt": "2026-10-15",
+      "crs": "EPSG:4326 (WGS84)",
+      "verified": true,
+      "description": "Ranh giới 103 xã/phường sau sắp xếp"
+    },
+    "can-tho/city-boundary.geojson": {
+      "provider": "ThangLeQuoc/vietnamese-provinces-database (MIT)",
+      "url": "https://github.com/ThangLeQuoc/vietnamese-provinces-database/tree/master/json/geojson/92_can_tho",
+      "upstream": "Bản đồ Đơn vị hành chính Việt Nam 2025 – NXB Tài nguyên, Môi trường và Bản đồ Việt Nam (Bộ Nông nghiệp & Môi trường)",
+      "license": "MIT (dữ liệu tham chiếu từ nguồn bản đồ nhà nước; xem README kho dữ liệu)",
+      "adminSource": "Nghị quyết 1668/NQ-UBTVQH15 (16/06/2025) – 103 xã/phường",
+      "retrievedAt": "2026-10-15",
+      "crs": "EPSG:4326 (WGS84)",
+      "verified": true,
+      "description": "Ranh giới TP. Cần Thơ mới (34 tỉnh/thành, mã 92)"
+    }
+  },
+  "eelDemo": {
+    "businessCoordinates": "synthetic",
+    "datasetId": "cantho-eel-demo-v1",
+    "excludedLegacyLayers": true,
+    "publicResearchFile": "src/data/eel-public-data.json",
+    "clusters": 8,
+    "tanks": 72
+  }
+}

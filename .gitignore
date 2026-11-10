@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+
+# Browser data - do not push
+artifacts/edge-profile/
+artifacts/chrome-profile/
+artifacts/browser-profile/
